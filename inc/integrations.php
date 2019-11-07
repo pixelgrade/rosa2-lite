@@ -24,9 +24,3 @@ require_once trailingslashit( get_template_directory() ) . 'inc/integrations/cus
  * Load Jetpack integration for this theme.
  */
 require_once trailingslashit( get_template_directory() ) . 'inc/integrations/jetpack.php';
-
-/**
- * Load Pixelgrade Care compatibility file.
- * http://pixelgrade.com/
- */
-require_once trailingslashit( get_template_directory() ) . 'inc/integrations/pixelgrade-care.php';
