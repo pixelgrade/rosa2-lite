@@ -1,0 +1,16 @@
+html, body, .site {
+    height: 100%;
+}
+
+.site {
+    display: flex;
+    flex-direction: column;
+
+    > * {
+        flex-shrink: 0;
+    }
+}
+
+.site-content {
+    flex-grow: 1;
+}

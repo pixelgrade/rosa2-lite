@@ -1,0 +1,8 @@
+$enable-categories-block-styles:        true !default;
+
+@if $enable-categories-block-styles == true {
+    /* Categories Block */
+    .wp-block-categories {
+        @include archives;
+    }
+}

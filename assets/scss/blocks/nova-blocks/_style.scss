@@ -1,0 +1,99 @@
+// hook Nova custom properties to the theme's
+* {
+    --novablocks-color-1: var(--current-color-primary);
+    --novablocks-color-2: var(--current-color-secondary);
+    --novablocks-color-3: var(--current-color-tertiary);
+
+    --novablocks-dark-1: var(--current-dark-primary);
+    --novablocks-dark-2: var(--current-dark-secondary);
+    --novablocks-dark-3: var(--current-dark-tertiary);
+
+    --novablocks-light-1: var(--current-light-primary);
+    --novablocks-light-2: var(--current-light-secondary);
+    --novablocks-light-3: var(--current-light-tertiary);
+}
+
+.novablocks-media,
+.novablocks-slideshow,
+.novablocks-hero {
+
+    & + & {
+        margin-top: 0;
+    }
+}
+
+.novablocks-announcement-bar {
+    --novablocks-announcement-color: var(--sm-light-primary);
+
+    &:not([class*="is-style-"]),
+    &.is-style-accent {
+        --novablocks-announcement-background-color: var(--sm-color-primary);
+    }
+
+    &.is-style-alternative {
+        --novablocks-announcement-background-color: var(--sm-color-secondary);
+    }
+
+    a:hover {
+        color: currentColor;
+    }
+}
+
+.novablocks-media {
+    padding-top: var(--theme-spacing-fluid-large);
+    padding-bottom: var(--theme-spacing-fluid-large);
+
+    &.block-is-basic {
+
+        & + & {
+            padding-top: 0;
+        }
+    }
+
+    & + :not(.novablocks-media) {
+        margin-top: 0;
+    }
+
+    &.content-is-moderate {
+        --novablocks-media-content-box-shadow:
+            0 32px 128px rgba(0, 0, 0, 0.1),
+            0 16px 64px rgba(0, 0, 0, 0.1),
+            0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    &.novablocks-media--blog {
+        --novablocks-media-content-box-shadow: none;
+    }
+
+    &.novablocks-media--no-thumbnail {
+
+        .novablocks-media__image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            path {
+                fill: var(--current-color-primary);
+            }
+        }
+    }
+}
+
+.novablocks-media__inner-container {
+
+    .wp-block-separator + * {
+        --element-spacing: var(--theme-spacing);
+    }
+}
+
+.novablocks-hero__inner-container {
+
+    > :not(:first-child) {
+        --element-spacing: var(--theme-spacing);
+    }
+
+    > .wp-block-separator:not(:first-child),
+    > .wp-block-separator + * {
+        --element-spacing: var(--theme-spacing-medium);
+    }
+}

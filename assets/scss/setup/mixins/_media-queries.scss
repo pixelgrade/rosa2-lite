@@ -1,0 +1,29 @@
+$theme-breakpoints: () !default;
+
+@mixin above( $value ) {
+    $breakpoint: map-get( $theme-breakpoints, $value );
+
+    @if ( $breakpoint != null ) {
+        $value: $breakpoint;
+    }
+
+    @if ( unitless( $value ) == false ) {
+        @media only screen and (min-width: $value) {
+            @content;
+        }
+    }
+}
+
+@mixin below( $value ) {
+    $breakpoint: map-get( $theme-breakpoints, $value );
+
+    @if ( $breakpoint != null ) {
+        $value: $breakpoint;
+    }
+
+    @if ( unitless( $value ) == false ) {
+        @media not screen and (min-width: $value) {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@mixin avoid-fout-color {
+    transition: var(--theme-transition);
+    transition-property: color;
+
+    html:not(.wf-active) & {
+        color: transparent;
+    }
+}
+
+@mixin avoid-fout-opacity {
+    transition: var(--theme-transition);
+    transition-property: opacity;
+
+    html:not(.wf-active) & {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,11 @@
+@each $size in micro, tiny, default, small, medium, large, xl, xxl {
+    @each $prop in padding, margin {
+        .has-#{$size}-#{$prop} {
+            --current-element-#{$prop}: var(--theme-spacing-#{$size});
+        }
+
+        .has-#{$size}-#{$prop}-fluid {
+            --current-element-#{$prop}: var(--theme-spacing-fluid-#{$size});
+        }
+    }
+}

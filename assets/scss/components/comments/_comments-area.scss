@@ -1,0 +1,14 @@
+.comments-area {
+    @include wrapper;
+    @include space-children-y( var(--theme-spacing-medium) );
+
+    clear: both;
+}
+
+.comments-area__wrap {
+    overflow: hidden;
+}
+
+.comments-area__content {
+    @include space-children-y( var(--theme-spacing-medium) );
+}

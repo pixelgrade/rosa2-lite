@@ -1,0 +1,35 @@
+$enable-latest-posts-block-styles:      true !default;
+
+@if $enable-latest-posts-block-styles == true {
+    /* Latest Posts Block */
+    .wp-block-latest-posts[class] {
+        padding-left: 0;
+    }
+
+    .wp-block-latest-posts__list {
+
+        &.is-grid {
+            list-style: none;
+            @include flex-grid;
+            @include flex-grid-count(2);
+
+            > li {
+                position: relative;
+                display: block;
+                padding: 2em;
+                text-align: center;
+                background: #EEE;
+            }
+
+            a {
+                display: block;
+                text-decoration: none;
+
+                &:after {
+                    content: "";
+                    @include cover;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+@each $alignment in left, right, center, none {
+
+    .entry-content .align#{$alignment},
+    .editor-styles-wrapper [data-align=#{$alignment}] [data-block] {
+
+        &:not(:first-child) {
+            margin-top: var(--theme-spacing);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: var(--theme-spacing);
+        }
+    }
+}
+
+@each $alignment in left, right {
+
+    .entry-content .align#{$alignment} {
+        float: #{$alignment};
+    }
+
+    .editor-block-list__block[data-align=#{$alignment}] {
+        max-width: 100%;
+
+        .editor-block-list__block-edit {
+            max-width: 40%;
+        }
+
+        &[data-align] .block-editor-rich-text p {
+            font: inherit;
+        }
+    }
+}
+
+.entry-content .alignright,
+.editor-block-list__block[data-align=right] .editor-block-list__block-edit {
+    margin-left: var(--theme-spacing);
+}
+
+.entry-content .alignleft,
+.editor-block-list__block[data-align=left] .editor-block-list__block-edit {
+    margin-right: var(--theme-spacing);
+}
+
+.entry-content .aligncenter,
+.editor-block-list__block[data-align=center] .editor-block-list__block-edit {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

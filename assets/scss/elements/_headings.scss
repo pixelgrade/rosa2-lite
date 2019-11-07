@@ -1,0 +1,37 @@
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h1.has-larger-font-size {
+  @include apply-font(display);
+}
+
+h1,
+h2.has-larger-font-size {
+  @include apply-font(heading-1);
+}
+
+h1.has-smaller-font-size,
+h2,
+h3.has-larger-font-size {
+  @include apply-font(heading-2);
+}
+
+h2.has-smaller-font-size,
+h3 {
+  @include apply-font(heading-3);
+}
+
+h3.has-smaller-font-size,
+h4 {
+  @include apply-font(heading-4);
+}
+
+h5 {
+  @include apply-font(heading-5);
+}
+
+h6 {
+  @include apply-font(heading-6);
+}

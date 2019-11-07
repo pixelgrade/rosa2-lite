@@ -1,0 +1,8 @@
+$enable-archives-block-styles:          true !default;
+
+@if $enable-archives-block-styles == true {
+    /* Archives Block */
+    .wp-block-archives-list {
+        @include archives;
+    }
+}

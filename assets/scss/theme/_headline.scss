@@ -1,0 +1,58 @@
+// always display primary and secondary headlines on separate lines
+.c-headline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &.has-text-align-left {
+        align-items: flex-start;
+    }
+
+    &.has-text-align-right {
+        align-items: flex-end;
+    }
+}
+
+.c-headline__word {
+    display: inline-flex !important;
+}
+
+.c-headline__primary,
+.c-headline__secondary {
+    display: block;
+}
+
+// bring primary and secondary headlines closer together
+.c-headline__secondary + .c-headline__primary,
+.c-headline > .editor-rich-text + .editor-rich-text {
+    margin-top: var(--theme-headline-spacing);
+}
+
+// raise secondary headline above primary
+.c-headline__secondary,
+.c-headline > .editor-rich-text:first-child {
+    position: relative;
+    z-index: 10;
+}
+
+.c-headline__secondary {
+    @include apply-font(accent);
+    color: var(--current-color-primary);
+}
+
+.c-headline__secondary {
+    font-size: 1.3636em;
+    white-space: nowrap;
+}
+
+h1.c-headline.has-larger-font-size {
+
+    .c-headline__secondary {
+        font-size: 0.87em;
+    }
+
+    .c-headline__secondary + .c-headline__primary,
+    > .editor-rich-text + .editor-rich-text {
+        margin-top: -0.3em;
+    }
+}

@@ -1,0 +1,19 @@
+.navigation {
+
+    @include specific(2) {
+        margin-top: var(--theme-spacing-xl);
+        margin-bottom: var(--theme-spacing-xl);
+    }
+
+    .novablocks-media--blog + &[class] {
+        margin-top: var(--theme-spacing-small);
+    }
+}
+
+.pagination {
+    --theme-content-width-normal: var(--theme-content-width-wide);
+
+    .nav-links {
+        @include nav-links;
+    }
+}

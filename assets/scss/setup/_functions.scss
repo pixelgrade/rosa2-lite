@@ -1,0 +1,35 @@
+@function remove($list, $value, $recursive: false) {
+    $result: ();
+
+    @for $i from 1 through length($list) {
+        @if type-of(nth($list, $i)) == list and $recursive {
+            $result: append($result, remove(nth($list, $i), $value, $recursive));
+        } @else if nth($list, $i) != $value {
+            $result: append($result, nth($list, $i));
+        }
+    }
+
+    @return $result;
+}
+
+/// Map deep get
+/// @author Hugo Giraudel
+/// @access public
+/// @param {Map} $map - Map
+/// @param {Arglist} $keys - Key chain
+/// @return {*} - Desired value
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}
+
+// https://css-tricks.com/snippets/sass/strip-unit-function/
+@function strip-unit( $number ) {
+    @if type-of( $number ) == 'number' and not unitless( $number ) {
+        @return $number / ($number * 0 + 1);
+    }
+
+    @return $number;
+}

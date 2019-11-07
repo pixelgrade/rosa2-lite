@@ -1,0 +1,79 @@
+
+@mixin separator-line {
+    &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: var(--separator-line-thickness);
+        background: currentColor;
+    }
+}
+
+.c-separator {
+    --separator-line-thickness: 2px;
+    --separator-arrow-width: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    line-height: 1;
+}
+
+.c-separator__symbol {
+    padding-left: 1em;
+    padding-right: 1em;
+    opacity: 0.5;
+
+    svg {
+        width: auto;
+        height: auto;
+    }
+
+    .novablocks-hero & {
+        opacity: 1;
+    }
+}
+
+.c-separator__line {
+    flex-grow: 1;
+    @include separator-line;
+}
+
+.c-separator__arrow {
+    height: var(--separator-line-thickness);
+    border: var(--separator-arrow-width) solid transparent;
+}
+
+.c-separator__arrow--left {
+    border-left-color: currentColor;
+    border-right: 0;
+}
+
+.c-separator__arrow--right {
+    border-right-color: currentColor;
+    border-left: 0;
+}
+
+.wp-block-separator.is-style-simple {
+    width: 100%;
+
+    .c-separator {
+        @include separator-line;
+    }
+
+    .c-separator__arrow,
+    .c-separator__symbol,
+    .c-separator__line {
+        display: none;
+    }
+}
+
+.wp-block-separator.is-style-decorative,
+.wp-block-separator:not([class*="is-style"]){
+
+    .c-separator__arrow,
+    .c-separator__line {
+        display: none;
+    }
+}

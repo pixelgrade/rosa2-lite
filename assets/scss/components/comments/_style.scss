@@ -1,0 +1,24 @@
+:root {
+    --theme-comment-metadata-spacing: 0.5em;
+    --theme-comment-avatar-spacing: 20px;
+    --theme-comment-body-spacing: 0.5rem;
+    --theme-comment-content-spacing: var(--theme-spacing-medium);
+    --theme-comment-avatar-width: 56px;
+}
+
+@import "comments-area";
+@import "comments-toggle";
+
+@import "comment";
+@import "comment-form";
+@import "comment-list";
+@import "comment-respond";
+@import "comment-reply-title";
+
+.bypostauthor {
+    color: inherit;
+}
+
+.says {
+    display: none;
+}

@@ -1,0 +1,12 @@
+.wp-block-group {
+	--wp-block-group-padding: var(--current-element-padding, var(--theme-spacing-fluid-large));
+
+	&[class*="is-style"]:not(.is-style-default) {
+		padding-top: var(--wp-block-group-padding);
+		padding-bottom: var(--wp-block-group-padding);
+
+		& + & {
+			--element-spacing: 0;
+		}
+	}
+}

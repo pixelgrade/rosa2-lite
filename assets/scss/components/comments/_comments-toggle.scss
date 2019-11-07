@@ -1,0 +1,19 @@
+.c-comments-toggle__label {
+    @include button;
+    @include button-fill;
+
+    display: block;
+    text-align: center;
+}
+
+.c-comments-toggle__checkbox {
+    display: none;
+
+    &:not(:checked) + .c-comments-toggle__label ~ * {
+        display: none;
+    }
+}
+
+.c-comments-toggle__checkbox + .c-comments-toggle__label {
+    --element-spacing: 0;
+}

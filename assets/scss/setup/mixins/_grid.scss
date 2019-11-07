@@ -1,0 +1,8 @@
+@mixin grid {
+    display: grid;
+}
+
+@mixin grid-count($number, $gap: var(--block-grid-spacing)) {
+    grid-gap: $gap;
+    grid-template-columns: repeat( #{$number}, 1fr );
+}

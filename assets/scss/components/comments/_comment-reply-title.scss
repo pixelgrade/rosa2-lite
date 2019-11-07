@@ -1,0 +1,10 @@
+.comment-reply-title[class] {
+    margin-bottom: var(--theme-spacing-small);
+}
+
+.comment-reply-title {
+    small {
+        font: inherit;
+
+    }
+}

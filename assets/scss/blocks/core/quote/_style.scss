@@ -1,0 +1,11 @@
+$enable-blockquote-block-styles:        true !default;
+
+@if $enable-blockquote-block-styles == true {
+    /* Blockquote Block */
+    .wp-block-quote {
+        @include space-children-y( var(--theme-spacing-medium) );
+
+        &.is-style-large {
+        }
+    }
+}

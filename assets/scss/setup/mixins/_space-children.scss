@@ -1,0 +1,27 @@
+@mixin space-children-y( $gap ) {
+
+    > :not(:first-child) {
+        --element-spacing: #{$gap};
+        margin-top: var(--element-spacing);
+    }
+
+}
+
+@mixin space-children-x( $gap ) {
+
+    > :not(:first-child) {
+        --element-spacing: #{$gap};
+        margin-left: var(--element-spacing);
+    }
+
+}
+
+@mixin space-children-xy( $gap ) {
+
+    > :not(:first-child) {
+        --element-spacing: #{$gap};
+        margin-top: var(--element-spacing);
+        margin-left: var(--element-spacing);
+    }
+
+}

@@ -1,0 +1,1031 @@
+# Copyright (C) 2019 Pixelgrade
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Rosa2 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/rosa2\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-10-01T14:57:24+03:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.3.0\n"
+"X-Domain: __theme_txtd\n"
+
+#. Theme Name of the theme
+msgid "Rosa2"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "https://demos.pixelgrade.com/rosa2"
+msgstr ""
+
+#. Description of the theme
+msgid "ROSA is an enchanting and easy-to-use parallax Restaurant WordPress theme that allows you to tell your story in a dynamic, narrative and enjoyable way, making it perfect for restaurants, bakeries, bars or coffee shops."
+msgstr ""
+
+#. Author of the theme
+msgid "Pixelgrade"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://pixelgrade.com"
+msgstr ""
+
+#: comments.php:30
+#: comments.php:53
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:32
+#: comments.php:55
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:33
+#: comments.php:56
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:66
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:72
+msgctxt "noun"
+msgid "Comment"
+msgstr ""
+
+#: comments.php:74
+msgid "Your comment..."
+msgstr ""
+
+#: functions.php:59
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:60
+msgid "Secondary Menu"
+msgstr ""
+
+#: header.php:24
+msgid "Skip to content"
+msgstr ""
+
+#: inc/extras.php:208
+msgid "Adding..."
+msgstr ""
+
+#: inc/extras.php:209
+msgid "Added!"
+msgstr ""
+
+#: inc/integrations/customify.php:79
+msgid "Fonts"
+msgstr ""
+
+#: inc/integrations/customify.php:83
+msgid "Body Fonts"
+msgstr ""
+
+#: inc/integrations/customify.php:87
+msgid "Body"
+msgstr ""
+
+#: inc/integrations/customify.php:104
+#: inc/integrations/customify.php:583
+msgid "Content"
+msgstr ""
+
+#: inc/integrations/customify.php:121
+msgid "Lead Paragraphs"
+msgstr ""
+
+#: inc/integrations/customify.php:138
+msgid "Heading Fonts"
+msgstr ""
+
+#: inc/integrations/customify.php:142
+msgid "Display"
+msgstr ""
+
+#: inc/integrations/customify.php:159
+msgid "Heading 1"
+msgstr ""
+
+#: inc/integrations/customify.php:176
+msgid "Heading 2"
+msgstr ""
+
+#: inc/integrations/customify.php:193
+msgid "Heading 3"
+msgstr ""
+
+#: inc/integrations/customify.php:210
+msgid "Heading 4"
+msgstr ""
+
+#: inc/integrations/customify.php:227
+msgid "Heading 5"
+msgstr ""
+
+#: inc/integrations/customify.php:244
+msgid "Heading 6"
+msgstr ""
+
+#: inc/integrations/customify.php:261
+msgid "Accent"
+msgstr ""
+
+#: inc/integrations/customify.php:277
+msgid "Other Fonts"
+msgstr ""
+
+#: inc/integrations/customify.php:281
+msgid "Navigation"
+msgstr ""
+
+#: inc/integrations/customify.php:298
+msgid "Buttons"
+msgstr ""
+
+#: inc/integrations/customify.php:315
+msgid "Meta"
+msgstr ""
+
+#: inc/integrations/customify.php:347
+msgid "Colors"
+msgstr ""
+
+#: inc/integrations/customify.php:352
+msgid "Rosa Primary Color"
+msgstr ""
+
+#: inc/integrations/customify.php:364
+msgid "Rosa Secondary Color"
+msgstr ""
+
+#: inc/integrations/customify.php:376
+msgid "Rosa Tertiary Color"
+msgstr ""
+
+#: inc/integrations/customify.php:388
+msgid "Rosa Primary Dark Color"
+msgstr ""
+
+#: inc/integrations/customify.php:400
+msgid "Rosa Secondary Dark Color"
+msgstr ""
+
+#: inc/integrations/customify.php:412
+msgid "Rosa Tertiary Dark Color"
+msgstr ""
+
+#: inc/integrations/customify.php:424
+msgid "Rosa Primary Light Color"
+msgstr ""
+
+#: inc/integrations/customify.php:436
+msgid "Rosa Secondary Light Color"
+msgstr ""
+
+#: inc/integrations/customify.php:448
+msgid "Rosa Tertiary Light Color"
+msgstr ""
+
+#: inc/integrations/customify.php:474
+msgid "Header"
+msgstr ""
+
+#: inc/integrations/customify.php:478
+msgid "Logo Height"
+msgstr ""
+
+#: inc/integrations/customify.php:479
+msgid "Adjust the max height of your logo container."
+msgstr ""
+
+#: inc/integrations/customify.php:498
+msgid "Header Height"
+msgstr ""
+
+#: inc/integrations/customify.php:499
+msgid "Adjust the header and navigation bar height."
+msgstr ""
+
+#: inc/integrations/customify.php:518
+msgid "Navigation Link Spacing"
+msgstr ""
+
+#: inc/integrations/customify.php:519
+msgid "Adjust the spacing between individual items in your navigation."
+msgstr ""
+
+#: inc/integrations/customify.php:538
+msgid "Header Position"
+msgstr ""
+
+#: inc/integrations/customify.php:539
+msgid "Choose if you want a static menu or a fixed (sticky) one that stays visible no matter how much you scroll the page."
+msgstr ""
+
+#: inc/integrations/customify.php:542
+msgid "Static"
+msgstr ""
+
+#: inc/integrations/customify.php:543
+msgid "Sticky (fixed)"
+msgstr ""
+
+#: inc/integrations/customify.php:548
+msgid "Header Sides Spacing"
+msgstr ""
+
+#: inc/integrations/customify.php:549
+msgid "Adjust the space separating the header and the sides of the browser."
+msgstr ""
+
+#: inc/integrations/customify.php:587
+msgid "Display Categories on Archives"
+msgstr ""
+
+#: inc/integrations/customify.php:592
+msgid "Display Tags on Archives"
+msgstr ""
+
+#: inc/integrations/customify.php:597
+msgid "Display Date on Archives"
+msgstr ""
+
+#: inc/integrations/customify.php:602
+msgid "Display Author on Archives"
+msgstr ""
+
+#: inc/integrations/customify.php:638
+msgid "Separators"
+msgstr ""
+
+#: inc/integrations/customify.php:642
+msgid "Separator Symbol"
+msgstr ""
+
+#: inc/integrations/customify.php:772
+msgid "Theme Default"
+msgstr ""
+
+#: inc/integrations/customify.php:797
+#: inc/integrations/customify.php:799
+msgid "Exquisite"
+msgstr ""
+
+#: inc/integrations/customify.php:800
+msgid "A warm comfort, truly simple and delightfull"
+msgstr ""
+
+#: inc/integrations/customify.php:888
+#: inc/integrations/customify.php:890
+msgid "Lively"
+msgstr ""
+
+#: inc/integrations/customify.php:891
+msgid "Chic and energetic with a confident nature"
+msgstr ""
+
+#: inc/integrations/customify.php:953
+#: inc/integrations/customify.php:955
+msgid "Voltage"
+msgstr ""
+
+#: inc/integrations/customify.php:956
+msgid "Bold and strong, ready to make an impact"
+msgstr ""
+
+#: inc/integrations/customify.php:1018
+#: inc/integrations/customify.php:1020
+msgid "Self"
+msgstr ""
+
+#: inc/integrations/customify.php:1021
+msgid "An adventurous spirit that's loud and proud"
+msgstr ""
+
+#: inc/integrations/novablocks.php:23
+msgid "This is a catchy"
+msgstr ""
+
+#: inc/integrations/novablocks.php:24
+msgid "Headline"
+msgstr ""
+
+#: inc/integrations/novablocks.php:34
+msgid "A brilliant subtitle to explain its catchiness"
+msgstr ""
+
+#: inc/integrations/novablocks.php:53
+msgid "Discover"
+msgstr ""
+
+#: inc/integrations/novablocks.php:54
+msgid "Our Story"
+msgstr ""
+
+#: inc/integrations/novablocks.php:71
+msgid "We have always defined ourselves by the ability to overcome the impossible. And we count these moments. These moments when we dare to aim higher, to break barriers, to make the unknown known."
+msgstr ""
+
+#: inc/integrations/novablocks.php:78
+msgid "Learn More"
+msgstr ""
+
+#: inc/integrations/pixelgrade-care.php:139
+msgid "One more lap to go.."
+msgstr ""
+
+#: inc/integrations/pixelgrade-care.php:144
+msgid "Start your digital journey with our"
+msgstr ""
+
+#: inc/integrations/pixelgrade-care.php:145
+#: inc/integrations/pixelgrade-care.php:152
+msgid "Pixelgrade Care&#174;"
+msgstr ""
+
+#: inc/integrations/pixelgrade-care.php:146
+msgid "on board. It's the core of your experience with our WordPress theme, and we bet you are going to love it from day one. You're in great hands, no doubt about that!"
+msgstr ""
+
+#: inc/integrations/pixelgrade-care.php:160
+msgid "Return to the WordPress Dashboard"
+msgstr ""
+
+#: inc/integrations/pixelgrade-care.php:180
+msgid "Installing..."
+msgstr ""
+
+#: inc/integrations/pixelgrade-care.php:183
+#: inc/integrations/pixelgrade-care.php:217
+msgid "Activating..."
+msgstr ""
+
+#: inc/integrations/pixelgrade-care.php:206
+msgid "Plugin installed successfully."
+msgstr ""
+
+#: inc/integrations/pixelgrade-care.php:209
+msgid "Plugin destination folder already exists."
+msgstr ""
+
+#: inc/integrations/pixelgrade-care.php:238
+#: inc/integrations/pixelgrade-care.php:256
+msgid "Unfortunately something went wrong. We are sorry, but you will need to install the plugin manually. Redirecting you to the appropriate page..."
+msgstr ""
+
+#: inc/integrations/pixelgrade-care.php:285
+msgid "Pixelgrade Care &rsaquo; Installer"
+msgstr ""
+
+#: inc/integrations/woocommerce.php:127
+msgid "Sale!"
+msgstr ""
+
+#: inc/integrations/woocommerce.php:222
+msgid "Cart"
+msgstr ""
+
+#: inc/integrations/woocommerce.php:224
+msgid "Checkout"
+msgstr ""
+
+#: inc/integrations/woocommerce.php:257
+msgid "Your cart"
+msgstr ""
+
+#: inc/integrations/woocommerce.php:315
+msgid "All Products"
+msgstr ""
+
+#: inc/integrations/woocommerce.php:342
+#: inc/template-tags.php:477
+msgctxt "previous set of posts"
+msgid "Previous"
+msgstr ""
+
+#: inc/integrations/woocommerce.php:343
+#: inc/template-tags.php:478
+msgctxt "next set of posts"
+msgid "Next"
+msgstr ""
+
+#: inc/required-plugins.php:64
+#: inc/required-plugins/class-tgm-plugin-activation.php:327
+msgid "Install Required Plugins"
+msgstr ""
+
+#: inc/required-plugins.php:65
+#: inc/required-plugins/class-tgm-plugin-activation.php:328
+msgid "Install Plugins"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: inc/required-plugins.php:66
+#: inc/required-plugins/class-tgm-plugin-activation.php:330
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: inc/required-plugins.php:68
+#: inc/required-plugins/class-tgm-plugin-activation.php:333
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#. translators: 1: plugin name(s).
+#: inc/required-plugins.php:69
+#: inc/required-plugins/class-tgm-plugin-activation.php:334
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: inc/required-plugins.php:71
+#: inc/required-plugins/class-tgm-plugin-activation.php:340
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/required-plugins.php:73
+msgid "Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed."
+msgid_plural "Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: inc/required-plugins.php:75
+#: inc/required-plugins/class-tgm-plugin-activation.php:358
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: inc/required-plugins.php:77
+#: inc/required-plugins/class-tgm-plugin-activation.php:364
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/required-plugins.php:79
+msgid "Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated."
+msgid_plural "Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: inc/required-plugins.php:81
+#: inc/required-plugins/class-tgm-plugin-activation.php:346
+msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
+msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/required-plugins.php:83
+msgid "Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated."
+msgid_plural "Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/required-plugins.php:85
+#: inc/required-plugins/class-tgm-plugin-activation.php:370
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/required-plugins.php:86
+msgid "Activate installed plugin"
+msgid_plural "Activate installed plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/required-plugins.php:87
+#: inc/required-plugins/class-tgm-plugin-activation.php:385
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: inc/required-plugins.php:88
+#: inc/required-plugins/class-tgm-plugin-activation.php:387
+#: inc/required-plugins/class-tgm-plugin-activation.php:3162
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: inc/required-plugins.php:89
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: inc/required-plugins/class-tgm-plugin-activation.php:332
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#. translators: 1: plugin name(s).
+#: inc/required-plugins/class-tgm-plugin-activation.php:352
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:375
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:380
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:386
+#: inc/required-plugins/class-tgm-plugin-activation.php:826
+#: inc/required-plugins/class-tgm-plugin-activation.php:2536
+#: inc/required-plugins/class-tgm-plugin-activation.php:3583
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:388
+#: inc/required-plugins/class-tgm-plugin-activation.php:2955
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:389
+msgid "No action taken. Plugin was already active."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/required-plugins/class-tgm-plugin-activation.php:391
+msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
+msgstr ""
+
+#. translators: 1: dashboard link.
+#: inc/required-plugins/class-tgm-plugin-activation.php:393
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:394
+msgid "Dismiss this notice"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:395
+msgid "There are one or more required or recommended plugins to install, update or activate."
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:396
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:521
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:522
+msgid "Update Required"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:933
+msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:933
+#: inc/required-plugins/class-tgm-plugin-activation.php:936
+msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:936
+msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:1120
+#: inc/required-plugins/class-tgm-plugin-activation.php:2951
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#. translators: %s: version number
+#: inc/required-plugins/class-tgm-plugin-activation.php:1985
+msgid "TGMPA v%s"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2276
+msgid "Required"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2279
+msgid "Recommended"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2295
+msgid "WordPress Repository"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2298
+msgid "External Source"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2301
+msgid "Pre-Packaged"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2318
+msgid "Not Installed"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2322
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2324
+msgid "Active"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2330
+msgid "Required Update not Available"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2333
+msgid "Requires Update"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2336
+msgid "Update recommended"
+msgstr ""
+
+#. translators: 1: install status, 2: update status
+#: inc/required-plugins/class-tgm-plugin-activation.php:2345
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#. translators: 1: number of plugins.
+#: inc/required-plugins/class-tgm-plugin-activation.php:2391
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: inc/required-plugins/class-tgm-plugin-activation.php:2395
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: inc/required-plugins/class-tgm-plugin-activation.php:2399
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: inc/required-plugins/class-tgm-plugin-activation.php:2403
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2485
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2493
+msgid "Installed version:"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2501
+msgid "Minimum required version:"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2513
+msgid "Available version:"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2536
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2550
+msgid "Plugin"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2551
+msgid "Source"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2552
+msgid "Type"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2556
+msgid "Version"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2557
+msgid "Status"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: inc/required-plugins/class-tgm-plugin-activation.php:2606
+msgid "Install %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: inc/required-plugins/class-tgm-plugin-activation.php:2611
+msgid "Update %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: inc/required-plugins/class-tgm-plugin-activation.php:2617
+msgid "Activate %2$s"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2687
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2720
+msgid "Install"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2726
+msgid "Update"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2729
+msgid "Activate"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2760
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2762
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2803
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2805
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2911
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:2937
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:3161
+msgid "Plugin activation failed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: inc/required-plugins/class-tgm-plugin-activation.php:3501
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#. translators: 1: plugin name, 2: error message.
+#: inc/required-plugins/class-tgm-plugin-activation.php:3504
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/required-plugins/class-tgm-plugin-activation.php:3506
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:3510
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/required-plugins/class-tgm-plugin-activation.php:3512
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/required-plugins/class-tgm-plugin-activation.php:3512
+#: inc/required-plugins/class-tgm-plugin-activation.php:3520
+msgid "Show Details"
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/required-plugins/class-tgm-plugin-activation.php:3512
+#: inc/required-plugins/class-tgm-plugin-activation.php:3520
+msgid "Hide Details"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:3513
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: inc/required-plugins/class-tgm-plugin-activation.php:3515
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:3518
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/required-plugins/class-tgm-plugin-activation.php:3520
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: inc/required-plugins/class-tgm-plugin-activation.php:3521
+msgid "All installations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: inc/required-plugins/class-tgm-plugin-activation.php:3523
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/template-tags.php:24
+msgctxt "post date"
+msgid "Posted on"
+msgstr ""
+
+#: inc/template-tags.php:41
+msgctxt "post author"
+msgid "by"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:60
+msgid ", "
+msgstr ""
+
+#. translators: before list of categories.
+#: inc/template-tags.php:63
+msgctxt "post categories"
+msgid "Posted in"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:74
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#. translators: before list of tags.
+#: inc/template-tags.php:77
+msgctxt "post tags"
+msgid "Tagged"
+msgstr ""
+
+#. translators: %s: post title
+#: inc/template-tags.php:91
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:116
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: inc/template-tags.php:300
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#: inc/template-tags.php:300
+msgid "The Pixelgrade Website"
+msgstr ""
+
+#: inc/template-tags.php:316
+msgid "&copy; %year% %site-title%."
+msgstr ""
+
+#: inc/template-tags.php:343
+msgid "Pingback:"
+msgstr ""
+
+#: inc/template-tags.php:343
+msgid "(Edit)"
+msgstr ""
+
+#. translators: %s: comment author link
+#: inc/template-tags.php:361
+msgid "%s <span class=\"says\">says:</span>"
+msgstr ""
+
+#. translators: 1: comment date, 2: comment time
+#: inc/template-tags.php:370
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: inc/template-tags.php:374
+msgid "Edit"
+msgstr ""
+
+#: inc/template-tags.php:378
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/template-tags.php:445
+msgid "Read more <span class=\"screen-reader-text\">about \"%s\"</span>"
+msgstr ""
+
+#: inc/template-tags.php:479
+msgid "Posts navigation"
+msgstr ""
+
+#: inc/template-tags.php:522
+msgid "Post navigation"
+msgstr ""
+
+#: inc/template-tags.php:529
+msgid "Previous article"
+msgstr ""
+
+#: inc/template-tags.php:537
+msgid "Next article"
+msgstr ""
+
+#: search.php:24
+msgid "Search results for: %s"
+msgstr ""
+
+#: template-parts/comments-toggle.php:25
+msgid "No Comments Yet"
+msgstr ""
+
+#: template-parts/comments-toggle.php:27
+msgctxt "comments title"
+msgid "1 Comment"
+msgstr ""
+
+#. translators: 1: number of comments
+#: template-parts/comments-toggle.php:32
+msgctxt "comments title"
+msgid "%1$s Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: template-parts/content-none.php:18
+msgid "Nothing Found"
+msgstr ""
+
+#. translators: 1: link to WP admin new post page.
+#: template-parts/content-none.php:28
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:40
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:46
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: template-parts/menu-toggle.php:27
+msgid "Menu"
+msgstr ""
+
+#: template-parts/site-footer.php:21
+msgid "Footer Menu"
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:24
+msgid "Have a coupon?"
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:24
+msgid "Click here to enter your code"
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:29
+msgid "If you have a coupon code, please apply it below."
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:32
+msgid "Coupon code"
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:36
+msgid "Apply coupon"
+msgstr ""

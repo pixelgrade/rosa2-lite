@@ -1,0 +1,109 @@
+// page numbers
+@mixin post-navigation__links {
+    max-width: var(--theme-content-width-normal);
+    margin-left: auto;
+    margin-right: auto;
+
+    @include above(tablet) {
+        display: flex;
+        flex-wrap: wrap;
+
+        > * {
+            flex: 1;
+        }
+    }
+}
+
+
+// SINGLE NAVIGATION
+.post-navigation {
+    --current-arrow-padding: calc(.4em + #{$theme-button-text-arrow-size});
+    --theme-wrapper-sides-spacing: var(--theme-spacing-fluid-medium);
+
+    padding-left: var(--theme-wrapper-sides-spacing);
+    padding-right: var(--theme-wrapper-sides-spacing);
+
+    clear: both;
+
+    .nav-links {
+        @include post-navigation__links;
+    }
+
+    a {
+        text-decoration: none;
+
+        &:after {
+            content: "";
+            @include cover;
+        }
+    }
+}
+
+.post-navigation__post-title {
+    @include apply-font(heading-4);
+}
+
+.post-navigation__post-title,
+.post-navigation__link-label {
+    display: block;
+
+    word-break: break-word;
+}
+
+.post-navigation__link {
+    position: relative;
+
+    @include below(tablet) {
+        text-align: center;
+    }
+}
+
+.post-navigation__link-label {
+    position: relative;
+    color: var(--current-color-primary);
+    @include apply-font(button);
+    transition: var(--theme-transition);
+    transition-property: transform;
+
+    &:after {
+        content: '';
+        @include button-text-arrow;
+        transform: translate(0, -50%) scale(-1, 1);
+        transition: var(--theme-transition);
+        transition-property: opacity;
+
+        .post-navigation__link:hover & {
+            opacity: 0;
+        }
+    }
+}
+
+.post-navigation__link--previous {
+    text-align: left;
+}
+
+.post-navigation__link-label--previous {
+    padding-left: var(--current-arrow-padding);
+
+    &:after {
+        right: auto;
+        left: 0;
+        transform: translate(0, -50%);
+    }
+
+    .post-navigation__link:hover & {
+        transform: translateX( calc( -1 * var(--current-arrow-padding) ) );
+    }
+}
+
+.post-navigation__link--next {
+    text-align: right;
+}
+
+.post-navigation__link-label--next {
+    padding-right: var(--current-arrow-padding);
+
+    .post-navigation__link:hover & {
+        transform: translateX( var(--current-arrow-padding) );
+    }
+}

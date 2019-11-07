@@ -1,0 +1,18 @@
+@mixin archives {
+    list-style: none;
+
+    ul {
+        padding-left: 0;
+        list-style: none;
+        counter-reset: submenu;
+
+        a:before {
+            content: "– " counters(submenu, "– ", none);
+            counter-increment: submenu;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+}

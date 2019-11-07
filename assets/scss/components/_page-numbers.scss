@@ -1,0 +1,35 @@
+a.page-numbers,
+span.page-numbers {
+
+    color: var(--current-dark-secondary);
+
+    &[class][class] {
+        width: 3em;
+        height: 3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.current {
+            background-color: var(--current-dark-secondary);
+            color: var(--current-light-primary);
+        }
+
+        &:not(.current):hover {
+            color: var(--current-dark-primary);
+        }
+    }
+
+    &.next[class],
+    &.prev[class] {
+        width: auto;
+    }
+
+    &:not(.prev):not(.next) {
+        display: none;
+
+        @include above(lap) {
+            display: flex;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+@mixin nav-links {
+    --current-arrow-padding: calc(.4em + #{$theme-button-text-arrow-size});
+
+    display: flex;
+    justify-content: center;
+
+    font-feature-settings: "lnum";
+
+
+    margin-left: calc(var(--theme-spacing-tiny) * -1);
+
+    @include apply-font(button);
+
+    a {
+        text-decoration: none;
+    }
+
+    > .page-numbers {
+        margin-left: var(--theme-spacing-tiny);
+    }
+
+    > .prev,
+    > .next {
+        position: relative;
+        transition: var(--theme-transition);
+        transition-property: transform;
+
+        &:after {
+            content: '';
+            @include button-text-arrow;
+        }
+    }
+
+    > .prev {
+        padding-left: var(--current-arrow-padding);
+
+        &:after {
+            right: auto;
+            left: 0;
+            transform: translate(0, -50%);
+        }
+    }
+
+    > .next {
+        padding-right: var(--current-arrow-padding);
+    }
+
+    > .prev,
+    > .current:last-child {
+        margin-right: auto;
+    }
+
+    > .next,
+    > .current:first-child {
+        margin-left: auto;
+    }
+}

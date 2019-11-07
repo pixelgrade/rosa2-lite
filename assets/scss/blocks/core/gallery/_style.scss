@@ -1,0 +1,53 @@
+$enable-gallery-block-styles:           true !default;
+
+@if $enable-gallery-block-styles == true {
+    /* Gallery Block */
+    
+    .wp-block-gallery {
+        --block-grid-spacing: 20px;
+
+        list-style: none;
+        @include flex-grid;
+
+        @for $i from 2 through 9 {
+
+            &.columns-#{$i} {
+
+                .blocks-gallery-grid {
+                    @include flex-grid-count($i);
+                }
+            }
+        }
+
+        img {
+            display: block;
+        }
+
+        figure {
+            position: relative;
+
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            height: 100%;
+        }
+
+        figcaption {
+            @include caption;
+        }
+
+        &.is-cropped {
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .blocks-gallery-grid {
+        list-style: none;
+        @include flex-grid;
+    }
+}

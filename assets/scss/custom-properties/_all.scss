@@ -1,0 +1,11 @@
+@import "colors";
+@import "typography";
+@import "layout";
+@import "spacing";
+@import "header";
+
+:root {
+    --theme-transition-duration: #{$theme-transition-duration};
+    --theme-transition-easing: #{$theme-transition-easing};
+    --theme-transition: all var(--theme-transition-duration) var(--theme-transition-easing);
+}

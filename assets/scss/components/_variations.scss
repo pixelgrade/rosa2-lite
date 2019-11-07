@@ -1,0 +1,28 @@
+.is-style-dark {
+    @include variation(dark);
+
+    background-color: var(--current-light-primary);
+    color: var(--current-dark-secondary);
+
+    a {
+        color: inherit;
+    }
+}
+
+.is-style-darker {
+    @include variation(darker);
+
+    background-color: var(--current-light-primary);
+    color: var(--current-dark-secondary);
+
+    a {
+        color: inherit;
+    }
+}
+
+.is-style-accent {
+    @include variation(accent);
+
+    background-color: var(--current-light-primary);
+    color: var(--current-dark-secondary);
+}

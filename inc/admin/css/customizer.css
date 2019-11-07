@@ -1,0 +1,61 @@
+/* Label for Viw Pro Customizer Section */
+[id*="pro__section"] .accordion-section-title:before {
+  position: absolute;
+  right: 30px;
+  content: "pro";
+  display: inline-block;
+  margin-right: 5px;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1;
+  background-color: #00CAB6;
+  color: #ffffff;
+  text-transform: capitalize; }
+
+/* Styling for buttons */
+#sub-accordion-section-pro__section .upsell-container .button-primary {
+  width: 100%;
+  cursor: pointer;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+          transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+  transition-property: transform, background, background-color, color, box-shadow, -webkit-transform;
+  border: 0;
+  text-align: center;
+  font-weight: 500;
+  background-color: #8E65C0;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 1px transparent;
+          box-shadow: 0 0 1px transparent;
+  -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+  font-size: 16px;
+  padding: 10px 16px 10px;
+  height: auto;
+  text-shadow: none; }
+  #sub-accordion-section-pro__section .upsell-container .button-primary:hover, #sub-accordion-section-pro__section .upsell-container .button-primary:focus {
+    -webkit-box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.7);
+    -webkit-transform: scale(1.05) translateY(-3px);
+            transform: scale(1.05) translateY(-3px);
+    background-color: #8E65C0; }
+
+.customize-section-description .upsell-container li {
+  list-style: none; }
+
+/*Label for pro features*/
+.upsell-features h4:before {
+  content: "pro";
+  display: inline-block;
+  margin-right: 5px;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1;
+  background-color: #00CAB6;
+  color: #ffffff;
+  text-transform: capitalize; }

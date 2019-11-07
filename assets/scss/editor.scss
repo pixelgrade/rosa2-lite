@@ -1,0 +1,137 @@
+@import "setup";
+@import "custom-properties/all";
+
+:root {
+
+    @include above($theme-font-size-breakpoint) {
+        --theme-font-size-slope-adjust: 0;
+    }
+}
+
+@import "theme/editor";
+
+/* Layout */
+.editor-block-list__layout {
+
+    > :not([data-align="wide"]):not([data-align="full"]) {
+        max-width: var(--theme-content-width-normal);
+    }
+
+    .wp-block[data-align=wide] {
+        max-width: var(--theme-content-width-wide);
+    }
+
+    > [data-align="wide"] {
+        max-width: var(--theme-content-width-wide);
+    }
+
+    > [data-align="full"] {
+        max-width: none;
+    }
+}
+
+/* Typography */
+.editor-styles-wrapper {
+
+    @import "blocks/editor";
+
+    // increased specificity selector to overwrite default styles
+    &[class] {
+        //@import "elements/forms";
+        @import "elements/headings";
+        @import "elements/iframe";
+        @import "elements/lists";
+        @import "elements/pre";
+        @import "elements/tables";
+        @include apply-font(content);
+
+        background-color: var(--current-light-primary);
+        color: var(--current-dark-secondary);
+    }
+
+    @import "elements/links";
+    @import "elements/media";
+
+    @import "components/alignment";
+    @import "components/variations";
+
+    blockquote {
+        margin: 0;
+    }
+}
+
+
+.editor-styles-wrapper {
+    @import "blocks/helpers";
+}
+
+/* Post Title Block */
+.post-type-page {
+
+    .edit-post-visual-editor {
+
+    }
+
+    .editor-post-title {
+
+    }
+
+    .editor-post-title__block {
+        max-width: none;
+
+        .editor-post-title__input {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            font-size: initial;
+            font-weight: normal;
+            line-height: 1.4;
+        }
+
+        &:not(.is-selected) .editor-post-title__input {
+            border-bottom: 1px dashed rgba(123,134,162,.3);
+        }
+    }
+}
+
+.editor-post-title__block .editor-post-title__input {
+    color: var(--current-dark-primary);
+
+    &:focus {
+        color: var(--current-dark-primary);
+    }
+}
+
+/* Hide Text Settings Panel */
+.blocks-font-size {
+    display: none;
+
+    &:first-child + .components-panel__body {
+        margin-top: 16px;
+    }
+}
+
+/* Hide Useless Heading Values */
+.components-toolbar {
+    [aria-label="Heading 4"],
+    [aria-label="Heading 5"],
+    [aria-label="Heading 6"] {
+        display: none;
+    }
+}
+
+/* Center block appender */
+.block-list-appender {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.is-dark-theme .c-logo__default { display: none; }
+.is-dark-theme .c-logo__inverted { display: block; }
+
+.is-dark-theme {
+    .components-text-control__input {
+        @include placeholder() {
+            color: var(--sm-dark-primary) !important;
+        }
+    }
+}
+

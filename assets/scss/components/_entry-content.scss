@@ -1,0 +1,26 @@
+.content-area {
+    @include apply-font(content);
+}
+
+.entry-content,
+[class*="__inner-container"] {
+    @include wrapper;
+}
+
+.entry-content,
+.wp-block-column,
+[class*="__inner-container"] {
+    @include space-children-y( var(--theme-spacing-small) );
+}
+
+// Larger spacing for specific blocks
+.wp-block-group,
+.nova-food-menu,
+.novablocks-hero,
+.novablocks-slideshow {
+    --element-spacing: var(--theme-spacing-fluid-large);
+
+    + :not(:first-child) {
+        margin-top: var(--element-spacing);
+    }
+}

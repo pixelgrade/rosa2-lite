@@ -1,0 +1,33 @@
+
+// ATTENTION!
+// This file shouldn't be modified. Proceed with caution!
+
+:root {
+    // font sizes
+    --theme-body-font-size: #{strip-unit($theme-body-font-size)};
+    --theme-customify-fluid-unit: calc( var(--theme-spacing-fluid) / var(--theme-body-font-size) );
+    --theme-customify-fluid-font-size: calc( 1em / var(--theme-body-font-size) );
+
+    // fluid typography settings
+    --theme-font-size-breakpoint: #{strip-unit($theme-font-size-breakpoint)};
+    --theme-font-size-minimum-value: #{strip-unit($theme-minimum-font-size)};
+    --theme-font-size-minimum-value-breakpoint: #{strip-unit($theme-font-size-minimum-value-breakpoint)};
+
+    --theme-font-size-slope-adjust: #{$theme-font-size-slope-adjust};
+
+    // create a unit value that is relative to the viewport width to all font sizes
+    --theme-addon-unit: calc( 1vw - var(--theme-font-size-breakpoint) * 1px / 100 );
+    --theme-addon-multiplier: 0;
+    --theme-addon: calc( var(--theme-addon-unit) * var(--theme-addon-multiplier) );
+
+    // Headline Lines Spacing
+    --theme-headline-spacing-setting: -0.3;
+    --theme-headline-spacing: calc(var(--theme-headline-spacing-setting) * 1em);
+
+    @include above($theme-font-size-breakpoint) {
+        --theme-font-size-slope-adjust: #{$theme-font-size-slope-adjust-desktop};
+        --theme-addon-multiplier: #{$theme-font-size-addon-multiplier-desktop};
+    }
+
+    @include define-fonts;
+}

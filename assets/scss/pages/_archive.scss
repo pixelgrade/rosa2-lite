@@ -1,0 +1,11 @@
+body {
+    &.archive,
+    &.blog,
+    &.search {
+        background-color: var(--current-light-tertiary);
+
+        .novablocks-media__inner-container {
+            text-align: center;
+        }
+    }
+}

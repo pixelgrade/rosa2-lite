@@ -1,0 +1,21 @@
+$enable-nova-blocks-styles:             true !default;
+
+@if $enable-nova-blocks-styles == true {
+    /* Nova Blocks */
+    .novablocks-media__inner-container {
+        --theme-wrapper-sides-spacing: 0;
+
+        .novablocks-media--blog & {
+            --theme-wrapper-sides-spacing: var(--novablocks-media-content-padding);
+        }
+
+        @include above (lap) {
+            --theme-wrapper-sides-spacing: var(--novablocks-media-content-padding);
+        }
+    }
+
+    .block-is-moderate + .block-is-moderate,
+    .block-is-highlighted + .block-is-highlighted {
+        padding-top: var(--theme-spacing-fluid-small);
+    }
+}

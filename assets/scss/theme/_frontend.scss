@@ -1,0 +1,33 @@
+@import "buttons";
+@import "headline";
+@import "main";
+@import "separator";
+
+.avatar {
+    display: block;
+    border-radius: 50%;
+}
+
+.comment__header {
+    a {
+        text-decoration-color: transparent;
+
+        &:hover {
+            text-decoration-color: var(--current-color-primary);
+        }
+    }
+}
+
+.entry-title,
+.entry-meta {
+
+    a {
+        color: var(--current-dark-primary);
+        text-decoration: underline;
+        text-decoration-color: transparent;
+    }
+}
+
+.entry-meta a:hover {
+    text-decoration-color: var(--current-color-primary);
+}

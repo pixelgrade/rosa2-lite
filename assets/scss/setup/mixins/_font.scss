@@ -1,0 +1,86 @@
+$font-config-defaults:
+    font-family,
+    font-size,
+    line-height,
+    font-weight,
+    letter-spacing,
+    text-transform,
+    text-decoration;
+
+@mixin define-font( $name, $config ) {
+
+    $config: map_merge( (
+        font-family: inherit,
+        font-size: inherit,
+        line-height: inherit,
+        font-weight: inherit,
+        letter-spacing: inherit,
+        text-transform: inherit,
+        text-decoration: inherit,
+    ), $config );
+
+    $prefix: --theme-#{$name};
+
+    @each $prop in remove($font-config-defaults, font-size) {
+        $value: map-get( $config, $prop );
+        @if ( map-get( $config, $prop ) ) {
+            #{$prefix}-#{$prop}: #{$value};
+        }
+    }
+
+    $font-size: map-get( $config, font-size );
+
+    @if ( $font-size and $font-size != 'inherit' ) {
+
+        #{$prefix}-font-size: #{$font-size};
+
+        // solving a first degree equation: y = ax + b
+
+        // x0 - viewport width at which font sizes should reach minimum value
+        // y0 - minimum font size
+        // x1 - viewport width at which we know the value for the font size
+        // y1 - known font size
+        --x0: var(--theme-font-size-minimum-value-breakpoint);
+        --y0: var(--theme-font-size-minimum-value);
+        --x1: var(--theme-font-size-breakpoint);
+
+        #{$prefix}-y1: var(#{$prefix}-font-size);
+        #{$prefix}-y0-new: calc( var(#{$prefix}-y1) - ( var(#{$prefix}-y1) - var(--y0) ) * var(--theme-font-size-slope-adjust) );
+
+        // calculate the slope and the remainder for the equation
+        #{$prefix}-a: calc( ( var(#{$prefix}-y1) - var(#{$prefix}-y0-new) ) / ( var(--x1) - var(--x0) ) );
+        #{$prefix}-b: calc( var(#{$prefix}-y0-new) - var(#{$prefix}-a) * var(--x0) );
+
+        // x2 - viewport width at a given time
+        // y2 - font size value we need to find out
+        #{$prefix}-x2: 100vw;
+        #{$prefix}-y2: calc( var(#{$prefix}-a) * var(#{$prefix}-x2) + var(#{$prefix}-b) * 1px );
+
+        #{$prefix}-final-font-size: calc( var(#{$prefix}-y2) + var(--theme-addon) );
+    }
+
+    @if ( $font-size == 'inherit' ) {
+        #{$prefix}-final-font-size: inherit;
+    }
+}
+
+@mixin define-fonts {
+    @each $name, $config in $theme-fonts {
+        @include define-font($name, $config);
+    }
+}
+
+@mixin apply-font( $name ) {
+
+    @each $prop in $font-config-defaults {
+        #{$prop}: var(--current-#{$prop});
+    }
+
+    @each $prop in $font-config-defaults {
+        @if ( $prop == 'font-size' ) {
+            --current-font-size: var(--theme-#{$name}-final-font-size);
+        } @else {
+            --current-#{$prop}: var(--theme-#{$name}-#{$prop});
+        }
+    }
+}

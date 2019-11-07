@@ -1,0 +1,8 @@
+
+// ATTENTION!
+// This file shouldn't be modified. Proceed with caution!
+
+:root {
+    --theme-content-width-normal: calc(#{strip-unit($theme-content-width-normal)} * var(--theme-content-final-font-size));
+    --theme-content-width-wide: calc(#{strip-unit($theme-content-width-wide)} * var(--theme-content-final-font-size));
+}

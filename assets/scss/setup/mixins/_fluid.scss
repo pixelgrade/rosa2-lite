@@ -1,0 +1,14 @@
+@mixin fluid($prop, $lowend: 420px, $min: 12px, $highend: 900px, $max: 21px) {
+
+    #{$prop}: $min;
+
+    $diff: abs(($max / ($max * 0 + 1)) - ($min / ($min * 0 + 1)));
+
+    @media screen and (min-width: $lowend) {
+        #{$prop}: calc(#{$min} + #{($diff)} * ((100vw - #{$lowend}) / #{(($highend / ($highend * 0 + 1)) - ($lowend / ($lowend * 0 + 1)))}));
+    }
+
+    @media screen and (min-width: $highend) {
+        #{$prop}: $max;
+    }
+}

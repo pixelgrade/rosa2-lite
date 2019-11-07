@@ -1,0 +1,5 @@
+// increase specificity to overwrite default block editor styles
+ul.wp-block-archives-list[class] {
+    @include archives;
+    padding-left: 0;
+}

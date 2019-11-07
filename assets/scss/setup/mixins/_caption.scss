@@ -1,0 +1,21 @@
+@mixin caption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    padding: 0.5em 0.75em;
+    overflow: hidden;
+
+    color: var(--current-light-primary);
+    white-space: nowrap;
+    transform: translateZ(0);
+
+    &:after {
+        content: "";
+        @include cover;
+        opacity: 0.6;
+        z-index: -1;
+        background: var(--current-dark-secondary);
+    }
+}

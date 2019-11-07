@@ -1,0 +1,63 @@
+$wp-colors: (
+    sm-color-primary: var(--current-color-primary),
+    sm-color-secondary: var(--current-color-secondary),
+    sm-color-tertiary: var(--current-color-tertiary),
+    sm-dark-primary: var(--current-dark-primary),
+    sm-dark-secondary: var(--current-dark-secondary),
+    sm-dark-tertiary: var(--current-dark-tertiary),
+    sm-light-primary: var(--current-light-primary),
+    sm-light-secondary: var(--current-light-secondary),
+    sm-light-tertiary: var(--current-light-tertiary),
+);
+
+/* Color Helper Classes */
+.has-background {
+    padding: 1em 1.25em;
+}
+
+@each $name, $color in $wp-colors {
+
+    .has-#{$name}-background-color {
+        background-color: $color;
+
+        @include specific(3) {
+
+            &.wp-block-button__link {
+
+                &.is-style-primary {
+                    @include button-fill;
+                }
+
+                &.is-style-secondary {
+                    @include button-fill-reverse;
+                }
+
+                background-color: transparent !important;
+                --theme-button-background-color: #{$color};
+                --theme-button-hover-background-color: transparent;
+            }
+        }
+    }
+
+    .has-#{$name}-color {
+        color: $color;
+
+        @include specific(3) {
+            &.wp-block-button__link {
+                color: var(--current-button-text-color) !important;
+                --theme-button-text-color: #{$color};
+                --theme-button-hover-text-color: #{$color};
+                --theme-button-border-color: #{$color};
+                --theme-button-hover-border-color: #{$color};
+            }
+        }
+    }
+}
+
+/* Alignment Helper Classes */
+@each $alignment in left, center, right {
+
+    .has-text-align-#{$alignment} {
+        text-align: $alignment;
+    }
+}

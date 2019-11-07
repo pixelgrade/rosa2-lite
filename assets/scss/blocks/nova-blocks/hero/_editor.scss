@@ -1,0 +1,7 @@
+.novablocks-u-background-dark {
+  @include variation(dark);
+
+  .novablocks-hero__indicator:after {
+    color: var(--theme-sm-light-1);
+  }
+}

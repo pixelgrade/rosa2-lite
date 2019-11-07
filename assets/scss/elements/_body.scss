@@ -1,0 +1,9 @@
+html {
+    -webkit-font-smoothing: antialiased;
+    @include apply-font(body);
+}
+
+body {
+    background-color: var(--current-light-primary);
+    color: var(--current-dark-secondary);
+}

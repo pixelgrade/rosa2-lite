@@ -1,0 +1,67 @@
+.novablocks-media__content {
+    max-width: 100%;
+    @include apply-font(body);
+    flex-basis: calc(50% - var(--novablocks-media-spacing));
+
+    @include below(tablet) {
+        flex-basis: 100%;
+    }
+}
+
+.novablocks-media__aside {
+    flex-basis: calc(50% + var(--novablocks-media-spacing));
+    min-height: 0;
+
+    .novablocks-media:not(.novablocks-media--no-thumbnail) & {
+        min-height: 15em;
+    }
+
+    .novablocks-media__image {
+
+        svg {
+            @include image-cover;
+            object-fit: contain;
+        }
+    }
+
+    @include above(tablet) {
+
+        .has-image-on-the-left & {
+            order: -1;
+        }
+    }
+}
+
+.block-is-moderate {
+    --novablocks-media-background-color: var(--current-light-tertiary);
+}
+
+.novablocks-media {
+    --element-spacing: var(--theme-spacing-large);
+    --novablocks-media-content-padding: var(--theme-spacing-fluid-large);
+    --novablocks-media-spacing: var(--theme-spacing-fluid-medium);
+}
+
+.novablocks-media--blog[class] {
+
+    .novablocks-media__content {
+        margin-bottom: 0;
+    }
+
+    .novablocks-media__aside {
+        order: 0;
+    }
+
+    &.has-image-on-the-left {
+        .novablocks-media__layout {
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+
+.novablocks-media__content {
+    @include below(tablet) {
+        margin-bottom: var(--element-spacing);
+    }
+}

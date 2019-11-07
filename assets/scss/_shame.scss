@@ -1,0 +1,25 @@
+// Keep this as tidy as possible
+
+/* Embeds */
+.fb_iframe_widget > span {
+    display: block;
+    max-width: 100%;
+}
+
+iframe.instagram-media {
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-right: 0 !important;
+}
+
+.is-style-lead {
+    @include apply-font(lead);
+}
+
+img:not(.is-loaded) {
+    opacity: 0;
+
+    .gm-style & {
+        opacity: 1;
+    }
+}

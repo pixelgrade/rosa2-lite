@@ -1,0 +1,13 @@
+@mixin specific( $classes ) {
+    $selector: '';
+
+    @for $i from 1 through $classes {
+        $selector: $selector + '[class]';
+    }
+
+    $selector: unquote('&' + $selector);
+
+    #{$selector} {
+        @content;
+    }
+}

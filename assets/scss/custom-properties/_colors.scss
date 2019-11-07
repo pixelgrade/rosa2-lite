@@ -1,0 +1,21 @@
+
+// ATTENTION!
+// This file shouldn't be modified. Proceed with caution!
+
+:root {
+    --sm-color-primary: #{$theme-sm-color-1};
+    --sm-color-secondary: #{$theme-sm-color-2};
+    --sm-color-tertiary: #{$theme-sm-color-3};
+    --sm-dark-primary: #{$theme-sm-dark-1};
+    --sm-dark-secondary: #{$theme-sm-dark-2};
+    --sm-dark-tertiary: #{$theme-sm-dark-3};
+    --sm-light-primary: #{$theme-sm-light-1};
+    --sm-light-secondary: #{$theme-sm-light-2};
+    --sm-light-tertiary: #{$theme-sm-light-3};
+
+    // copies values from --sm-color-name to --theme-color-name
+    @include variation(default, theme, sm);
+
+    // copies values from --theme-color-name to --current-color-name
+    @include variation(default, current, theme);
+}

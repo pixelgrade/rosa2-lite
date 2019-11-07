@@ -1,0 +1,37 @@
+@mixin close($size: 20px, $width: 2px, $position: true) {
+
+  @if $position {
+    position: relative;
+  }
+
+  // make it square
+  width: $size;
+  height: $size;
+
+  // hack for elements that have content
+  overflow: hidden;
+  text-indent: -9999em;
+
+  &:before,
+  &:after {
+    content: "";
+
+    display: block;
+    width: $width;
+    height: 100%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    background-color: currentColor;
+  }
+
+  &:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}

@@ -1,0 +1,10 @@
+$enable-pullquote-block-styles:         true !default;
+
+@if $enable-pullquote-block-styles == true {
+    /* Pullquote Block */
+    .wp-block-pullquote {
+    }
+
+    .wp-block-pullquote__citation {
+    }
+}

@@ -1,0 +1,15 @@
+/* Media */
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    transition: var(--theme-transition);
+    transition-property: opacity;
+}
+
+figure {
+    margin: 0;
+}

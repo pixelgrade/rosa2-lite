@@ -1,0 +1,44 @@
+.wp-block-button__link {
+    @include button-transition;
+}
+
+.wp-block-button {
+
+    &:not(.is-style-text) .wp-block-button__link {
+        @include button-base;
+        @include apply-font(button);
+
+        &:not(.has-background) {
+            @include button-background;
+        }
+
+        &:not(.has-text-color) {
+            @include button-color;
+        }
+    }
+
+    &:not([class*="is-style"]) .wp-block-button__link {
+        &:not(.has-background) {
+            @include button-fill;
+        }
+    }
+
+    &.is-style-primary .wp-block-button__link[class] {
+        @include button-fill;
+    }
+
+    &.is-style-secondary .wp-block-button__link[class] {
+        @include button-fill-reverse;
+    }
+}
+
+.is-style-text {
+
+    .wp-block-button__link {
+        @include button-reset;
+        @include button-text;
+
+        --theme-button-text-color: var(--current-color-primary);
+        --theme-button-hover-text-color: var(--current-color-primary);
+    }
+}

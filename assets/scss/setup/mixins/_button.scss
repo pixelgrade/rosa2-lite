@@ -1,0 +1,215 @@
+@mixin button-base {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+
+  --theme-button-text-color: #{$theme-button-text-color};
+  --theme-button-background-color: #{$theme-button-background-color};
+  --theme-button-border-color: #{$theme-button-border-color};
+
+  --theme-button-hover-text-color: #{$theme-button-hover-text-color};
+  --theme-button-hover-background-color: #{$theme-button-hover-background-color};
+  --theme-button-hover-border-color: #{$theme-button-hover-border-color};
+
+  --theme-button-border-width: #{$theme-button-border-width};
+  --theme-button-border-style: #{$theme-button-border-style};
+  --theme-button-border-radius: #{$theme-button-border-radius};
+
+  --theme-button-x-padding: #{$theme-button-x-padding};
+  --theme-button-y-padding: #{$theme-button-y-padding};
+  --theme-button-padding: var(--theme-button-y-padding) var(--theme-button-x-padding);
+
+  --theme-button-transition-duration: #{$theme-button-transition-duration};
+  --theme-button-transition-easing: #{$theme-button-transition-easing};
+
+  --theme-button-transition: all var(--theme-button-transition-duration) var(--theme-button-transition-easing);
+  --theme-button-hover-transition: var(--theme-button-transition);
+
+  --current-button-background-color: var(--theme-button-background-color);
+  --current-button-border-color: var(--theme-button-border-color);
+  --current-button-text-color: var(--theme-button-text-color);
+  --current-button-transition: var(--theme-button-transition);
+
+  &:hover {
+    --current-button-background-color: var(--theme-button-hover-background-color);
+    --current-button-border-color: var(--theme-button-hover-border-color);
+    --current-button-text-color: var(--theme-button-hover-text-color);
+    --current-button-transition: var(--theme-button-hover-transition);
+  }
+}
+
+@mixin button-box {
+  padding: var(--theme-button-padding);
+  border: var(--theme-button-border-width) var(--theme-button-border-style) var(--current-button-border-color);
+  border-radius: var(--theme-button-border-radius);
+}
+
+@mixin button-background {
+  background-color: var(--current-button-background-color);
+}
+
+@mixin button-color {
+  color: var(--current-button-text-color);
+}
+
+@mixin button-transition {
+  transition: var(--current-button-transition);
+}
+
+@mixin button-fill-base($pseudo: true) {
+  background-color: transparent;
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: calc(100% + var(--theme-button-border-width));
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    transition: var(--current-button-transition);
+    transition-property: transform;
+    z-index: -1;
+  }
+
+  @if $pseudo == false {
+    background-color: transparent;
+    background-size: calc( 200% + 4 * var(--theme-button-border-width) ) calc( 100% + 4 * var(--theme-button-border-width) );
+    background-position: calc( 100% + var(--theme-button-border-width) ) calc( -1 * var(--theme-button-border-width) );
+
+    &:hover {
+      background-position: calc( -1 * var(--theme-button-border-width) ) calc( -1 * var(--theme-button-border-width) );
+    }
+  }
+}
+
+@mixin button-fill($pseudo: true) {
+  @include button-fill-base($pseudo);
+  &:before {
+    transform: scale3d(1,1,1);
+    transform-origin: right;
+    background-color: var(--theme-button-background-color);
+  }
+
+  &:hover:before {
+    transform: scale3d(0,1,1);
+  }
+
+  @if $pseudo == false {
+    background-image: linear-gradient(to right, var(--theme-button-hover-background-color) 50%, var(--theme-button-background-color) 50%);
+  }
+}
+
+@mixin button-fill-reverse($pseudo: true) {
+  @include button-fill-base($pseudo);
+  --current-button-text-color: var(--theme-button-hover-text-color);
+  &:before {
+    transform: scale3d(0,1,1);
+    transform-origin: left;
+    background-color: var(--theme-button-background-color);
+  }
+
+  &:hover {
+    --current-button-text-color: var(--theme-button-text-color);
+    &:before {
+      transform: scale3d(1,1,1);
+    }
+  }
+
+  @if $pseudo == false {
+    --current-button-text-color: var(--theme-button-hover-text-color);
+    background-image: linear-gradient(to left, var(--theme-button-hover-background-color) 50%, var(--theme-button-background-color) 50%);
+
+    &:hover {
+      --current-button-text-color: var(--theme-button-text-color);
+    }
+  }
+}
+
+@mixin button-reset {
+  padding: 0;
+  background: none;
+  border-width: 0;
+}
+
+@mixin button-text-arrow {
+  @supports ( ( mask-clip: initial ) or ( -webkit-mask-clip: initial ) ) {
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    display: inline-block;
+    width: #{$theme-button-text-arrow-size};
+    height: #{$theme-button-text-arrow-size};
+
+    mask: url('assets/images/icon-arrow.svg') no-repeat 50% 50%;
+    mask-size: cover;
+
+    -webkit-mask: url('assets/images/icon-arrow.svg') no-repeat 50% 50%;
+    -webkit-mask-size: cover;
+    background-color: currentColor;
+
+    vertical-align: text-bottom;
+
+    transform: translate(0, -50%) scale(-1, 1);
+    transition: var(--theme-button-transition);
+    transition-property: opacity, transform;
+  }
+}
+
+@mixin button-text {
+  position: relative;
+  padding-right: #{$theme-button-text-arrow-size};
+  padding-bottom: .3em;
+  margin-right: calc( -1 * #{$theme-button-text-arrow-size} );
+  margin-bottom: -.3em;
+  text-decoration: none;
+
+  &:before {
+    content: '';
+
+    position: absolute;
+    bottom: 0;
+    right: 1.15em;
+
+    width: calc(100% - #{$theme-button-text-arrow-size});
+    height: .125em;
+
+    background: currentColor;
+    transition: var(--theme-button-transition);
+    transition-property: width;
+    transform-origin: 100% 50%;
+  }
+
+  &:after {
+    content: '';
+    @include button-text-arrow;
+    opacity: 0;
+    transform: translate(0, -50%) scale(-1,1);
+  }
+
+  &:hover {
+
+    &:before {
+      width: 0;
+    }
+
+    &:after {
+      opacity: 1;
+      transform: translate(.4em, -50%) scale(-1,1);
+    }
+  }
+}
+
+@mixin button {
+  @include button-base;
+  @include button-box;
+  @include button-background;
+  @include button-color;
+  @include button-transition;
+  @include apply-font(button);
+}

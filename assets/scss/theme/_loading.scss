@@ -1,0 +1,68 @@
+body {
+    transition: var(--theme-transition);
+    transition-property: opacity;
+}
+
+body.is-loading {
+    opacity: 0;
+}
+
+html:not(.wf-active) {
+    pointer-events: none;
+}
+
+// WooCommerce archives cards
+.wc-block-grid__product-onsale {
+    @include avoid-fout-color;
+}
+
+.wc-block-grid__product-title,
+.wc-block-grid__product-price {
+    @include avoid-fout-opacity;
+}
+
+// WooCommerce archives header
+.woocommerce-products-header,
+.woocommerce-notices-wrapper,
+.woocommerce-result-count,
+.woocommerce-ordering {
+    @include avoid-fout-opacity;
+}
+
+// Nova Blocks media card
+.novablocks-media__image {
+    background-color: var(--sm-light-tertiary);
+
+    .novablocks-media.block-is-moderate & {
+        background-color: var(--sm-light-primary);
+    }
+}
+
+.entry-content,
+[class*="__inner-container"]:not(.novablocks-hero__inner-container) {
+    > :not(.wp-block-group):not(.novablocks-media):not(.disabled-avoid-fout) {
+        @include avoid-fout-opacity;
+    }
+}
+
+// avoid adding transitions to elements that will be added in js
+.novablocks-hero__inner-container {
+    @include specific(2) {
+        > * {
+            transition-property: none;
+        }
+    }
+}
+
+// tiny hack for cooler loading of novablocks media
+body:not(.wf-active) .novablocks-media .wp-block-group__inner-container > .wp-block {
+    opacity: 1;
+}
+
+body:not(.has-loaded) .c-comments-toggle__checkbox + .c-comments-toggle__label ~ * {
+    display: none;
+}
+
+.comments-area {
+    @include avoid-fout-opacity;
+}

@@ -1,0 +1,75 @@
+// BREAKPOINTS
+$theme-breakpoints: (
+    mobile: 480px,
+    tablet: 768px,
+    lap: 1000px,
+    desktop: 1440px,
+);
+
+// COLORS
+$theme-sm-color-1: #DDAB5D;
+$theme-sm-color-2: #39497C;
+$theme-sm-color-3: #B12C4A;
+
+$theme-sm-dark-1: #212B49;
+$theme-sm-dark-2: #34394B;
+$theme-sm-dark-3: #141928;
+
+$theme-sm-light-1: #FFFFFF;
+$theme-sm-light-2: #CCCCCC;
+$theme-sm-light-3: #EEEFF2;
+
+// font sizes
+$theme-body-font-size: 16px;
+
+// fluid typography settings
+
+// these variables must be set in px
+$theme-minimum-font-size: 16px;
+$theme-font-size-breakpoint: 1440px;
+$theme-font-size-breakpoint-em: 1em * $theme-font-size-breakpoint / $theme-body-font-size;
+$theme-font-size-minimum-value-breakpoint: 320px;
+$theme-font-size-minimum-value-breakpoint-em: 1em * $theme-font-size-minimum-value-breakpoint / $theme-body-font-size;
+
+// use the --theme-font-size-slope-adjust variable to alter the slope of the resulted function
+// in such a way that when this variable equals 0, the slope of the function results to also 0
+// and the font sizes stay the same no matter the viewport
+$theme-font-size-slope-adjust: 0.6;
+$theme-font-size-slope-adjust-desktop: 0.6;
+
+// use a multiplier variable to control how much of that unit is added to the font size at any given time
+// on mobile devices the font size addon is set to 0 by default 0 so nothing is added to the resulted font sizes
+$theme-font-size-addon-multiplier-desktop: 1;
+
+// LAYOUT
+$theme-spacing-unit: 1rem;
+$theme-spacing-unit-fluid-minimum: 0.45rem;
+
+// these variables must be set in em
+$theme-content-width-normal: 38em;
+$theme-content-width-wide: 65em;
+
+// OTHERS
+$theme-transition-duration: .4s;
+$theme-transition-easing: $ease;
+
+// BUTTONS
+$theme-button-x-padding: 1.5em;
+$theme-button-y-padding: 0.75em;
+
+$theme-button-transition-duration: $theme-transition-duration;
+$theme-button-transition-easing: $theme-transition-easing;
+
+$theme-button-border-width: 2px;
+$theme-button-border-style: solid;
+$theme-button-border-radius: 0;
+
+$theme-button-text-color: var(--current-light-primary);
+$theme-button-background-color: var(--current-dark-primary);
+$theme-button-border-color: var(--current-dark-primary);
+
+$theme-button-hover-text-color: var(--current-dark-primary);
+$theme-button-hover-background-color: transparent;
+$theme-button-hover-border-color: var(--current-dark-primary);
+
+$theme-button-text-arrow-size: 1.15em;

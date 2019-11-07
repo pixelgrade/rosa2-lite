@@ -1,0 +1,30 @@
+@mixin quote {
+    @include apply-font(heading-3);
+
+    &:before {
+        content: "";
+        display: block;
+        height: 0.1em;
+        background-color: var(--current-color-primary);
+        margin-bottom: var(--theme-spacing);
+        max-width: 5em;
+    }
+}
+
+@mixin quote__cite {
+    margin-top: var(--theme-spacing);
+    @include apply-font(heading-5);
+    font-style: normal;
+}
+
+.wp-block-quote,
+.wp-block-pullquote {
+    @include quote;
+}
+
+.wp-block-quote cite,
+.wp-block-quote__citation,
+.wp-block-pullquote cite,
+.wp-block-pullquote__citation {
+    @include quote__cite;
+}

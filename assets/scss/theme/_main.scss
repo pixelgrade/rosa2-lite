@@ -1,0 +1,22 @@
+figure {
+    @include space-children-y( var(--theme-spacing-tiny) );
+}
+
+pre,
+code {
+    border: 1px solid;
+    border-radius: 0.2em;
+    background: var(--current-light-secondary);
+}
+
+pre {
+    padding: 1em;
+}
+
+code {
+    padding: 0.1em;
+}
+
+pre code {
+    background: transparent;
+}

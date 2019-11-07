@@ -1,0 +1,123 @@
+$enable-columns-block-styles: true !default;
+
+@mixin wp-block-columns-spacing {
+    // spacing for first level of rows
+    &:not(:first-child),
+    & + :not(:first-child) {
+        --element-spacing: var(--theme-spacing-fluid-large);
+    }
+
+    // spacing for deeper levels of rows
+    & &:not(:first-child),
+    & & + :not(:first-child) {
+        --element-spacing: var(--theme-spacing-fluid-medium);
+    }
+}
+
+@mixin wp-block-columns-stack-2 {
+    flex-wrap: wrap;
+
+    > * {
+        flex-basis: calc(50% - var(--wp-block-columns-spacing) / 2) !important;
+        margin-bottom: var(--wp-block-columns-spacing);
+    }
+
+    > :nth-child(2n+1) {
+        margin-left: 0;
+    }
+
+    > :last-child,
+    > :nth-child(2n+1):nth-last-child(2) {
+        margin-bottom: 0;
+    }
+}
+
+@mixin wp-block-columns-stack-1 {
+    flex-wrap: wrap;
+
+    > * {
+        flex-basis: 100% !important;
+    }
+
+    // need at least the same specificity as the 2-stack mixin
+    > :nth-child(n) {
+        margin-left: 0;
+
+        &:not(:last-child) {
+            margin-bottom: var(--wp-block-columns-spacing);
+        }
+    }
+}
+
+@if $enable-columns-block-styles == true {
+
+    /* Columns Blocks */
+    .wp-block-columns {
+        @include wp-block-columns-spacing;
+    }
+
+    .wp-block-column {
+        min-width: 0;
+        word-break: break-word;
+        overflow-wrap: break-word;
+
+    }
+
+    :root {
+        --wp-block-columns-spacing: calc(var(--theme-spacing-fluid-medium) + var(--theme-spacing-fluid-tiny));
+    }
+
+    .wp-block-columns {
+        display: flex;
+
+        > * {
+            flex: 0 1 100%;
+        }
+
+        > :not(:first-child) {
+            margin-left: var(--wp-block-columns-spacing);
+        }
+
+        @include below(lap) {
+            @include wp-block-columns-stack-2;
+
+            & & {
+                @include wp-block-columns-stack-1;
+            }
+        }
+
+        @include below(tablet) {
+            @include wp-block-columns-stack-1;
+        }
+    }
+
+    .wp-block-columns {
+
+        &.are-vertically-aligned-top {
+            align-items: flex-start
+        }
+
+        &.are-vertically-aligned-center {
+            align-items: center
+        }
+
+        &.are-vertically-aligned-bottom {
+            align-items: flex-end
+        }
+    }
+
+    .wp-block-column {
+
+        &.is-vertically-aligned-top {
+            align-self: flex-start
+        }
+
+        &.is-vertically-aligned-center {
+            align-self: center
+        }
+
+        &.is-vertically-aligned-bottom {
+            align-self: flex-end
+        }
+    }
+}

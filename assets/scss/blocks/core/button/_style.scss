@@ -1,0 +1,39 @@
+$enable-button-block-styles:            true !default;
+
+@if $enable-button-block-styles == true {
+
+    /* Button Block */
+    .wp-block-button {
+
+        &.is-style-squared {
+            --theme-button-border-radius: 0;
+        }
+
+        &.is-style-outline {
+            --theme-button-background-color: transparent;
+            --theme-button-text-color: currentColor;
+            --theme-button-border-color: currentColor;
+
+            --theme-button-hover-background-color: transparent;
+            --theme-button-hover-text-color: currentColor;
+            --theme-button-hover-border-color: currentColor;
+        }
+
+        @each $alignment in left, center, right {
+            &.align#{$alignment} {
+                text-align: #{$alignment};
+            }
+        }
+    }
+
+    .wp-block-button__link {
+        display: inline-block;
+        @include button-base;
+        @include button-box;
+        @include apply-font(button);
+
+        &:not(.has-text-color) {
+            @include button-color;
+        }
+    }
+}

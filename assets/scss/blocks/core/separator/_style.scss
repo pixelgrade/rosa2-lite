@@ -1,0 +1,17 @@
+$enable-separator-block-styles: true !default;
+
+@if $enable-separator-block-styles == true {
+    /* Separator Block */
+    .wp-block-separator {
+        border: 0;
+        border-top: 1px solid;
+
+        &:not(.is-style-wide) {
+            width: 20em;
+        }
+
+        &.is-style-dots {
+            border-top-style: dotted;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+.entry-meta {
+    @include breadcrumbs;
+    @include apply-font(meta);
+
+    li {
+        --element-spacing: 0;
+    }
+}

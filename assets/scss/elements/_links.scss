@@ -1,0 +1,13 @@
+/* Links */
+a {
+    color: var(--current-dark-secondary);
+    text-decoration: underline;
+
+    transition: text-decoration-color .25s $easeInOut;
+
+    &:hover,
+    &:focus {
+        color: var(--current-dark-secondary);
+        text-decoration-color: var(--current-color-primary);
+    }
+}

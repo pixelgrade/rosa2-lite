@@ -1,0 +1,104 @@
+// font families
+$theme-sm-font-body: Reforma1969, sans-serif;
+$theme-sm-font-primary: Reforma1969, sans-serif;
+$theme-sm-font-secondary: Reforma2018, sans-serif;
+$theme-sm-font-accent: Billy Ohio, sans-serif;
+
+$theme-fonts: (
+    body: (
+        font-family: $theme-sm-font-body,
+        font-size: 16,
+        line-height: 1.7,
+        font-weight: 400,
+        letter-spacing: -0.03em
+    ),
+    content: (
+        font-family: $theme-sm-font-body,
+        font-size: 18,
+        line-height: 1.6,
+        letter-spacing: -0.03em,
+    ),
+    lead: (
+        font-family: $theme-sm-font-body,
+        font-size: 24,
+        line-height: 1.6,
+        letter-spacing: -0.02em,
+    ),
+    display: (
+        font-family: $theme-sm-font-primary,
+        font-size: 115,
+        line-height: 1.03,
+        font-weight: 700,
+        letter-spacing: -0.03em,
+    ),
+    heading-1: (
+        font-family: $theme-sm-font-primary,
+        font-size: 66,
+        line-height: 1.1,
+        font-weight: 700,
+        letter-spacing: -0.03em,
+    ),
+    heading-2: (
+        font-family: $theme-sm-font-primary,
+        font-size: 40,
+        font-weight: 700,
+        line-height: 1.2,
+        letter-spacing: -0.02em,
+    ),
+    heading-3: (
+        font-family: $theme-sm-font-primary,
+        font-size: 32,
+        font-weight: 700,
+        line-height: 1.2,
+        letter-spacing: -0.02em,
+    ),
+    heading-4: (
+        font-family: $theme-sm-font-primary,
+        font-size: 24,
+        font-weight: 700,
+        line-height: 1.2,
+        letter-spacing: -0.02em,
+    ),
+    heading-5: (
+        font-family: $theme-sm-font-secondary,
+        font-size: 17,
+        font-weight: 500,
+        line-height: 1.5,
+        letter-spacing: 0.017em,
+    ),
+    heading-6: (
+        font-family: $theme-sm-font-secondary,
+        font-size: 17,
+        font-weight: 500,
+        line-height: 1.5,
+        letter-spacing: 0.017em,
+    ),
+    navigation: (
+        font-family: $theme-sm-font-secondary,
+        font-size: 17,
+        font-weight: 500,
+        line-height: 1.5,
+        letter-spacing: 0.017em,
+    ),
+    meta: (
+        font-family: $theme-sm-font-secondary,
+        font-size: 17,
+        font-weight: 500,
+        line-height: 1.5,
+        letter-spacing: 0.017em,
+    ),
+    button: (
+        font-family: $theme-sm-font-secondary,
+        font-size: 17,
+        font-weight: 500,
+        line-height: 1.2,
+        letter-spacing: 0.03em,
+        text-transform: capitalize,
+    ),
+    accent: (
+        font-family: $theme-sm-font-accent,
+        font-weight: 400,
+        text-transform: none,
+        letter-spacing: normal,
+    ),
+);

@@ -1,0 +1,109 @@
+.single {
+
+    [id="page"] {
+        background: var(--current-light-tertiary);
+    }
+
+    .site-content {
+        background: var(--current-light-primary);
+    }
+}
+
+.single,
+.page {
+
+    .site-content {
+        padding-bottom: var(--theme-spacing-fluid-large);
+
+        overflow: hidden;
+    }
+}
+
+.post,
+.page {
+    + .comments-area {
+        margin-top: var(--theme-spacing-fluid-medium);
+    }
+}
+
+.page:not(.has-hero) {
+
+    .site-content {
+        padding-top: var(--theme-spacing-fluid-large);
+    }
+}
+
+@include above(lap) {
+
+    .single {
+
+        .site-header:not(.site-header--scrolled) {
+            background-color: transparent;
+
+            &:after {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.single,
+.page {
+
+    .entry-header > * {
+        @include avoid-fout-opacity;
+    }
+
+    .hentry {
+        @include space-children-y( var(--theme-spacing-large) );
+    }
+
+    .entry-header {
+        --theme-content-width-normal: var(--theme-content-width-wide);
+        background-color: var(--current-light-tertiary);
+        @include space-children-y( var(--theme-spacing) );
+    }
+
+    .entry-thumbnail {
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 40%;
+            background-color: var(--current-light-tertiary);
+        }
+
+        > * {
+            position: relative;
+        }
+
+        img {
+            display: block;
+            width: auto;
+            height: auto;
+            max-height: 60vh;
+        }
+    }
+
+    .entry-thumbnail__wrapper {
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .entry-thumbnail__container {
+        background-color: var(--current-light-secondary);
+    }
+}
+
+.post-password-form {
+    input[type="submit"] {
+        width: 100%;
+        margin-top: var(--theme-spacing-small);
+    }
+}

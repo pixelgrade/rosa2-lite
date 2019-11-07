@@ -1,0 +1,359 @@
+%input,
+%select,
+%textarea {
+    -webkit-font-smoothing: initial;
+}
+
+%input,
+%textarea {
+    @extend %font-headings;
+    @extend %input-box;
+
+    width: 100%;
+    max-width: 100%;
+
+    color: inherit;
+
+    @include placeholder() {
+        color: $color-grey-warm;
+    }
+}
+
+%textarea {
+    max-width: 100%;
+    resize: vertical;
+}
+
+%select {
+    @extend %font-headings;
+    @extend %input-box;
+    padding-right: 100px;
+
+    width: 100%;
+
+
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &::-ms-expand {
+        display: none;
+    }
+
+    background: url('assets/images/arrow-down.svg') calc(100% - 15px) center no-repeat;
+    background-size: 17px 9px;
+}
+
+%checkbox {
+    border: 2px solid $color-dark;
+    border-radius: 0;
+
+    width: 21px !important;
+    height: 21px !important;
+    margin-right: 9px;
+
+    background: transparent;
+
+    -webkit-appearance: none;
+
+    &:checked {
+        background: url('assets/images/checkbox.svg') center center no-repeat;
+        background-size: 100% 100%;
+        outline: 0;
+    }
+}
+
+%label {
+    @include leading-map(map-merge($h5, (
+        spacing-bottom: false
+    )));
+}
+
+.dark,
+%form-dark {
+    %input-box {
+        color: #ffffff;
+        background-color: transparent;
+        border-color: #ffffff;
+    }
+
+    input[type="file"] {
+        color: white;
+    }
+
+    %label {
+        color: #ffffff;
+    }
+
+    %checkbox {
+        border-color: white;
+        color: #23242D;
+
+        &:checked {
+            background-image: url('assets/images/checkbox-inverted.svg');
+        }
+    }
+
+    %select {
+        background-image: url('assets/images/arrow-down-inverted.svg');
+    }
+}
+
+.alt,
+%form-alt {
+    %input,
+    %textarea,
+    %select {
+        padding-left: 0;
+        padding-right: 0;
+
+        border: 0;
+        border-bottom: 3px solid currentColor;
+
+        background-color: transparent;
+    }
+
+    &.dark %input,
+    &.dark %select,
+    &.dark %textarea {
+        border-color: #ffffff;
+    }
+
+    %select {
+        padding-top: 8px;
+        padding-right: 87px;
+        padding-bottom: 7px;
+        background-position: 100% center;
+    }
+}
+
+input {
+    &[type="text"],
+    &[type="tel"],
+    &[type="number"],
+    &[type="date"],
+    &[type="email"],
+    &[type="password"],
+    &[type="url"] {
+        @extend %input;
+    }
+}
+
+input[type="submit"],
+input[type="button"],
+button[type="submit"],
+button[type="reset"] {
+    @include btn;
+    @extend %fs-14;
+    @include leading-map($btn-font);
+}
+
+input[type="checkbox"] {
+    @extend %checkbox;
+
+    & + span {
+        @extend %label;
+    }
+}
+
+input[type="radio"] {
+    @extend %checkbox;
+    border-radius: 50%;
+}
+
+input[type="file"] {
+    @extend %font-headings;
+    @extend %fs-14;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    display: block;
+    margin-bottom: 0 !important;
+    padding: 21px 43px;
+    border: 0 solid transparent;
+    border-right-width: 1em;
+    background-clip: padding-box;
+    overflow: visible;
+
+    font-family: $font-family-headings;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+
+    transition: all $transition--micro ease-in-out;
+
+    color: $color-white;
+    cursor: pointer;
+    background-color: $btn-background;
+}
+
+label {
+    @extend %label;
+    display: block;
+
+    + span {
+        display: block;
+    }
+}
+
+textarea {
+    @extend %textarea;
+}
+
+select {
+    @extend %select;
+
+    &[multiple] {
+        background: none;
+        padding-right: 13px;
+    }
+}
+
+fieldset {
+    border: 0;
+
+    legend {
+        @extend %fs-12;
+        padding: 0 !important;
+
+        color: $color-grey-warm;
+
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    > div {
+        @extend %mt-xs;
+    }
+}
+
+// Ninja Form
+.nf-form-cont {
+
+    .list-radio-wrap .nf-field-element li,
+    .list-checkbox-wrap .nf-field-element li {
+        display: flex;
+        margin-bottom: 28px !important;
+
+        &:last-child {
+            margin-bottom: 0 !important;
+        }
+    }
+
+    .list-radio-wrap .nf-field-element li input,
+    .list-checkbox-wrap .nf-field-element li input,
+    .nf-field-element input[type="checkbox"] {
+        width: 21px !important;
+        margin-right: 9px !important;
+    }
+
+    .list-radio-wrap .nf-field-element li label,
+    .list-checkbox-wrap .nf-field-element li label {
+        padding-bottom: 0;
+        line-height: 21px;
+
+        &:before {
+            margin-bottom: 0;
+        }
+    }
+
+    .label-right .checkbox-wrap .nf-field-element {
+        width: auto;
+    }
+
+    .label-right .nf-field-label {
+        padding: 0;
+        line-height: 21px;
+    }
+
+    .nf-field-container {
+        @extend %mb-xs;
+        line-height: 1;
+    }
+
+    .label-above .nf-field-label {
+        @extend %label;
+        @extend %pb-xxs;
+        margin-bottom: 0;
+    }
+
+    .nf-before-form-content {
+        @extend %mb-xs;
+    }
+}
+
+// Contact Form 7
+form {
+
+    &.wpcf7 p > span {
+        display: block;
+    }
+}
+
+.wpcf7-form-control-wrap {
+    display: block;
+}
+
+.u-content-width > div.wpcf7 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+span.wpcf7-list-item {
+    @extend %mb-xs;
+    display: flex;
+    margin-left: 0;
+
+    &.last {
+        margin-bottom: 0;
+    }
+}
+
+.wpcf7-list-item-label {
+    @extend %label;
+    line-height: 21px !important;
+
+    &:before {
+        margin-bottom: 0 !important;
+    }
+}
+
+.div.wpcf7-response-output {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.contact-form {
+    @extend %ml--s;
+    display: flex;
+    flex-wrap: wrap;
+
+    > * {
+        @extend %pl-s;
+        width: 100%;
+    }
+
+    > div {
+        @extend %mb-xs;
+
+        input[type='text'],
+        input[type='email'],
+        textarea {
+            width: 100%;
+            max-width: none;
+            margin-bottom: 0;
+            float: none;
+        }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        border-color: #383C50;
+        opacity: .6;
+    }
+}

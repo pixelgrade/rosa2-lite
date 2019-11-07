@@ -1,0 +1,53 @@
+.site-branding {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.site-logo[class] {
+
+    a {
+        display: block;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+        max-height: 20px;
+        width: auto;
+        height: auto;
+
+        @include above(lap) {
+            max-height: var(--theme-header-logo-height);
+
+            &[src*="svg"] {
+                max-height: none;
+                height: var(--theme-header-logo-height);
+            }
+        }
+    }
+
+    .c-logo__inverted img {
+        width: 100%;
+    }
+}
+
+.site-title {
+    @include apply-font(heading-4);
+
+    --current-font-size: calc( var(--theme-header-logo-height) * 1.8 );
+    --current-line-height: 1;
+}
+
+.site-info {
+    text-align: center;
+}
+
+.site-logo + .site-info {
+    text-align: left;
+
+    .site-title,
+    .site-description {
+        margin-left: 1rem;
+    }
+}

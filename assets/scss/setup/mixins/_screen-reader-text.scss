@@ -1,0 +1,39 @@
+@mixin screen-reader-text {
+    position: absolute !important;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+
+    &:focus {
+        top: 5px;
+        left: 5px;
+        z-index: 100000; /* Above WP toolbar. */
+
+        display: block;
+        width: auto;
+        height: auto;
+        padding: 15px 23px 14px;
+
+        color: var(--current-dark-primary);
+        background-color: var(--current-light-secondary);
+        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+        border-radius: 3px;
+
+        font-size: 14px;
+        font-size: 0.875rem;
+        font-weight: bold;
+        line-height: normal;
+        text-decoration: none;
+
+        clip: auto !important;
+        clip-path: none;
+    }
+}

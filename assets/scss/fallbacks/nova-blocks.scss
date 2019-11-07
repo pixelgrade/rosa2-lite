@@ -1,0 +1,91 @@
+@media only screen and (min-width: 1000px) {
+
+    .site-header {
+
+        ul.menu,
+        .menu > ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.novablocks-media {
+    --novablocks-media-content-background-color: var(--theme-light-primary);
+
+    background-color: var(--novablocks-media-background-color);
+
+    &.has-background {
+        padding: var(--novablocks-media-padding) 0;
+    }
+}
+
+.block-is-moderate,
+.block-is-highlighted {
+    --novablocks-media-padding: var(--novablocks-media-spacing);
+}
+
+.novablocks-media__layout {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--novablocks-media-spacing));
+
+    > * {
+        min-width: 300px;
+        padding-left: var(--novablocks-media-spacing);
+        flex: 1 0 50%;
+    }
+}
+
+.novablocks-media__inner-container {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 100%;
+    padding: var(--novablocks-media-content-padding);
+    margin-top: auto;
+    margin-bottom: auto;
+
+    color: var(--novablocks-media-text-color);
+    box-shadow: var(--novablocks-media-content-box-shadow);
+    z-index: 2;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+
+        display: block;
+        background-color: var(--novablocks-media-content-background-color);
+        opacity: var(--novablocks-media-content-background-opacity);
+        pointer-events: none;
+    }
+}
+
+.novablocks-media__aside {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-gap: 15px;
+    min-height: 400px;
+}
+
+.novablocks-media__image {
+    position: relative;
+    grid-column: span 6;
+
+    img {
+        @include image-cover;
+    }
+}
+
+.novablocks-media__image:first-child:last-child,
+.novablocks-media__placeholder {
+    grid-column: span 12;
+}

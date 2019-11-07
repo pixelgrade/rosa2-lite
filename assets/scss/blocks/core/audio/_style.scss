@@ -1,0 +1,10 @@
+$enable-audio-block-styles:             true !default;
+
+@if $enable-audio-block-styles == true {
+    /* Audio Block */
+    .wp-block-audio {
+        audio {
+            width: 100%;
+        }
+    }
+}

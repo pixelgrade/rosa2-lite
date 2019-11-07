@@ -1,0 +1,18 @@
+.site-footer--fallback {
+    padding-top: var(--theme-spacing-medium);
+    padding-bottom: var(--theme-spacing-medium);
+
+    @include variation(dark);
+
+    background-color: var(--current-light-primary);
+    color: var(--current-dark-secondary);
+
+    a {
+        color: inherit;
+        text-decoration: underline;
+    }
+}
+
+.site-footer > .site-footer__inner-container > div:last-child {
+    margin-top: 0;
+}
