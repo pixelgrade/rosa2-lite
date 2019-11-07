@@ -21,7 +21,6 @@ define( 'ROSA2_LITE_THEME_LIGHT_TERTIARY',   '#EEEFF2' );    // light gray
 require_once __DIR__ . '/extras.php';
 require_once __DIR__ . '/colors.php';
 require_once __DIR__ . '/fonts.php';
-require_once __DIR__ . '/font-palettes.php';
 require_once __DIR__ . '/connected-fields.php';
 
 // Add new options to the Customify config

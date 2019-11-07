@@ -15,12 +15,12 @@ function rosa2_lite_add_colors_section_to_customify_config( $config ) {
 
 	$colors_section = array(
 		'colors_section' => array(
-			'title'   => esc_html__( 'Colors', '__theme_txtd' ),
+			'title'   => '',
+			'type'  => 'hidden',
 			'options' => array(
 				'color_1'       => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'live'    => true,
-					'label'   => esc_html__( 'Rosa Primary Color', '__theme_txtd' ),
 					'default' => ROSA2_LITE_THEME_COLOR_PRIMARY,
 					'css'     => array(
 						array(
@@ -30,9 +30,8 @@ function rosa2_lite_add_colors_section_to_customify_config( $config ) {
 					),
 				),
 				'color_2'       => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'live'    => true,
-					'label'   => esc_html__( 'Rosa Secondary Color', '__theme_txtd' ),
 					'default' => ROSA2_LITE_THEME_COLOR_SECONDARY,
 					'css'     => array(
 						array(
@@ -42,9 +41,8 @@ function rosa2_lite_add_colors_section_to_customify_config( $config ) {
 					),
 				),
 				'color_3'       => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'live'    => true,
-					'label'   => esc_html__( 'Rosa Tertiary Color', '__theme_txtd' ),
 					'default' => ROSA2_LITE_THEME_COLOR_TERTIARY,
 					'css'     => array(
 						array(
@@ -54,9 +52,8 @@ function rosa2_lite_add_colors_section_to_customify_config( $config ) {
 					),
 				),
 				'color_dark_1'  => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'live'    => true,
-					'label'   => esc_html__( 'Rosa Primary Dark Color', '__theme_txtd' ),
 					'default' => ROSA2_LITE_THEME_DARK_PRIMARY,
 					'css'     => array(
 						array(
@@ -66,9 +63,8 @@ function rosa2_lite_add_colors_section_to_customify_config( $config ) {
 					),
 				),
 				'color_dark_2'  => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'live'    => true,
-					'label'   => esc_html__( 'Rosa Secondary Dark Color', '__theme_txtd' ),
 					'default' => ROSA2_LITE_THEME_DARK_SECONDARY,
 					'css'     => array(
 						array(
@@ -78,9 +74,8 @@ function rosa2_lite_add_colors_section_to_customify_config( $config ) {
 					),
 				),
 				'color_dark_3'  => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'live'    => true,
-					'label'   => esc_html__( 'Rosa Tertiary Dark Color', '__theme_txtd' ),
 					'default' => ROSA2_LITE_THEME_DARK_TERTIARY,
 					'css'     => array(
 						array(
@@ -90,9 +85,8 @@ function rosa2_lite_add_colors_section_to_customify_config( $config ) {
 					),
 				),
 				'color_light_1' => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'live'    => true,
-					'label'   => esc_html__( 'Rosa Primary Light Color', '__theme_txtd' ),
 					'default' => ROSA2_LITE_THEME_LIGHT_PRIMARY,
 					'css'     => array(
 						array(
@@ -102,9 +96,8 @@ function rosa2_lite_add_colors_section_to_customify_config( $config ) {
 					),
 				),
 				'color_light_2' => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'live'    => true,
-					'label'   => esc_html__( 'Rosa Secondary Light Color', '__theme_txtd' ),
 					'default' => ROSA2_LITE_THEME_LIGHT_SECONDARY,
 					'css'     => array(
 						array(
@@ -114,9 +107,8 @@ function rosa2_lite_add_colors_section_to_customify_config( $config ) {
 					),
 				),
 				'color_light_3' => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'live'    => true,
-					'label'   => esc_html__( 'Rosa Tertiary Light Color', '__theme_txtd' ),
 					'default' => ROSA2_LITE_THEME_LIGHT_TERTIARY,
 					'css'     => array(
 						array(
