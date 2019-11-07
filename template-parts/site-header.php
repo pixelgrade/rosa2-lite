@@ -33,6 +33,7 @@ get_template_part( 'template-parts/menu-toggle' ); ?>
                         'container'      => false,
                         'theme_location' => 'primary',
                         'menu_id'        => 'primary-menu',
+                        'fallback_cb'    => 'rosa2_lite_please_select_a_menu_fallback',
                     ) ); ?>
                 </nav><!-- #site-navigation -->
             </div>

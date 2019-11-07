@@ -101,12 +101,13 @@ add_action( 'after_setup_theme', 'rosa2_lite_setup', 10 );
 function rosa2_lite_deregister_gutenberg_styles() {
 	// Overwrite Core block styles with empty styles.
 	wp_deregister_style( 'wp-block-library' );
-	wp_register_style( 'wp-block-library',  '' );
+	wp_register_style( 'wp-block-library', '' );
 
 	// Overwrite Core theme styles with empty styles.
 	wp_deregister_style( 'wp-block-library-theme' );
 	wp_register_style( 'wp-block-library-theme', '' );
 }
+
 add_action( 'enqueue_block_assets', 'rosa2_lite_deregister_gutenberg_styles', 10 );
 
 function rosa2_lite_enqueue_theme_block_editor_assets() {
@@ -124,6 +125,7 @@ function rosa2_lite_enqueue_theme_block_editor_assets() {
 		true
 	);
 }
+
 add_action( 'enqueue_block_editor_assets', 'rosa2_lite_enqueue_theme_block_editor_assets', 10 );
 
 function rosa2_lite_scripts() {
@@ -138,17 +140,24 @@ function rosa2_lite_scripts() {
 	// @todo This needs to be replaced with other libraries with a license compatible with GPL v2
 	wp_register_script( 'gsap-split-text', '//pxgcdn.com/js/gsap/2.1.3/plugins/SplitText' . $suffix . '.js', array(), null, true );
 	wp_register_script( 'gsap', '//pxgcdn.com/js/gsap/2.1.3/TweenMax' . $suffix . '.js', array(), null, true );
-	wp_enqueue_script( 'rosa2-app', get_template_directory_uri() . '/dist/js/scripts' . $suffix . '.js', array( 'jquery', 'gsap', 'gsap-split-text', 'hoverIntent', 'imagesloaded' ), $theme->get( 'Version' ), true );
+	wp_enqueue_script( 'rosa2-app', get_template_directory_uri() . '/dist/js/scripts' . $suffix . '.js', array(
+		'jquery',
+		'gsap',
+		'gsap-split-text',
+		'hoverIntent',
+		'imagesloaded'
+	), $theme->get( 'Version' ), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
+
 add_action( 'wp_enqueue_scripts', 'rosa2_lite_scripts', 10 );
 
 function rosa2_lite_print_scripts() {
 	ob_start(); ?>
-	<script>
+    <script>
 		window.addEventListener( "DOMContentLoaded", function( event ) {
 			document.body.classList.remove( "is-loading" );
 			document.body.classList.add( "has-loaded" );
@@ -156,10 +165,11 @@ function rosa2_lite_print_scripts() {
 		window.addEventListener( "beforeunload", function( event ) {
 			document.body.classList.add( "is-loading" );
 		} );
-	</script>
+    </script>
 
 	<?php echo ob_get_clean();
 }
+
 add_action( 'wp_print_scripts', 'rosa2_lite_print_scripts', 10 );
 
 /**

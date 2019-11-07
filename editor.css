@@ -1020,7 +1020,8 @@
       overflow: hidden;
       color: var(--current-light-primary);
       white-space: nowrap;
-      transform: translateZ(0); }
+      transform: translateZ(0);
+      position: relative; }
       .editor-styles-wrapper .wp-block-gallery figcaption:after {
         content: "";
         position: absolute;
@@ -1040,7 +1041,8 @@
   .editor-styles-wrapper .blocks-gallery-grid {
     list-style: none;
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    padding-left: 0; }
   .editor-styles-wrapper .wp-block-group {
     --wp-block-group-padding: var(--current-element-padding, var(--theme-spacing-fluid-large)); }
     .editor-styles-wrapper .wp-block-group[class*="is-style"]:not(.is-style-default) {

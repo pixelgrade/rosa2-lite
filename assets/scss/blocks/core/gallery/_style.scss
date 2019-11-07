@@ -34,6 +34,7 @@ $enable-gallery-block-styles:           true !default;
 
         figcaption {
             @include caption;
+            position: relative;
         }
 
         &.is-cropped {
@@ -49,5 +50,6 @@ $enable-gallery-block-styles:           true !default;
     .blocks-gallery-grid {
         list-style: none;
         @include flex-grid;
+        padding-left: 0;
     }
 }

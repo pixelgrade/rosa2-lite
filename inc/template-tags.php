@@ -526,3 +526,16 @@ if ( ! function_exists( 'rosa2_lite_get_the_post_navigation' ) ) {
 		return apply_filters( 'rosa2_lite_get_the_post_navigation', $navigation, $args );
 	}
 }
+
+if ( ! function_exists( 'rosa2_lite_please_select_a_menu_fallback' ) ) {
+	function rosa2_lite_please_select_a_menu_fallback() {
+		if ( ! current_user_can( 'edit_theme_options' ) ) {
+			return;
+		}
+
+		echo '
+		<ul class="menu" >
+			<li><a href="' . esc_url( admin_url( 'nav-menus.php?action=locations' ) ) . '">' . esc_html__( 'Please select a menu in this location', '__theme_txtd' ) . '</a></li>
+		</ul>';
+	}
+}

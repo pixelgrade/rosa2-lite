@@ -7,10 +7,6 @@ body.is-loading {
     opacity: 0;
 }
 
-html:not(.wf-active) {
-    pointer-events: none;
-}
-
 // WooCommerce archives cards
 .wc-block-grid__product-onsale {
     @include avoid-fout-color;
@@ -52,11 +48,6 @@ html:not(.wf-active) {
             transition-property: none;
         }
     }
-}
-
-// tiny hack for cooler loading of novablocks media
-body:not(.wf-active) .novablocks-media .wp-block-group__inner-container > .wp-block {
-    opacity: 1;
 }
 
 body:not(.has-loaded) .c-comments-toggle__checkbox + .c-comments-toggle__label ~ * {

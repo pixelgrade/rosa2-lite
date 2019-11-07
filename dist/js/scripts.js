@@ -1503,17 +1503,11 @@ function () {
 
 function scripts_initialize() {
   new app_App();
+  console.log('init');
 }
 
 external_jQuery_default()(function () {
-  var $window = external_jQuery_default()(window);
-  var $html = external_jQuery_default()('html');
-
-  if ($html.is('.wf-active')) {
-    scripts_initialize();
-  } else {
-    $window.on('wf-active', scripts_initialize);
-  }
+  scripts_initialize();
 });
 
 /***/ })
