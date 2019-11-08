@@ -1,5 +1,6 @@
 .novablocks-media__content {
     max-width: 100%;
+    word-break: break-word;
     @include apply-font(body);
     flex-basis: calc(50% - var(--novablocks-media-spacing));
 

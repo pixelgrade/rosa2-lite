@@ -13,6 +13,10 @@
     @include space-children-y( var(--theme-spacing-small) );
 }
 
+.entry-content {
+    word-wrap: break-word;
+}
+
 // Larger spacing for specific blocks
 .wp-block-group,
 .nova-food-menu,

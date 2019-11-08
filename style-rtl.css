@@ -1590,7 +1590,7 @@ ul.menu,
 ul.menu a,
 .menu > ul a {
   display: block;
-  padding: .75em 0;
+  padding: 1em;
   color: inherit;
   text-decoration: none; }
 
@@ -2122,6 +2122,9 @@ ul.menu a,
 [class*="__inner-container"] > :not(:first-child) {
   --element-spacing: var(--theme-spacing-small);
   margin-top: var(--element-spacing); }
+
+.entry-content {
+  word-wrap: break-word; }
 
 .wp-block-group,
 .nova-food-menu,
@@ -4087,6 +4090,7 @@ span.page-numbers {
 
 .novablocks-media__content {
   max-width: 100%;
+  word-break: break-word;
   font-family: var(--current-font-family);
   font-size: var(--current-font-size);
   line-height: var(--current-line-height);
@@ -4566,6 +4570,9 @@ body.archive, body.blog, body.search {
   max-width: var(--theme-content-width-normal);
   margin-right: auto;
   margin-left: auto;
+  --theme-wrapper-sides-spacing: var(--theme-spacing-fluid-medium);
+  padding-right: var(--theme-wrapper-sides-spacing);
+  padding-left: var(--theme-wrapper-sides-spacing);
   clear: both; }
 
 .error404 .content-area,

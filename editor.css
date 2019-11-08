@@ -1154,6 +1154,7 @@
       grid-template-areas: "media-text-content" "media-text-media"; } }
   .editor-styles-wrapper .novablocks-media__content {
     max-width: 100%;
+    word-break: break-word;
     font-family: var(--current-font-family);
     font-size: var(--current-font-size);
     line-height: var(--current-line-height);
