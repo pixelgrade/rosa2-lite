@@ -173,6 +173,19 @@ function rosa2_lite_print_scripts() {
 add_action( 'wp_print_scripts', 'rosa2_lite_print_scripts', 10 );
 
 /**
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
+ */
+function rosa2_lite_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'rosa2_lite_content_width', 960 );
+}
+add_action( 'after_setup_theme', 'rosa2_lite_content_width', 0 );
+
+
+/**
  * Custom template tags for this theme.
  */
 require_once trailingslashit( get_template_directory() ) . 'inc/template-tags.php';

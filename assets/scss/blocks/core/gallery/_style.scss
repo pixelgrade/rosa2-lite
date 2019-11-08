@@ -53,3 +53,9 @@ $enable-gallery-block-styles:           true !default;
         padding-left: 0;
     }
 }
+
+.wp-caption,
+.wp-caption-text,
+.gallery-caption {
+    color: currentColor;
+}

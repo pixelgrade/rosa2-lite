@@ -43,15 +43,15 @@ function rosa2_lite_customize_register( $wp_customize ) {
 	$custom_logo_args = get_theme_support( 'custom-logo' );
 	$wp_customize->add_control( new WP_Customize_Cropped_Image_Control( $wp_customize, 'rosa_transparent_logo',
 		array(
-			'label' => esc_html__( 'Logo while on Transparent Header', 'rosa-2' ),
+			'label' => esc_html__( 'Logo while on Transparent Header', '__theme_txtd' ),
 			'button_labels' => array(
-				'select'       => esc_html__( 'Select logo', 'rosa-2' ),
-				'change'       => esc_html__( 'Change logo', 'rosa-2' ),
-				'default'      => esc_html__( 'Default', 'rosa-2' ),
-				'remove'       => esc_html__( 'Remove', 'rosa-2' ),
-				'placeholder'  => esc_html__( 'No logo selected', 'rosa-2' ),
-				'frame_title'  => esc_html__( 'Select logo', 'rosa-2' ),
-				'frame_button' => esc_html__( 'Choose logo', 'rosa-2' ),
+				'select'       => esc_html__( 'Select logo', '__theme_txtd' ),
+				'change'       => esc_html__( 'Change logo', '__theme_txtd' ),
+				'default'      => esc_html__( 'Default', '__theme_txtd' ),
+				'remove'       => esc_html__( 'Remove', '__theme_txtd' ),
+				'placeholder'  => esc_html__( 'No logo selected', '__theme_txtd' ),
+				'frame_title'  => esc_html__( 'Select logo', '__theme_txtd' ),
+				'frame_button' => esc_html__( 'Choose logo', '__theme_txtd' ),
 			),
 			'section' => 'title_tagline',
 			'priority'      => 9, // put it after the normal logo that has priority 8

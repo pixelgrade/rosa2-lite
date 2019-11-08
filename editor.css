@@ -1043,6 +1043,10 @@
     display: flex;
     flex-wrap: wrap;
     padding-left: 0; }
+  .editor-styles-wrapper .wp-caption,
+  .editor-styles-wrapper .wp-caption-text,
+  .editor-styles-wrapper .gallery-caption {
+    color: currentColor; }
   .editor-styles-wrapper .wp-block-group {
     --wp-block-group-padding: var(--current-element-padding, var(--theme-spacing-fluid-large)); }
     .editor-styles-wrapper .wp-block-group[class*="is-style"]:not(.is-style-default) {

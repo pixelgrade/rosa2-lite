@@ -3854,6 +3854,11 @@ span.page-numbers {
   flex-wrap: wrap;
   padding-right: 0; }
 
+.wp-caption,
+.wp-caption-text,
+.gallery-caption {
+  color: currentColor; }
+
 .wp-block-group {
   --wp-block-group-padding: var(--current-element-padding, var(--theme-spacing-fluid-large)); }
   .wp-block-group[class*="is-style"]:not(.is-style-default) {
@@ -4485,6 +4490,9 @@ body.archive, body.blog, body.search {
   background-color: var(--current-light-tertiary); }
   body.archive .novablocks-media__inner-container, body.blog .novablocks-media__inner-container, body.search .novablocks-media__inner-container {
     text-align: center; }
+
+.sticky {
+  color: currentColor; }
 
 .single [id="page"] {
   background: var(--current-light-tertiary); }
