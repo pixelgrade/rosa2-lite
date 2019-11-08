@@ -114,6 +114,9 @@ function rosa2_lite_enqueue_theme_block_editor_assets() {
 	$theme  = wp_get_theme( get_template() );
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
+	/* Default Google Fonts */
+	wp_enqueue_style( 'rosa2-lite-google-fonts', rosa2_lite_google_fonts_url() );
+
 	wp_enqueue_style( 'rosa2-block-styles', get_template_directory_uri() . '/editor.css', array(), $theme->get( 'Version' ) );
 	wp_enqueue_style( 'rosa2-theme-styles', get_template_directory_uri() . '/dist/js/editor.blocks.css', array(), $theme->get( 'Version' ) );
 
@@ -131,6 +134,9 @@ add_action( 'enqueue_block_editor_assets', 'rosa2_lite_enqueue_theme_block_edito
 function rosa2_lite_scripts() {
 	$theme  = wp_get_theme( get_template() );
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+
+	/* Default Google Fonts */
+	wp_enqueue_style( 'rosa2-lite-google-fonts', rosa2_lite_google_fonts_url() );
 
 	wp_enqueue_style( 'rosa2-style', get_template_directory_uri() . '/style.css', array(), $theme->get( 'Version' ) );
 	wp_style_add_data( 'rosa2-style', 'rtl', 'replace' );

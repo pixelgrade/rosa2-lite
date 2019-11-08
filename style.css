@@ -73,7 +73,7 @@ Table of Contents
   --theme-addon: calc( var(--theme-addon-unit) * var(--theme-addon-multiplier) );
   --theme-headline-spacing-setting: -0.3;
   --theme-headline-spacing: calc(var(--theme-headline-spacing-setting) * 1em);
-  --theme-body-font-family: Reforma1969, sans-serif;
+  --theme-body-font-family: Source Sans Pro, sans-serif;
   --theme-body-line-height: 1.7;
   --theme-body-font-weight: 400;
   --theme-body-letter-spacing: -0.03em;
@@ -90,7 +90,7 @@ Table of Contents
   --theme-body-x2: 100vw;
   --theme-body-y2: calc( var(--theme-body-a) * var(--theme-body-x2) + var(--theme-body-b) * 1px);
   --theme-body-final-font-size: calc( var(--theme-body-y2) + var(--theme-addon));
-  --theme-content-font-family: Reforma1969, sans-serif;
+  --theme-content-font-family: Source Sans Pro, sans-serif;
   --theme-content-line-height: 1.6;
   --theme-content-font-weight: inherit;
   --theme-content-letter-spacing: -0.03em;
@@ -107,7 +107,7 @@ Table of Contents
   --theme-content-x2: 100vw;
   --theme-content-y2: calc( var(--theme-content-a) * var(--theme-content-x2) + var(--theme-content-b) * 1px);
   --theme-content-final-font-size: calc( var(--theme-content-y2) + var(--theme-addon));
-  --theme-lead-font-family: Reforma1969, sans-serif;
+  --theme-lead-font-family: Source Sans Pro, sans-serif;
   --theme-lead-line-height: 1.6;
   --theme-lead-font-weight: inherit;
   --theme-lead-letter-spacing: -0.02em;
@@ -124,7 +124,7 @@ Table of Contents
   --theme-lead-x2: 100vw;
   --theme-lead-y2: calc( var(--theme-lead-a) * var(--theme-lead-x2) + var(--theme-lead-b) * 1px);
   --theme-lead-final-font-size: calc( var(--theme-lead-y2) + var(--theme-addon));
-  --theme-display-font-family: Reforma1969, sans-serif;
+  --theme-display-font-family: Montserrat, sans-serif;
   --theme-display-line-height: 1.03;
   --theme-display-font-weight: 700;
   --theme-display-letter-spacing: -0.03em;
@@ -141,7 +141,7 @@ Table of Contents
   --theme-display-x2: 100vw;
   --theme-display-y2: calc( var(--theme-display-a) * var(--theme-display-x2) + var(--theme-display-b) * 1px);
   --theme-display-final-font-size: calc( var(--theme-display-y2) + var(--theme-addon));
-  --theme-heading-1-font-family: Reforma1969, sans-serif;
+  --theme-heading-1-font-family: Montserrat, sans-serif;
   --theme-heading-1-line-height: 1.1;
   --theme-heading-1-font-weight: 700;
   --theme-heading-1-letter-spacing: -0.03em;
@@ -158,7 +158,7 @@ Table of Contents
   --theme-heading-1-x2: 100vw;
   --theme-heading-1-y2: calc( var(--theme-heading-1-a) * var(--theme-heading-1-x2) + var(--theme-heading-1-b) * 1px);
   --theme-heading-1-final-font-size: calc( var(--theme-heading-1-y2) + var(--theme-addon));
-  --theme-heading-2-font-family: Reforma1969, sans-serif;
+  --theme-heading-2-font-family: Montserrat, sans-serif;
   --theme-heading-2-line-height: 1.2;
   --theme-heading-2-font-weight: 700;
   --theme-heading-2-letter-spacing: -0.02em;
@@ -175,7 +175,7 @@ Table of Contents
   --theme-heading-2-x2: 100vw;
   --theme-heading-2-y2: calc( var(--theme-heading-2-a) * var(--theme-heading-2-x2) + var(--theme-heading-2-b) * 1px);
   --theme-heading-2-final-font-size: calc( var(--theme-heading-2-y2) + var(--theme-addon));
-  --theme-heading-3-font-family: Reforma1969, sans-serif;
+  --theme-heading-3-font-family: Montserrat, sans-serif;
   --theme-heading-3-line-height: 1.2;
   --theme-heading-3-font-weight: 700;
   --theme-heading-3-letter-spacing: -0.02em;
@@ -192,7 +192,7 @@ Table of Contents
   --theme-heading-3-x2: 100vw;
   --theme-heading-3-y2: calc( var(--theme-heading-3-a) * var(--theme-heading-3-x2) + var(--theme-heading-3-b) * 1px);
   --theme-heading-3-final-font-size: calc( var(--theme-heading-3-y2) + var(--theme-addon));
-  --theme-heading-4-font-family: Reforma1969, sans-serif;
+  --theme-heading-4-font-family: Montserrat, sans-serif;
   --theme-heading-4-line-height: 1.2;
   --theme-heading-4-font-weight: 700;
   --theme-heading-4-letter-spacing: -0.02em;
@@ -209,7 +209,7 @@ Table of Contents
   --theme-heading-4-x2: 100vw;
   --theme-heading-4-y2: calc( var(--theme-heading-4-a) * var(--theme-heading-4-x2) + var(--theme-heading-4-b) * 1px);
   --theme-heading-4-final-font-size: calc( var(--theme-heading-4-y2) + var(--theme-addon));
-  --theme-heading-5-font-family: Reforma2018, sans-serif;
+  --theme-heading-5-font-family: Montserrat, sans-serif;
   --theme-heading-5-line-height: 1.5;
   --theme-heading-5-font-weight: 500;
   --theme-heading-5-letter-spacing: 0.017em;
@@ -226,7 +226,7 @@ Table of Contents
   --theme-heading-5-x2: 100vw;
   --theme-heading-5-y2: calc( var(--theme-heading-5-a) * var(--theme-heading-5-x2) + var(--theme-heading-5-b) * 1px);
   --theme-heading-5-final-font-size: calc( var(--theme-heading-5-y2) + var(--theme-addon));
-  --theme-heading-6-font-family: Reforma2018, sans-serif;
+  --theme-heading-6-font-family: Montserrat, sans-serif;
   --theme-heading-6-line-height: 1.5;
   --theme-heading-6-font-weight: 500;
   --theme-heading-6-letter-spacing: 0.017em;
@@ -243,7 +243,7 @@ Table of Contents
   --theme-heading-6-x2: 100vw;
   --theme-heading-6-y2: calc( var(--theme-heading-6-a) * var(--theme-heading-6-x2) + var(--theme-heading-6-b) * 1px);
   --theme-heading-6-final-font-size: calc( var(--theme-heading-6-y2) + var(--theme-addon));
-  --theme-navigation-font-family: Reforma2018, sans-serif;
+  --theme-navigation-font-family: Montserrat, sans-serif;
   --theme-navigation-line-height: 1.5;
   --theme-navigation-font-weight: 500;
   --theme-navigation-letter-spacing: 0.017em;
@@ -260,7 +260,7 @@ Table of Contents
   --theme-navigation-x2: 100vw;
   --theme-navigation-y2: calc( var(--theme-navigation-a) * var(--theme-navigation-x2) + var(--theme-navigation-b) * 1px);
   --theme-navigation-final-font-size: calc( var(--theme-navigation-y2) + var(--theme-addon));
-  --theme-meta-font-family: Reforma2018, sans-serif;
+  --theme-meta-font-family: Montserrat, sans-serif;
   --theme-meta-line-height: 1.5;
   --theme-meta-font-weight: 500;
   --theme-meta-letter-spacing: 0.017em;
@@ -277,7 +277,7 @@ Table of Contents
   --theme-meta-x2: 100vw;
   --theme-meta-y2: calc( var(--theme-meta-a) * var(--theme-meta-x2) + var(--theme-meta-b) * 1px);
   --theme-meta-final-font-size: calc( var(--theme-meta-y2) + var(--theme-addon));
-  --theme-button-font-family: Reforma2018, sans-serif;
+  --theme-button-font-family: Montserrat, sans-serif;
   --theme-button-line-height: 1.2;
   --theme-button-font-weight: 500;
   --theme-button-letter-spacing: 0.03em;
@@ -294,7 +294,7 @@ Table of Contents
   --theme-button-x2: 100vw;
   --theme-button-y2: calc( var(--theme-button-a) * var(--theme-button-x2) + var(--theme-button-b) * 1px);
   --theme-button-final-font-size: calc( var(--theme-button-y2) + var(--theme-addon));
-  --theme-accent-font-family: Billy Ohio, sans-serif;
+  --theme-accent-font-family: Yesteryear, cursive;
   --theme-accent-line-height: inherit;
   --theme-accent-font-weight: 400;
   --theme-accent-letter-spacing: normal;
