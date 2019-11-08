@@ -23,6 +23,7 @@ get_template_part( 'template-parts/menu-toggle' ); ?>
                         'theme_location' => 'secondary',
                         'menu_id'        => 'secondary-menu',
                         'fallback_cb'    => false,
+	                    'depth'          => 1
                     ) ); ?>
                 </nav><!-- #site-navigation -->
 
@@ -34,6 +35,7 @@ get_template_part( 'template-parts/menu-toggle' ); ?>
                         'theme_location' => 'primary',
                         'menu_id'        => 'primary-menu',
                         'fallback_cb'    => 'rosa2_lite_please_select_a_menu_fallback',
+                        'depth'          => 1
                     ) ); ?>
                 </nav><!-- #site-navigation -->
             </div>

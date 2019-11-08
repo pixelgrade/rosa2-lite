@@ -177,12 +177,16 @@
     right: 1.15em;
 
     width: calc(100% - #{$theme-button-text-arrow-size});
-    height: .125em;
+    height: .1em;
+
+    transform: scale3d(1, 1, 1);
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    transform-origin: left;
 
     background: currentColor;
     transition: var(--theme-button-transition);
-    transition-property: width;
-    transform-origin: 100% 50%;
+    transition-property: transform;
   }
 
   &:after {
@@ -195,7 +199,8 @@
   &:hover {
 
     &:before {
-      width: 0;
+      transform: scale3d(0, 1, 1);
+      transform-origin: right;
     }
 
     &:after {
