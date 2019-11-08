@@ -4195,14 +4195,14 @@ span.page-numbers {
 
 .novablocks-hero__inner-container > .c-headline .c-headline__primary,
 .novablocks-hero__inner-container > .c-headline .c-headline__secondary {
-  opacity: 0; }
+  opacity: 1; }
 
 .novablocks-hero__inner-container > .c-headline + .c-headline .c-headline__primary,
 .novablocks-hero__inner-container > .c-headline + .c-headline .c-headline__secondary {
   opacity: 1; }
 
 .novablocks-hero__inner-container > :not(.c-headline) {
-  opacity: 0; }
+  opacity: 1; }
 
 .novablocks-hero__inner-container .c-separator__symbol {
   color: var(--current-color-primary); }

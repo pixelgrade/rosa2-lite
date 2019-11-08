@@ -143,13 +143,8 @@ function rosa2_lite_scripts() {
 
 	wp_enqueue_style( 'rosa2-blocks-styles', get_template_directory_uri() . '/dist/js/editor.blocks.css', array(), $theme->get( 'Version' ) );
 
-	// @todo This needs to be replaced with other libraries with a license compatible with GPL v2
-	wp_register_script( 'gsap-split-text', '//pxgcdn.com/js/gsap/2.1.3/plugins/SplitText' . $suffix . '.js', array(), null, true );
-	wp_register_script( 'gsap', '//pxgcdn.com/js/gsap/2.1.3/TweenMax' . $suffix . '.js', array(), null, true );
 	wp_enqueue_script( 'rosa2-app', get_template_directory_uri() . '/dist/js/scripts' . $suffix . '.js', array(
 		'jquery',
-		'gsap',
-		'gsap-split-text',
 		'hoverIntent',
 		'imagesloaded'
 	), $theme->get( 'Version' ), true );

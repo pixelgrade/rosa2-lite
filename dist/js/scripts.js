@@ -550,48 +550,28 @@ function () {
 
 
 
-
 var hero_Hero =
 /*#__PURE__*/
 function () {
   function Hero(element) {
-    var _this = this;
-
     classCallCheck_default()(this, Hero);
 
     this.element = element;
     this.progress = 0;
-    this.timeline = new TimelineMax({
-      paused: true,
-      onComplete: function onComplete() {
-        _this.paused = true;
-      }
-    });
-    this.pieces = this.getMarkupPieces();
     this.paused = false;
     this.offset = 0;
     this.update();
-    this.updateOnScroll();
     this.init();
   }
 
   createClass_default()(Hero, [{
     key: "init",
     value: function init() {
-      var _this2 = this;
+      var _this = this;
 
       globalService.registerOnScroll(function () {
-        _this2.update();
+        _this.update();
       });
-      globalService.registerRender(function () {
-        _this2.updateOnScroll();
-      });
-      this.addIntroToTimeline();
-      this.timeline.addLabel('middle');
-      this.addOutroToTimeline();
-      this.timeline.addLabel('end');
-      this.pauseTimelineOnScroll();
-      this.timeline.play();
     }
   }, {
     key: "update",
@@ -606,298 +586,6 @@ function () {
         width: this.box.width,
         height: this.box.height
       };
-    }
-  }, {
-    key: "updateOnScroll",
-    value: function updateOnScroll() {
-      var _GlobalService$getPro2 = globalService.getProps(),
-          scrollY = _GlobalService$getPro2.scrollY,
-          scrollHeight = _GlobalService$getPro2.scrollHeight,
-          windowHeight = _GlobalService$getPro2.windowHeight; // used to calculate animation progress
-
-
-      var length = windowHeight * 0.5;
-      var middleMin = 0;
-      var middleMax = scrollHeight - windowHeight - length * 0.5;
-      var middle = this.view.y + (this.box.height - windowHeight) * 0.5;
-      var middleMid = Math.max(middleMin, Math.min(middle, middleMax));
-      this.start = middleMid - length * 0.5;
-      this.end = this.start + length;
-      this.progress = (scrollY - this.start) / (this.end - this.start);
-      this.updateTimelineOnScroll();
-    }
-  }, {
-    key: "updateTimelineOnScroll",
-    value: function updateTimelineOnScroll() {
-      if (!this.paused) {
-        return;
-      }
-
-      var currentProgress = this.timeline.progress();
-      var middleTime = this.timeline.getLabelTime('middle');
-      var endTime = this.timeline.getLabelTime('end'); // ( this.progress - 0.5 ) / ( 1 - 0.5 ) = ( newTlProgress - minTlProgress ) / ( 1 - minTlProgress );
-      // ( this.progress - 0.5 ) * 2 * ( 1 - minTlProgress ) = ( newTlProgress - minTlProgress );
-      // newTlProgress = ( this.progress - 0.5 ) * 2 * ( 1 - minTlProgress ) + minTlProgress;
-
-      var minTlProgress = middleTime / endTime;
-      var newTlProgress = (this.progress - 0.5) * 2 * (1 - minTlProgress) + minTlProgress;
-      newTlProgress = Math.min(Math.max(minTlProgress, newTlProgress), 1);
-
-      if (currentProgress === newTlProgress) {
-        return;
-      }
-
-      this.timeline.progress(newTlProgress);
-    }
-  }, {
-    key: "getMarkupPieces",
-    value: function getMarkupPieces() {
-      var container = jQuery(this.element).find('.novablocks-hero__inner-container');
-      var headline = container.children().filter('.c-headline').first();
-      var title = headline.find('.c-headline__primary');
-      var subtitle = headline.find('.c-headline__secondary');
-      var separator = headline.next('.wp-block-separator');
-      var sepFlower = separator.find('.c-separator__symbol');
-      var sepLine = separator.find('.c-separator__line');
-      var sepArrow = separator.find('.c-separator__arrow');
-      var othersBefore = headline.prevAll();
-      var othersAfter = headline.length ? headline.nextAll().not(separator) : container.children();
-      return {
-        headline: headline,
-        title: title,
-        subtitle: subtitle,
-        separator: separator,
-        sepFlower: sepFlower,
-        sepLine: sepLine,
-        sepArrow: sepArrow,
-        othersBefore: othersBefore,
-        othersAfter: othersAfter
-      };
-    }
-  }, {
-    key: "addIntroToTimeline",
-    value: function addIntroToTimeline() {
-      var timeline = this.timeline;
-
-      var _GlobalService$getPro3 = globalService.getProps(),
-          windowWidth = _GlobalService$getPro3.windowWidth;
-
-      var _this$pieces = this.pieces,
-          headline = _this$pieces.headline,
-          title = _this$pieces.title,
-          subtitle = _this$pieces.subtitle,
-          separator = _this$pieces.separator,
-          sepFlower = _this$pieces.sepFlower,
-          sepLine = _this$pieces.sepLine,
-          sepArrow = _this$pieces.sepArrow,
-          othersBefore = _this$pieces.othersBefore,
-          othersAfter = _this$pieces.othersAfter;
-
-      if (title.length && title.text().trim().length) {
-        var splitTitle = new SplitText(title, {
-          wordsClass: 'c-headline__word'
-        });
-        splitTitle.lines.forEach(function (line) {
-          var words = Array.from(line.children);
-          var letters = [];
-          words.forEach(function (word) {
-            letters.push.apply(letters, toConsumableArray_default()(word.children));
-          });
-          letters.forEach(function (letter) {
-            var box = letter.getBoundingClientRect();
-            var width = letter.offsetWidth;
-            var offset = box.x - windowWidth / 2;
-            var offsetPercent = 2 * offset / windowWidth;
-            var move = 400 * letters.length * offsetPercent;
-            timeline.from(letter, 0.72, {
-              x: move,
-              ease: Expo.easeOut
-            }, 0);
-          });
-        });
-        timeline.fromTo(title, 0.89, {
-          opacity: 0
-        }, {
-          opacity: 1,
-          ease: Expo.easeOut
-        }, 0); // aici era title dar facea un glitch ciudat
-
-        timeline.fromTo(headline, 1, {
-          'y': 30
-        }, {
-          'y': 0,
-          ease: Expo.easeOut
-        }, 0);
-      }
-
-      if (subtitle.length) {
-        timeline.fromTo(subtitle, 0.65, {
-          opacity: 0
-        }, {
-          opacity: 1,
-          ease: Quint.easeOut
-        }, '-=0.65');
-        timeline.fromTo(subtitle, 0.9, {
-          y: 30
-        }, {
-          y: 0,
-          ease: Quint.easeOut
-        }, '-=0.65');
-      }
-
-      if (separator.length) {
-        if (sepFlower.length) {
-          timeline.fromTo(sepFlower, 0.15, {
-            opacity: 0
-          }, {
-            opacity: 1,
-            ease: Quint.easeOut
-          }, '-=0.6');
-          timeline.fromTo(sepFlower, 0.55, {
-            rotation: -270
-          }, {
-            rotation: 0,
-            ease: Back.easeOut
-          }, '-=0.5');
-        }
-
-        if (sepLine.length) {
-          timeline.fromTo(sepLine, 0.6, {
-            width: 0
-          }, {
-            width: '42%',
-            opacity: 1,
-            ease: Quint.easeOut
-          }, '-=0.55');
-          timeline.fromTo(separator, 0.6, {
-            width: 0
-          }, {
-            width: '100%',
-            opacity: 1,
-            ease: Quint.easeOut
-          }, '-=0.6');
-        }
-
-        if (sepArrow.length) {
-          timeline.fromTo(sepArrow, 0.2, {
-            opacity: 0
-          }, {
-            opacity: 1,
-            ease: Quint.easeOut
-          }, '-=0.27');
-        }
-      }
-
-      if (othersAfter.length) {
-        timeline.fromTo(othersAfter, 0.5, {
-          opacity: 0
-        }, {
-          opacity: 1,
-          ease: Quint.easeOut
-        }, '-=0.28');
-        timeline.fromTo(othersAfter, 0.75, {
-          y: -20
-        }, {
-          y: 0
-        }, '-=0.5');
-      }
-
-      if (othersBefore.length) {
-        timeline.fromTo(othersBefore, 0.5, {
-          opacity: 0
-        }, {
-          opacity: 1,
-          ease: Quint.easeOut
-        }, '-=0.75');
-        timeline.fromTo(othersBefore, 0.75, {
-          y: 20
-        }, {
-          y: 0
-        }, '-=0.75');
-      }
-
-      this.timeline = timeline;
-    }
-  }, {
-    key: "addOutroToTimeline",
-    value: function addOutroToTimeline() {
-      var _this$pieces2 = this.pieces,
-          title = _this$pieces2.title,
-          subtitle = _this$pieces2.subtitle,
-          othersBefore = _this$pieces2.othersBefore,
-          othersAfter = _this$pieces2.othersAfter,
-          separator = _this$pieces2.separator,
-          sepLine = _this$pieces2.sepLine,
-          sepFlower = _this$pieces2.sepFlower,
-          sepArrow = _this$pieces2.sepArrow;
-      var timeline = this.timeline;
-      timeline.fromTo(title, 1.08, {
-        y: 0
-      }, {
-        opacity: 0,
-        y: -60,
-        ease: Quad.easeIn
-      }, 'middle');
-      timeline.to(subtitle, 1.08, {
-        opacity: 0,
-        y: -90,
-        ease: Quad.easeIn
-      }, 'middle');
-      timeline.to(othersBefore, 1.08, {
-        y: 60,
-        opacity: 0,
-        ease: Quad.easeIn
-      }, 'middle');
-      timeline.to(othersAfter, 1.08, {
-        y: 60,
-        opacity: 0,
-        ease: Quad.easeIn
-      }, 'middle');
-      timeline.to(sepLine, 0.86, {
-        width: '0%',
-        opacity: 0,
-        ease: Quad.easeIn
-      }, '-=0.94');
-      timeline.to(separator, 0.86, {
-        width: '0%',
-        opacity: 0,
-        ease: Quad.easeIn
-      }, '-=0.86');
-      timeline.to(sepFlower, 1, {
-        rotation: 180
-      }, '-=1.08');
-      timeline.to(sepFlower, 0.11, {
-        opacity: 0
-      }, '-=0.03');
-      timeline.to(sepArrow, 0.14, {
-        opacity: 0
-      }, '-=1.08');
-      this.timeline = timeline;
-    }
-  }, {
-    key: "pauseTimelineOnScroll",
-    value: function pauseTimelineOnScroll() {
-      var _this3 = this;
-
-      var middleTime = this.timeline.getLabelTime('middle');
-      var endTime = this.timeline.getLabelTime('end');
-      this.timeline.eventCallback('onUpdate', function (tl) {
-        var time = tl.time(); // calculate the current timeline progress relative to middle and end labels
-        // in such a way that timelineProgress is 0.5 for middle and 1 for end
-        // because we don't want the animation to be stopped before the middle label
-
-        var tlProgress = (time - middleTime) / (endTime - middleTime);
-        var pastMiddle = time > middleTime;
-        var pastScroll = tlProgress * 0.5 + 0.5 >= _this3.progress;
-
-        if (pastMiddle && pastScroll) {
-          tl.pause();
-
-          _this3.timeline.eventCallback('onUpdate', null);
-
-          _this3.paused = true;
-        }
-      }, ["{self}"]);
     }
   }]);
 
@@ -1003,11 +691,9 @@ function () {
   createClass_default()(Header, [{
     key: "initialize",
     value: function initialize() {
-      this.timeline = this.getInroTimeline();
       external_jQuery_default()('.site-header__wrapper').css('transition', 'none');
       this.$header.addClass('site-header--fixed site-header--ready');
       this.$mobileHeader.addClass('site-header--fixed site-header--ready');
-      this.timeline.play();
     }
   }, {
     key: "update",
@@ -1015,33 +701,6 @@ function () {
       this.updatePageOffset();
       this.updateHeaderOffset();
       this.updateMobileHeaderOffset();
-    }
-  }, {
-    key: "getInroTimeline",
-    value: function getInroTimeline() {
-      var element = this.element;
-      var timeline = new TimelineMax({
-        paused: true
-      });
-      var height = external_jQuery_default()(element).outerHeight();
-      var transitionEasing = Power4.easeOut;
-      var transitionDuration = 0.5;
-      timeline.to(element, transitionDuration, {
-        opacity: 1,
-        ease: transitionEasing
-      }, 0);
-      timeline.to({
-        height: 0
-      }, transitionDuration, {
-        height: height,
-        onUpdate: this.onHeightUpdate.bind(this),
-        onUpdateParams: ["{self}"],
-        onComplete: function onComplete() {
-          external_jQuery_default()('.site-header__wrapper').css('transition', '');
-        },
-        ease: transitionEasing
-      }, 0);
-      return timeline;
     }
   }, {
     key: "onHeightUpdate",

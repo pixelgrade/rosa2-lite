@@ -35,40 +35,17 @@ class Header {
 	}
 
 	initialize() {
-		this.timeline = this.getInroTimeline();
 
 		$( '.site-header__wrapper' ).css( 'transition', 'none' );
 
 		this.$header.addClass( 'site-header--fixed site-header--ready' );
 		this.$mobileHeader.addClass( 'site-header--fixed site-header--ready' );
-
-		this.timeline.play();
 	}
 
 	update() {
 		this.updatePageOffset();
 		this.updateHeaderOffset();
 		this.updateMobileHeaderOffset();
-	}
-
-	getInroTimeline() {
-		const element = this.element;
-		const timeline = new TimelineMax( { paused: true } );
-		const height = $( element ).outerHeight();
-		const transitionEasing = Power4.easeOut;
-		const transitionDuration = 0.5;
-		timeline.to( element, transitionDuration, { opacity: 1, ease: transitionEasing }, 0 );
-		timeline.to( { height: 0 }, transitionDuration, {
-			height: height,
-			onUpdate: this.onHeightUpdate.bind( this ),
-			onUpdateParams: ["{self}"],
-			onComplete: () => {
-				$( '.site-header__wrapper' ).css( 'transition', '' );
-			},
-			ease: transitionEasing
-		}, 0 );
-
-		return timeline;
 	}
 
 	onHeightUpdate( tween ) {

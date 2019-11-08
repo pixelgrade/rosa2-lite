@@ -3,7 +3,7 @@
     > .c-headline {
         .c-headline__primary,
         .c-headline__secondary {
-            opacity: 0;
+            opacity: 1;
         }
     }
 
@@ -15,7 +15,7 @@
     }
 
     > :not(.c-headline) {
-        opacity: 0;
+        opacity: 1;
     }
 
     .c-separator__symbol {
