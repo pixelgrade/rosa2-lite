@@ -4562,6 +4562,12 @@ body.archive, body.blog, body.search {
   width: 100%;
   margin-top: var(--theme-spacing-small); }
 
+.post-nav-links {
+  max-width: var(--theme-content-width-normal);
+  margin-right: auto;
+  margin-left: auto;
+  clear: both; }
+
 .error404 .content-area,
 .search-no-results .content-area {
   height: 100%;

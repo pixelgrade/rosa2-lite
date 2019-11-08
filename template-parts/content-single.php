@@ -40,4 +40,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php the_content(); ?>
     </div>
 
+    <?php wp_link_pages(); ?>
+
 </article><!-- #post-<?php the_ID(); ?> -->
