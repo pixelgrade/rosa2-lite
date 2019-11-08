@@ -1242,8 +1242,6 @@ function () {
       var mq = window.matchMedia("only screen and (min-width: 1000px)"); // we are on desktop
 
       if (mq.matches) {
-        this.addSubMenusLeftClass();
-
         if (this.initialized && !this.desktop) {
           this.unbindClick();
         }
@@ -1256,8 +1254,6 @@ function () {
         return;
       }
 
-      this.removeSubMenusLeftClass();
-
       if (this.initialized && this.desktop) {
         this.unbindHoverIntent();
       }
@@ -1268,29 +1264,6 @@ function () {
 
       this.desktop = false;
       return;
-    }
-  }, {
-    key: "addSubMenusLeftClass",
-    value: function addSubMenusLeftClass() {
-      var _GlobalService$getPro = globalService.getProps(),
-          windowWidth = _GlobalService$getPro.windowWidth;
-
-      this.$menuItemsWithChildren.each(function (index, obj) {
-        var $obj = external_jQuery_default()(obj);
-        var $subMenu = $obj.children(SUBMENU),
-            subMenuWidth = $subMenu.outerWidth(),
-            subMenuOffSet = $subMenu.offset(),
-            availableSpace = windowWidth - subMenuOffSet.left;
-
-        if (availableSpace < subMenuWidth) {
-          $obj.addClass(SUBMENU_LEFT_CLASS);
-        }
-      });
-    }
-  }, {
-    key: "removeSubMenusLeftClass",
-    value: function removeSubMenusLeftClass() {
-      this.$menuItemsWithChildren.removeClass(SUBMENU_LEFT_CLASS);
     }
   }, {
     key: "onClickMobile",

@@ -29,7 +29,6 @@ export default class Navbar {
 
 		// we are on desktop
 		if ( mq.matches ) {
-			this.addSubMenusLeftClass();
 
 			if ( this.initialized && ! this.desktop ) {
 				this.unbindClick();
@@ -43,8 +42,6 @@ export default class Navbar {
 			return;
 		}
 
-		this.removeSubMenusLeftClass();
-
 		if ( this.initialized && this.desktop ) {
 			this.unbindHoverIntent();
 		}
@@ -55,26 +52,6 @@ export default class Navbar {
 
 		this.desktop = false;
 		return;
-	}
-
-	addSubMenusLeftClass() {
-		const { windowWidth } = GlobalService.getProps();
-
-		this.$menuItemsWithChildren.each( function( index, obj ) {
-			const $obj = $( obj );
-			const $subMenu = $obj.children( SUBMENU ),
-				subMenuWidth = $subMenu.outerWidth(),
-				subMenuOffSet = $subMenu.offset(),
-				availableSpace = windowWidth - subMenuOffSet.left;
-
-			if ( availableSpace < subMenuWidth ) {
-				$obj.addClass( SUBMENU_LEFT_CLASS );
-			}
-		} )
-	}
-
-	removeSubMenusLeftClass() {
-		this.$menuItemsWithChildren.removeClass( SUBMENU_LEFT_CLASS );
 	}
 
 	onClickMobile( event ) {
