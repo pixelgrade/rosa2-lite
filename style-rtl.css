@@ -4229,12 +4229,12 @@ span.page-numbers {
   --current-color-primary: var(--sm-color-primary);
   --current-color-secondary: var(--sm-color-secondary);
   --current-color-tertiary: var(--sm-color-tertiary);
-  --current-dark-primary: var(--sm-light-secondary);
+  --current-dark-primary: var(--sm-light-primary);
   --current-dark-secondary: var(--sm-light-primary);
-  --current-dark-tertiary: var(--sm-light-tertiary);
+  --current-dark-tertiary: var(--sm-light-primary);
   --current-light-primary: var(--sm-dark-primary);
-  --current-light-secondary: var(--sm-dark-secondary);
-  --current-light-tertiary: var(--sm-dark-tertiary); }
+  --current-light-secondary: var(--sm-dark-primary);
+  --current-light-tertiary: var(--sm-dark-primary); }
 
 [class*="novablocks-u-content"] {
   z-index: 10; }

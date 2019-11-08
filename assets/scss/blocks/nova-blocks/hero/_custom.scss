@@ -53,7 +53,7 @@
 }
 
 .novablocks-u-background-dark {
-    @include variation(dark);
+    @include variation(dark-contrast);
 }
 
 [class*="novablocks-u-content"] {

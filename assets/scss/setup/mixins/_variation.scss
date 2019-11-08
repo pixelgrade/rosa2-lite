@@ -52,6 +52,23 @@ $variations: (
         light-secondary: dark-secondary,
         light-tertiary: dark-primary,
     ),
+
+    // We need this on hero,
+    // where we need white, not gray
+    dark-contrast: (
+        // color
+      color-primary: color-primary,
+      color-secondary: color-secondary,
+      color-tertiary: color-tertiary,
+        // dark
+      dark-primary: light-primary,
+      dark-secondary: light-primary,
+      dark-tertiary: light-primary,
+        // light
+      light-primary: dark-primary,
+      light-secondary: dark-primary,
+      light-tertiary: dark-primary,
+    ),
     accent: (
         // color
         color-primary: dark-primary,
