@@ -43,4 +43,4 @@ The Rosa2 Lite Theme bundles the following third-party resources:
 * normalize.css https://necolas.github.io/normalize.css/, (c) 2012-2016 Nicolas Gallagher and Jonathan Neal, licensed under the [MIT License](https://opensource.org/licenses/mit-license.html)
 * rellax.js https://pixelgrade.github.io/rellax/, Copyright (c) 2016-2019 Pixelgrade, License: the [MIT License](https://opensource.org/licenses/mit-license.html)
 
-* Images: screenshot image from PxHere - [Source](https://pxhere.com/en/photo/1398176) licensed under CC0 Public Domain.
+* Images: screenshot image from PxHere - [Source](https://pxhere.com/en/photo/1420053) licensed under CC0 Public Domain.
