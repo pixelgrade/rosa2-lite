@@ -2,7 +2,7 @@ var gulp = require( 'gulp' ),
 	plugins = require( 'gulp-load-plugins')(),
 	fs = require( 'fs' ),
 	del = require( 'del' ),
-	theme = 'rosa-2-lite';
+	theme = 'rosa2-lite';
 
 // -----------------------------------------------------------------------------
 // Copy plugin folder outside in a build folder

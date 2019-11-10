@@ -1,7 +1,7 @@
 var gulp = require( 'gulp' ),
 	fs = require( 'fs' ),
 	plugins = require( 'gulp-load-plugins')(),
-	theme = 'rosa-2-lite';
+	theme = 'rosa2-lite';
 
 // -----------------------------------------------------------------------------
 // Create the theme installer archive and delete the build folder
@@ -29,7 +29,7 @@ function makeZip() {
 	versionString = '-' + versionString.replace(/\./g, '-');
 
 	return gulp.src('./')
-	           .pipe( plugins.exec('cd ./../; rm -rf ' + theme[0].toUpperCase() + theme.slice(1) + '*.zip; cd ./build/; zip -r -X ./../' + theme[0].toUpperCase() + theme.slice(1) + versionString + '.zip ./; cd ./../; rm -rf build'));
+	           .pipe( plugins.exec('cd ./../; rm -rf ' + theme + '*.zip; cd ./build/; zip -r -X ./../' + theme + versionString + '.zip ./; cd ./../; rm -rf build'));
 }
 makeZip.description = 'Create the theme installer archive and delete the build folder';
 gulp.task( 'build:zip', makeZip );

@@ -1,4 +1,4 @@
-Theme Name: Rosa 2 Lite
+Theme Name: Rosa2 Lite
 Theme URI: https://github.com/pixelgrade/rosa2-lite
 Author: Pixelgrade
 Author URI: https://pixelgrade.com/
@@ -17,7 +17,7 @@ Tested up to: 5.3.0
 
 == Description ==
 
-Rosa 2 Lite is the free version of Rosa 2, the #1 best selling restaurant WordPress theme, built to help small businesses shape an appealing online experience.
+Rosa2 Lite is the free version of Rosa 2, the #1 best selling restaurant WordPress theme, built to help small businesses shape an appealing online experience.
 It's packed with a parallax effect to grab attention, an online food menu so people can discover your offering, an easy to customize interface without using code, and a responsive design to address people on the go.
 This theme's versatility allows it to be used in a wide range of industries, making it the perfect theme if you own a business.
 No matter if it's a restaurant, beauty salon, house rental, hotel, coffee shop, or any other type of small business, this theme will fit your needs perfectly.
