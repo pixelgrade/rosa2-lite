@@ -107,7 +107,6 @@ function rosa2_lite_deregister_gutenberg_styles() {
 	wp_deregister_style( 'wp-block-library-theme' );
 	wp_register_style( 'wp-block-library-theme', '' );
 }
-
 add_action( 'enqueue_block_assets', 'rosa2_lite_deregister_gutenberg_styles', 10 );
 
 function rosa2_lite_enqueue_theme_block_editor_assets() {
@@ -117,8 +116,8 @@ function rosa2_lite_enqueue_theme_block_editor_assets() {
 	/* Default Google Fonts */
 	wp_enqueue_style( 'rosa2-lite-google-fonts', rosa2_lite_google_fonts_url() );
 
-	wp_enqueue_style( 'rosa2-block-styles', get_template_directory_uri() . '/editor.css', array(), $theme->get( 'Version' ) );
-	wp_enqueue_style( 'rosa2-theme-styles', get_template_directory_uri() . '/dist/js/editor.blocks.css', array(), $theme->get( 'Version' ) );
+	wp_enqueue_style( 'rosa2-theme-styles', get_template_directory_uri() . '/editor.css', array(), $theme->get( 'Version' ) );
+	wp_enqueue_style( 'rosa2-block-styles', get_template_directory_uri() . '/dist/js/editor.blocks.css', array( 'rosa2-theme-styles' ), $theme->get( 'Version' ) );
 
 	wp_enqueue_script(
 		'rosa2-editor-js',
@@ -128,7 +127,6 @@ function rosa2_lite_enqueue_theme_block_editor_assets() {
 		true
 	);
 }
-
 add_action( 'enqueue_block_editor_assets', 'rosa2_lite_enqueue_theme_block_editor_assets', 10 );
 
 function rosa2_lite_scripts() {
@@ -141,7 +139,7 @@ function rosa2_lite_scripts() {
 	wp_enqueue_style( 'rosa2-style', get_template_directory_uri() . '/style.css', array(), $theme->get( 'Version' ) );
 	wp_style_add_data( 'rosa2-style', 'rtl', 'replace' );
 
-	wp_enqueue_style( 'rosa2-blocks-styles', get_template_directory_uri() . '/dist/js/editor.blocks.css', array(), $theme->get( 'Version' ) );
+	wp_enqueue_style( 'rosa2-blocks-styles', get_template_directory_uri() . '/dist/js/editor.blocks.css', array( 'rosa2-style' ), $theme->get( 'Version' ) );
 
 	wp_enqueue_script( 'rosa2-app', get_template_directory_uri() . '/dist/js/scripts' . $suffix . '.js', array(
 		'jquery',
@@ -153,9 +151,11 @@ function rosa2_lite_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-
 add_action( 'wp_enqueue_scripts', 'rosa2_lite_scripts', 10 );
 
+/**
+ * Print inline scripts to handle the loaded classes on body.
+ */
 function rosa2_lite_print_scripts() {
 	ob_start(); ?>
     <script>
@@ -170,7 +170,6 @@ function rosa2_lite_print_scripts() {
 
 	<?php echo ob_get_clean();
 }
-
 add_action( 'wp_print_scripts', 'rosa2_lite_print_scripts', 10 );
 
 /**

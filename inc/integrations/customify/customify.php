@@ -18,7 +18,6 @@ define( 'ROSA2_LITE_THEME_LIGHT_PRIMARY',    '#FFFFFF' );    // white
 define( 'ROSA2_LITE_THEME_LIGHT_SECONDARY',  '#CCCCCC' );    // gray
 define( 'ROSA2_LITE_THEME_LIGHT_TERTIARY',   '#EEEFF2' );    // light gray
 
-require_once __DIR__ . '/extras.php';
 require_once __DIR__ . '/colors.php';
 require_once __DIR__ . '/fonts.php';
 require_once __DIR__ . '/connected-fields.php';
