@@ -99,6 +99,10 @@
     .entry-thumbnail__container {
         background-color: var(--current-light-secondary);
     }
+
+    &[class*="full-width"] {
+        --theme-content-width-normal: var(--theme-content-width-wide);
+    }
 }
 
 .post-password-form {
