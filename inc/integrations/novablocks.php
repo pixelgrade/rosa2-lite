@@ -10,10 +10,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! function_exists( 'rosa2_lite_novablocks_setup' ) ) {
 	function rosa2_lite_novablocks_setup() {
-		add_theme_support( 'novablocks-headline' );
-		add_theme_support( 'novablocks-menu-food' );
-		add_theme_support( 'novablocks-hero' );
-		add_theme_support( 'novablocks-media' );
+		add_theme_support( 'novablocks', array(
+			'headline',
+			'menu-food',
+			'hero',
+			'media',
+		) );
 	}
 }
 add_action( 'after_setup_theme', 'rosa2_lite_novablocks_setup', 10 );
