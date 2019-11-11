@@ -4595,6 +4595,10 @@ body.archive, body.blog, body.search {
 .page .entry-thumbnail__container {
   background-color: var(--current-light-secondary); }
 
+.single[class*="full-width"],
+.page[class*="full-width"] {
+  --theme-content-width-normal: var(--theme-content-width-wide); }
+
 .post-password-form input[type="submit"] {
   width: 100%;
   margin-top: var(--theme-spacing-small); }
