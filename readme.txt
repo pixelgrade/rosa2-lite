@@ -42,5 +42,12 @@ The Rosa2 Lite Theme bundles the following third-party resources:
 
 == Changelog ==
 
+= 1.0.1 =
+* Fixed container width in Gutenberg Editor.
+* Improved styling for Social Links block.
+* Improved styling for Buttons block.
+* Fixed highlighted food menu item styling.
+* Fixed comments toggle button.
+
 = 1.0.0 =
 * Initial release
