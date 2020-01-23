@@ -28,14 +28,10 @@ export default class CommentsArea {
 		if ( instant ) {
 			$contentWrap.css( 'height', newHeight );
 		} else {
-			TweenMax.to( $contentWrap, .4, {
-				height: newHeight,
-				onComplete: function() {
-					if ( isChecked ) {
-						$contentWrap.css( 'height', '' );
-					}
-				}
-			} );
+			$contentWrap.css( 'height', newHeight );
+			if ( isChecked ) {
+				$contentWrap.css( 'height', '' );
+			}
 		}
 	}
 

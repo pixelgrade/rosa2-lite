@@ -1500,11 +1500,7 @@
   .editor-styles-wrapper .nova-food-menu__section:not(:first-child) {
     margin-top: var(--theme-spacing-small); }
   .editor-styles-wrapper .nova-food-menu-item--highlighted {
-    border-color: var(--theme-dark-primary);
-    border-top: 0;
-    margin-left: calc(var(--menu-offset) * -1);
-    margin-right: calc(var(--menu-offset) * -1);
-    padding: 0 var(--menu-offset) 14px; }
+    border-color: var(--theme-dark-primary); }
   .editor-styles-wrapper .nova-food-menu-item__highlight-label {
     background-color: var(--theme-dark-primary); }
   .editor-styles-wrapper .nova-food-menu-item__title {

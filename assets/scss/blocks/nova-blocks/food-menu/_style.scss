@@ -13,12 +13,6 @@
 
 .nova-food-menu-item--highlighted {
   border-color: var(--theme-dark-primary);
-  border-top: 0;
-
-  margin-left: calc(var(--menu-offset) * -1);
-  margin-right: calc(var(--menu-offset) * -1);
-
-  padding: 0 var(--menu-offset) 14px;
 }
 
 .nova-food-menu-item__highlight-label {
