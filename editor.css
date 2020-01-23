@@ -766,6 +766,28 @@
       --current-button-transition: var(--theme-button-hover-transition); }
     .editor-styles-wrapper .wp-block-button__link:not(.has-text-color) {
       color: var(--current-button-text-color); }
+  .editor-styles-wrapper .wp-block-buttons[class] {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: calc(var(--theme-spacing) * -1); }
+    .editor-styles-wrapper .wp-block-buttons[class] .block-editor-block-list__layout {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap; }
+      .editor-styles-wrapper .wp-block-buttons[class] .block-editor-block-list__layout * {
+        margin-left: 0;
+        margin-right: 0; }
+    .editor-styles-wrapper .wp-block-buttons[class] .wp-block,
+    .editor-styles-wrapper .wp-block-buttons[class] .wp-block-button {
+      display: flex;
+      margin-left: var(--theme-spacing); }
+    .editor-styles-wrapper .wp-block-buttons[class].aligncenter {
+      justify-content: center; }
+    .editor-styles-wrapper .wp-block-buttons[class].alignleft {
+      justify-content: flex-start; }
+    .editor-styles-wrapper .wp-block-buttons[class].alignright {
+      justify-content: flex-end; }
   .editor-styles-wrapper ul.wp-block-categories__list[class] {
     list-style: none;
     padding-left: 0; }

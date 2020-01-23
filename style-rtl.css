@@ -3573,6 +3573,29 @@ span.page-numbers {
   .wp-block-button__link:not(.has-text-color) {
     color: var(--current-button-text-color); }
 
+.wp-block-buttons[class] {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-right: calc(var(--theme-spacing) * -1); }
+  .wp-block-buttons[class] .block-editor-block-list__layout {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; }
+    .wp-block-buttons[class] .block-editor-block-list__layout * {
+      margin-right: 0;
+      margin-left: 0; }
+  .wp-block-buttons[class] .wp-block,
+  .wp-block-buttons[class] .wp-block-button {
+    display: flex;
+    margin-right: var(--theme-spacing); }
+  .wp-block-buttons[class].aligncenter {
+    justify-content: center; }
+  .wp-block-buttons[class].alignleft {
+    justify-content: flex-start; }
+  .wp-block-buttons[class].alignright {
+    justify-content: flex-end; }
+
 /* Categories Block */
 .wp-block-categories {
   list-style: none; }
@@ -4544,17 +4567,6 @@ span.page-numbers {
     color: var(--theme-dark-primary); }
   .has-moderate-media-card-after-hero .novablocks-hero__indicator {
     color: var(--theme-light-tertiary); }
-
-.novablocks-u-background-dark {
-  --current-color-primary: var(--sm-color-primary);
-  --current-color-secondary: var(--sm-color-secondary);
-  --current-color-tertiary: var(--sm-color-tertiary);
-  --current-dark-primary: var(--sm-light-primary);
-  --current-dark-secondary: var(--sm-light-primary);
-  --current-dark-tertiary: var(--sm-light-primary);
-  --current-light-primary: var(--sm-dark-primary);
-  --current-light-secondary: var(--sm-dark-primary);
-  --current-light-tertiary: var(--sm-dark-primary); }
 
 [class*="novablocks-u-content"] {
   z-index: 10; }

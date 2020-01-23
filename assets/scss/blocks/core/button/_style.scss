@@ -36,4 +36,41 @@ $enable-button-block-styles:            true !default;
             @include button-color;
         }
     }
+
+    .wp-block-buttons[class] {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        margin-left: calc(var(--theme-spacing) * -1);
+
+        .block-editor-block-list__layout {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            * {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+
+        .wp-block,
+        .wp-block-button {
+            display: flex;
+            margin-left: var(--theme-spacing);
+        }
+
+        &.aligncenter {
+            justify-content: center;
+        }
+
+        &.alignleft {
+            justify-content: flex-start;
+        }
+
+        &.alignright {
+            justify-content: flex-end;
+        }
+    }
 }

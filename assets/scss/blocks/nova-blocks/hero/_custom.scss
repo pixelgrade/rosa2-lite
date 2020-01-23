@@ -52,10 +52,6 @@
     }
 }
 
-.novablocks-u-background-dark {
-    @include variation(dark-contrast);
-}
-
 [class*="novablocks-u-content"] {
     z-index: 10;
 }
