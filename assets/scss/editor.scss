@@ -11,7 +11,8 @@
 @import "theme/editor";
 
 /* Layout */
-.editor-block-list__layout {
+.editor-block-list__layout,
+.block-editor-block-list__layout {
 
     > :not([data-align="wide"]):not([data-align="full"]) {
         max-width: var(--theme-content-width-normal);
