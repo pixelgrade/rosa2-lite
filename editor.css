@@ -1506,12 +1506,7 @@
     margin-right: calc(var(--menu-offset) * -1);
     padding: 0 var(--menu-offset) 14px; }
   .editor-styles-wrapper .nova-food-menu-item__highlight-label {
-    background-color: var(--theme-dark-primary);
-    padding: var(--theme-spacing-micro) 18px;
-    margin-left: calc(var(--menu-offset) * -1);
-    margin-right: calc(var(--menu-offset) * -1);
-    margin-bottom: 14px;
-    width: calc(100% + calc(var(--menu-ofset) * 2)); }
+    background-color: var(--theme-dark-primary); }
   .editor-styles-wrapper .nova-food-menu-item__title {
     --theme-heading-5-font-weight: 700; }
     .editor-styles-wrapper .nova-food-menu-item__title .item-title {
@@ -1701,18 +1696,8 @@
     margin-top: 0;
     -webkit-transform: none;
     transform: none; }
-  .editor-styles-wrapper .novablocks-u-background-dark {
-    --current-color-primary: var(--sm-color-primary);
-    --current-color-secondary: var(--sm-color-secondary);
-    --current-color-tertiary: var(--sm-color-tertiary);
-    --current-dark-primary: var(--sm-light-secondary);
-    --current-dark-secondary: var(--sm-light-primary);
-    --current-dark-tertiary: var(--sm-light-tertiary);
-    --current-light-primary: var(--sm-dark-primary);
-    --current-light-secondary: var(--sm-dark-secondary);
-    --current-light-tertiary: var(--sm-dark-tertiary); }
-    .editor-styles-wrapper .novablocks-u-background-dark .novablocks-hero__indicator:after {
-      color: var(--theme-sm-light-1); }
+  .editor-styles-wrapper .novablocks-u-background-dark .novablocks-hero__indicator:after {
+    color: var(--theme-sm-light-1); }
   .editor-styles-wrapper .wp-block-quote,
   .editor-styles-wrapper .wp-block-pullquote {
     font-family: var(--current-font-family);

@@ -23,14 +23,6 @@
 
 .nova-food-menu-item__highlight-label {
   background-color: var(--theme-dark-primary);
-
-  padding: var(--theme-spacing-micro) 18px;
-
-  margin-left: calc(var(--menu-offset) * -1);
-  margin-right: calc(var(--menu-offset) * -1);
-  margin-bottom: 14px;
-
-  width: calc(100% + calc(var(--menu-ofset) * 2));
 }
 
 .nova-food-menu-item__title {
