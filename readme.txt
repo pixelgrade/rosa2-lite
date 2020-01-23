@@ -4,8 +4,8 @@ Author: Pixelgrade
 Author URI: https://pixelgrade.com/
 Contributors: pixelgrade, babbardel, vlad.olaru, razvanonofrei, gorby31
 Description: This is the free version of Rosa 2, the #1 best selling restaurant WordPress theme, built to help small businesses shape an appealing online experience. It's packed with a parallax effect to grab attention, an online food menu so people can discover your offering, an easy to customize interface without using code, and a responsive design to address people on the go. This theme's versatility allows it to be used in a wide range of industries, making it the perfect theme if you own a business. No matter if it's a restaurant, beauty salon, house rental, hotel, coffee shop, or any other type of small business, this theme will fit your needs perfectly. With the Style Manager system you can customize your site's overall color palettes choosing from a set of predefined, carefully crafted palettes. If in need of help, jump right in the Theme Help section provided via the Pixelgrade Assistant plugin and search the documentation or open a support ticket.
-Version: 1.1.0
-Stable tag: 1.1.0
+Version: 1.1.1
+Stable tag: 1.1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: rosa2-lite
@@ -41,6 +41,9 @@ The Rosa2 Lite Theme bundles the following third-party resources:
 * Images: screenshot image from PxHere - [Source](https://pxhere.com/en/photo/1420053) licensed under CC0 Public Domain.
 
 == Changelog ==
+
+= 1.1.1 =
+* Updated up-selling texts.
 
 = 1.1.0 =
 * Fixed container width in Gutenberg Editor.

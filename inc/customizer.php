@@ -76,7 +76,7 @@ function rosa2_lite_customize_register( $wp_customize ) {
 		/* translators: %s: The view pro link. */
 			__( '<div class="upsell-container">
 					<h2>Need More? Go PRO</h2>
-					<p>Take it to the next level and stand out. See the hotspots of Rosa2 PRO:</p>
+					<p>Take it to the next level and stand out. See the hotspots of Rosa 2 PRO:</p>
 					<ul class="upsell-features">
                             <li>
                             	<h4>Personalize to Match Your Branding</h4>
@@ -85,12 +85,12 @@ function rosa2_lite_customize_register( $wp_customize ) {
 
                             <li>
                             	<h4>More Parallax Areas with Slideshow and Video</h4>
-                            	<div class="description">With Rosa PRO, you\'ll be able to add multiple parallax areas on the same page. You\'ll also be able to add a slideshow of images to each parallax section or a background video showcasing your location, behind the scenes action or promote special events. The sky\'s the limit.</div>
+                            	<div class="description">With Rosa 2 PRO, you\'ll be able to add multiple parallax areas on the same page. You\'ll also be able to add a slideshow of images to each parallax section or a background video showcasing your location, behind the scenes action or promote special events. The sky\'s the limit.</div>
                             </li>
 
                             <li>
                             	<h4>Support for Online Ordering & Other Advanced Features</h4>
-                            	<div class="description">Rosa PRO is fully integrated with the famous WooCommerce plugin and the UpMenu online ordering plugin so you can enable food delivery in an instant. People will be able to order food right from your website with a few clicks. You\'ll also get additional options for your Food Menu (prices, categories), a Location Map for easy discovery, more Widget Areas for extra flexibility, and many others.</div>
+                            	<div class="description">Rosa 2 PRO is fully integrated with the famous WooCommerce plugin and the UpMenu online ordering plugin so you can enable food delivery in an instant. People will be able to order food right from your website with a few clicks. You\'ll also get additional options for your Food Menu (prices, categories), a Location Map for easy discovery, more Widget Areas for extra flexibility, and many others.</div>
                             </li>
                               <li>
                             	<h4>Premium Customer Support</h4>
@@ -99,7 +99,7 @@ function rosa2_lite_customize_register( $wp_customize ) {
 
                     </ul> %s </div>', '__theme_txtd' ),
 			/* translators: %1$s: The view pro URL, %2$s: The view pro link text. */
-			sprintf( '<a href="%1$s" target="_blank" class="button button-primary">%2$s</a>', esc_url( rosa2_lite_get_pro_link() ), esc_html__( 'Get Rosa2 PRO', '__theme_txtd' ) )
+			sprintf( '<a href="%1$s" target="_blank" class="button button-primary">%2$s</a>', esc_url( rosa2_lite_get_pro_link() ), esc_html__( 'Get Rosa 2 PRO', '__theme_txtd' ) )
 		),
 	) );
 
@@ -185,7 +185,7 @@ function rosa2_lite_customizer_partial_transparent_logo() {
  * Generate a link to the Rosa Lite info page.
  */
 function rosa2_lite_get_pro_link() {
-	return 'https://pixelgrade.com/themes/portfolio/rosa-pro/?utm_source=rosa-lite-clients&utm_medium=customizer&utm_campaign=rosa-lite';
+	return 'https://pixelgrade.com/themes/rosa2-pro/?utm_source=rosa2-lite-clients&utm_medium=customizer&utm_campaign=rosa2-lite';
 }
 
 /**
