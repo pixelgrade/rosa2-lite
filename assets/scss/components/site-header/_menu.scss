@@ -234,6 +234,7 @@ ul.menu,
   ul.menu,
   .menu > ul {
     a {
+      position: relative;
       display: block;
       padding: .75em 0;
       color: inherit;

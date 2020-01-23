@@ -1614,6 +1614,7 @@ ul.menu,
 
 .site-header ul.menu a,
 .site-header .menu > ul a {
+  position: relative;
   display: block;
   padding: .75em 0;
   color: inherit;
