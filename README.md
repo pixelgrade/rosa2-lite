@@ -3,7 +3,7 @@
 
 [View Demo](https://demos.pixelgrade.com/rosa2-lite/)
 
-![nova_theme_github](https://user-images.githubusercontent.com/46342490/62714232-d3f30500-ba06-11e9-8f75-cfdfe0034823.png)
+![rosa2_lite_github](https://user-images.githubusercontent.com/46342490/73247615-f4cc3400-41b9-11ea-9b5e-2a310242fc90.jpg)
 
 [![](https://img.shields.io/github/issues-closed/pixelgrade/rosa2-lite.svg?color=6cc644&label=Issues)](https://github.com/pixelgrade/rosa2-lite/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed+) [![](https://img.shields.io/github/issues/pixelgrade/rosa2-lite.svg?color=4078c0&label=%20)](https://github.com/pixelgrade/rosa2-lite/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen)
 
