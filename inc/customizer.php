@@ -80,21 +80,22 @@ function rosa2_lite_customize_register( $wp_customize ) {
 					<ul class="upsell-features">
                             <li>
                             	<h4>Personalize to Match Your Branding</h4>
-                            	<div class="description">Showcase your restaurant\'s brand in an easy and smart way by using Style Manager. This intuitive interface allows you to change color palettes and fonts with a few clicks until they fully represent your business.</div>
+                            	<div class="description">Showcase your brand in an easy and smart way by using Style Manager, an intuitive interface that allows you to change color and font palettes and with a few clicks until they fully represent your business.</div>
+                            </li>
+                            
+                            <li>
+                            	<h4>New Doppler Scrolling Effect</h4>
+                            	<div class="description">With Rosa 2 PRO you can impress the site visitors with full-bleed images or videos. The new Doppler effect works perfectly with portrait images and lets you highlight the parts you find most relevant for your visitors.</div>
+                            </li>
+                            
+                            <li>
+                            	<h4>Sell Online, Manage Bookings, and More</h4>
+                            	<div class="description">Rosa 2 PRO is fully integrated with the famous WooCommerce plugin so you can enable food delivery in an instant. Plus, people will be able to book a table online with a few clicks. You’ll also get a Location Map for easy discovery, custom Header and Footer, an Announcement Bar for sitewide notifications, and many other features.</div>
                             </li>
 
-                            <li>
-                            	<h4>More Parallax Areas with Slideshow and Video</h4>
-                            	<div class="description">With Rosa 2 PRO, you\'ll be able to add multiple parallax areas on the same page. You\'ll also be able to add a slideshow of images to each parallax section or a background video showcasing your location, behind the scenes action or promote special events. The sky\'s the limit.</div>
-                            </li>
-
-                            <li>
-                            	<h4>Support for Online Ordering & Other Advanced Features</h4>
-                            	<div class="description">Rosa 2 PRO is fully integrated with the famous WooCommerce plugin and the UpMenu online ordering plugin so you can enable food delivery in an instant. People will be able to order food right from your website with a few clicks. You\'ll also get additional options for your Food Menu (prices, categories), a Location Map for easy discovery, more Widget Areas for extra flexibility, and many others.</div>
-                            </li>
                               <li>
                             	<h4>Premium Customer Support</h4>
-                            	<div class="description">You will benefit by priority support from a caring and devoted team, eager to help and to spread happiness. We work hard to provide a flawless experience for those who vote us with trust and choose to be our awesome client.</div>
+                            	<div class="description">You will benefit by priority support from a caring and devoted team, eager to help and spread happiness. We work hard to provide a flawless experience for those who vote for us with trust and choose to be our special clients.</div>
                             </li>
 
                     </ul> %s </div>', '__theme_txtd' ),
@@ -185,7 +186,7 @@ function rosa2_lite_customizer_partial_transparent_logo() {
  * Generate a link to the Rosa Lite info page.
  */
 function rosa2_lite_get_pro_link() {
-	return 'https://pixelgrade.com/themes/rosa2-pro/?utm_source=rosa2-lite-clients&utm_medium=customizer&utm_campaign=rosa2-lite';
+	return 'https://pixelgrade.com/themes/restaurants/rosa2-pro?utm_source=rosa2-lite-clients&utm_medium=customizer&utm_campaign=rosa2-lite';
 }
 
 /**
