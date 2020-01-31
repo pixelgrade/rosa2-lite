@@ -1132,7 +1132,6 @@ function () {
 
 function scripts_initialize() {
   new app_App();
-  console.log('init');
 }
 
 external_jQuery_default()(function () {
