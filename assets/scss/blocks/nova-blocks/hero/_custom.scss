@@ -41,6 +41,8 @@
     height: 50px;
     color: var(--theme-light-primary);
 
+    transform: translate(-50%);
+
     z-index: 1;
 
     &:after {

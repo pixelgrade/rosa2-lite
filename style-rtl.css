@@ -4562,6 +4562,7 @@ span.page-numbers {
   width: 160px;
   height: 50px;
   color: var(--theme-light-primary);
+  transform: translate(50%);
   z-index: 1; }
   .novablocks-hero__indicator:after {
     color: var(--theme-dark-primary); }
