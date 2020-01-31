@@ -2413,6 +2413,10 @@ ul.menu,
     .comment-form label:not(:last-child) {
       margin-bottom: var(--theme-spacing-tiny); }
 
+.comment-form-cookies-consent [name="wp-comment-cookies-consent"] {
+  margin-bottom: 0;
+  margin-top: var(--theme-spacing-tiny); }
+
 .comment-notes {
   font-size: 85%; }
 
