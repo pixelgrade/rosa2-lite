@@ -17,6 +17,11 @@ function rosa2_lite_register_required_plugins() {
 			'required' => false,
 			'version'  => '1.1.4',
 		),
+		array(
+			'name'     => 'Customify',
+			'slug'     => 'customify',
+			'required' => false,
+		),
 	);
 
 	$config = array(
