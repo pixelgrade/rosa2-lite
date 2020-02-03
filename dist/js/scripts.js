@@ -219,19 +219,6 @@ function insideHalf(box1, box2) {
   var insideY = box1.y + box1.height / 2 >= box2.y && box2.y + box2.height >= box1.y + box1.height / 2;
   return insideX && insideY;
 }
-function reloadRellax(element) {
-  var rellax = jQuery(element).data('rellax');
-
-  if (rellax) {
-    rellax._reset();
-
-    rellax._cachePosition();
-
-    rellax._prepareElement();
-
-    rellax._updatePosition();
-  }
-}
 var debounce = function debounce(func, wait) {
   var timeout = null;
   return function () {
