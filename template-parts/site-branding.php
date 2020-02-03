@@ -47,7 +47,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			}
 
 			if ( $description || is_customize_preview() ) { ?>
-                <p class="site-description"><?php echo $description; ?></p>
+                <p class="site-description"><?php echo wp_kses_post( $description ); ?></p>
 			<?php } ?>
         </div><!-- .site-info -->
 	<?php } ?>

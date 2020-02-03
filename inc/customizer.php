@@ -90,7 +90,7 @@ function rosa2_lite_customize_register( $wp_customize ) {
                             
                             <li>
                             	<h4>Sell Online, Manage Bookings, and More</h4>
-                            	<div class="description">Rosa 2 PRO is fully integrated with the famous WooCommerce plugin so you can enable food delivery in an instant. Plus, people will be able to book a table online with a few clicks. You’ll also get a Location Map for easy discovery, custom Header and Footer, an Announcement Bar for sitewide notifications, and many other features.</div>
+                            	<div class="description">Rosa 2 PRO is fully integrated with the famous WooCommerce plugin so you can enable food delivery in an instant. Plus, people will be able to book a table online with a few clicks. You\'ll also get a Location Map for easy discovery, custom Header and Footer, an Announcement Bar for site-wide notifications, and many other features.</div>
                             </li>
 
                               <li>
@@ -104,12 +104,12 @@ function rosa2_lite_customize_register( $wp_customize ) {
 		),
 	) );
 
-	$wp_customize->add_setting( 'rosa_lite_style_view_pro_desc', array(
+	$wp_customize->add_setting( 'rosa2_lite_style_view_pro_desc', array(
 		'default'           => '',
 		'sanitize_callback' => '__return_true',
 	) );
 
-	$wp_customize->add_control( 'rosa_lite_style_view_pro_desc', array(
+	$wp_customize->add_control( 'rosa2_lite_style_view_pro_desc', array(
 		'section' => 'pro__section',
 		'type'    => 'hidden',
 	) );

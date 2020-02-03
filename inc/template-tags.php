@@ -294,6 +294,7 @@ if ( ! function_exists( 'rosa2_lite_footer_the_copyright' ) ) {
 		/* translators: %s: WordPress. */
 		$output .= '<a href="' . esc_url( __( 'https://wordpress.org/', '__theme_txtd' ) ) . '">' . sprintf( esc_html__( 'Proudly powered by %s', '__theme_txtd' ), 'WordPress' ) . '</a>' . "\n";
 		$output .= '<span class="sep"> | </span>';
+		/* translators: 1: The theme name 2: The theme author link.  */
 		$output .= '<span class="c-footer__credits">' . sprintf( esc_html__( 'Theme: %1$s by %2$s.', '__theme_txtd' ), 'Rosa2 Lite', '<a href="https://pixelgrade.com/?utm_source=rosa2-lite-clients&utm_medium=footer&utm_campaign=rosa2-lite" title="' . esc_html__( 'The Pixelgrade Website', '__theme_txtd' ) . '" rel="nofollow">Pixelgrade</a>' ) . '</span>' . "\n";
 		$output .= '</div>';
 		echo apply_filters( 'rosa2_lite_footer_the_copyright', $output );
@@ -419,6 +420,7 @@ if ( ! function_exists( 'rosa2_lite_get_read_more_button' ) ) {
 
 		return
 			'<div class="wp-block-button aligncenter is-style-text">' .
+			/* translators: %s: The post title. */
 			'<a class="wp-block-button__link" href="' . esc_url( get_permalink() ) . '">' . sprintf( wp_kses_post( __( 'Read more <span class="screen-reader-text">about "%s"</span>', '__theme_txtd' ) ), get_the_title() ) . '</a>' .
 			'</div>';
 	}

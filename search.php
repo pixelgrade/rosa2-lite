@@ -21,7 +21,9 @@ get_header(); ?>
             <header class="entry-header">
                 <div class="entry-content has-text-align-center">
 	                <h1 class="page-title has-text-align-center">
-		                <?php printf( esc_html__( 'Search results for: %s', '__theme_txtd' ), get_search_query() ); ?>
+		                <?php
+		                /* translators: %s: The search query */
+		                printf( esc_html__( 'Search results for: %s', '__theme_txtd' ), get_search_query() ); ?>
 	                </h1>
                 </div>
 	        </header><!-- .page-header -->
