@@ -4,8 +4,8 @@ Author: Pixelgrade
 Author URI: https://pixelgrade.com/
 Contributors: pixelgrade, babbardel, vlad.olaru, razvanonofrei, gorby31
 Description: This is the free version of Rosa 2, the #1 best selling restaurant WordPress theme, built to help small businesses shape an appealing online experience. It's packed with a parallax effect to grab attention, an online food menu so people can discover your offering, an easy to customize interface without using code, and a responsive design to address people on the go. This theme's versatility allows it to be used in a wide range of industries, making it the perfect theme if you own a business. No matter if it's a restaurant, beauty salon, house rental, hotel, coffee shop, or any other type of small business, this theme will fit your needs perfectly. With the Style Manager system you can customize your site's overall color palettes choosing from a set of predefined, carefully crafted palettes. If in need of help, jump right in the Theme Help section provided via the Pixelgrade Assistant plugin and search the documentation or open a support ticket.
-Version: 1.1.1
-Stable tag: 1.1.1
+Version: 1.1.2
+Stable tag: 1.1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: rosa2-lite
@@ -29,17 +29,29 @@ With the Style Manager system you can customize your site's overall color palett
 2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
 
+== Recommended Plugins ==
+
+To **take full advantage of Rosa2 Lite,** we recommend you install and activate the following two WordPress plugins:
+1. [Nova Blocks](https://wordpress.org/plugins/nova-blocks/) for **easy-to-use custom Gutenberg blocks**
+2. [Customify](https://wordpress.org/plugins/customify/) for access to **Style Manager via the Customizer** for easy styling customization.
+
+Both these plugins are developed and maintained by us, Pixelgrade, and they are both reviewed and distributed by the WordPress.org repository.
+You will be prompted upon theme activation to install and activate these plugins, so no need to to anything manually. However, it is up to you if you wish to use them.
+
 == Credits ==
 
 Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License v2.0 or later.
 
 The Rosa2 Lite Theme bundles the following third-party resources:
 
-* normalize.css https://necolas.github.io/normalize.css/, (c) 2012-2016 Nicolas Gallagher and Jonathan Neal, licensed under the [MIT License](https://opensource.org/licenses/mit-license.html)
+* normalize.css https://github.com/necolas/normalize.css, (c) Nicolas Gallagher and Jonathan Neal, licensed under the [MIT License](https://opensource.org/licenses/mit-license.html)
 
 * Images: screenshot image from PxHere - [Source](https://pxhere.com/en/photo/1420053) licensed under CC0 Public Domain.
 
 == Changelog ==
+
+= 1.1.2 =
+* Minor fixes and cleanup.
 
 = 1.1.1 =
 * Updated up-selling texts.
