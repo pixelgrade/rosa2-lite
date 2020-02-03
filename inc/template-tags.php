@@ -182,7 +182,7 @@ if ( ! function_exists( 'rosa2_lite_get_separator_markup' ) ) {
             <div class="c-separator__line c-separator__line--right"></div>
             <div class="c-separator__arrow c-separator__arrow--right"></div>
         </div>
-		<?php return apply_filters( 'rosa2_lite_separator_markup', ob_get_flush() );
+		<?php return apply_filters( 'rosa2_lite_separator_markup', ob_get_clean() );
 	}
 }
 
@@ -190,7 +190,7 @@ if ( ! function_exists( 'rosa2_lite_get_separator_symbol' ) ) {
 	function rosa2_lite_get_separator_symbol() {
         ob_start();
         get_template_part( 'template-parts/separators/fleuron-1-svg' );
-        return ob_get_flush();
+        return ob_get_clean();
 	}
 }
 
