@@ -27,8 +27,7 @@ get_header(); ?>
 					comments_template();
 				}
 
-			endwhile; // End of the loop.
-			?>
+			endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

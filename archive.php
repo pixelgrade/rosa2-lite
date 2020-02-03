@@ -13,31 +13,32 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header(); ?>
 
-    <div id="primary" class="content-area">
-        <main id="main" class="site-main">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
 
 			<?php if ( have_posts() ) { ?>
 
-            <header class="entry-header">
-                <div class="entry-content has-text-align-center">
-                    <?php
-                    the_archive_title( '<h1 class="page-title">', '</h1>' );
-                    the_archive_description( '<div class="archive-description">', '</div>' );
-                    ?>
-                </div>
-	        </header><!-- .page-header -->
+				<header class="entry-header">
+					<div class="entry-content has-text-align-center">
+						<?php
+						the_archive_title( '<h1 class="page-title">', '</h1>' );
+						the_archive_description( '<div class="archive-description">', '</div>' );
+						?>
+					</div>
+				</header><!-- .page-header -->
 
-	        <div class="entry-content">
-		        <?php
+				<div class="entry-content">
+					<?php
 					get_template_part( 'template-parts/loop' );
-					rosa2_lite_the_posts_pagination();
-				} else {
-					get_template_part( 'template-parts/content', 'none' );
-				} ?>
-	        </div>
+					rosa2_lite_the_posts_pagination(); ?>
+				</div>
 
-        </main><!-- #main -->
-    </div><!-- #primary -->
+			<?php } else {
+				get_template_part( 'template-parts/content', 'none' );
+			} ?>
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
 
 <?php
 get_footer();

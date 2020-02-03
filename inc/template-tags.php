@@ -22,7 +22,7 @@ if ( ! function_exists( 'rosa2_lite_posted_on' ) ) :
 		/* translators: before post date. */
 		echo '<div class="posted-on">' .
 		     '<span class="screen-reader-text">' . esc_html_x( 'Posted on', 'post date', '__theme_txtd' ) . '</span>' .
-		     '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>' .
+		     '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>' . // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		     '</div>';
 
 	}
@@ -39,8 +39,8 @@ if ( ! function_exists( 'rosa2_lite_posted_by' ) ) {
 
 		echo '<span class="byline">' .
 		     '<div class="screen-reader-text">' . esc_html_x( 'by', 'post author', '__theme_txtd' ) . '</div>' .
-		     '<span class="author vcard"><a class="url fn n" href="' . $author_url . '">' . $author_name . '</a></span>' .
-		     '</span>'; // WPCS: XSS OK.
+		     '<span class="author vcard"><a class="url fn n" href="' . $author_url . '">' . $author_name . '</a></span>' . // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		     '</span>';
 
 	}
 }
@@ -60,7 +60,7 @@ if ( ! function_exists( 'rosa2_lite_categories_posted_in' ) ) {
 			$categories_list = get_the_category_list( esc_html__( ', ', '__theme_txtd' ) );
 			if ( $categories_list ) {
 				/* translators: before list of categories. */
-				echo '<div class="cat-links"><span class="screen-reader-text">' . esc_html_x( 'Posted in', 'post categories', '__theme_txtd' ) . '</span>' . $categories_list . '</div>';
+				echo '<div class="cat-links"><span class="screen-reader-text">' . esc_html_x( 'Posted in', 'post categories', '__theme_txtd' ) . '</span>' . $categories_list . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 		}
 	}
@@ -74,7 +74,7 @@ if ( ! function_exists( 'rosa2_lite_tags_posted_in' ) ) {
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', '__theme_txtd' ) );
 			if ( $tags_list ) {
 				/* translators: before list of tags. */
-				echo '<div class="tags-links"><span class="screen-reader-text">' . esc_html_x( 'Tagged', 'post tags', '__theme_txtd' ) . '</span>' . $tags_list . '</div>';
+				echo '<div class="tags-links"><span class="screen-reader-text">' . esc_html_x( 'Tagged', 'post tags', '__theme_txtd' ) . '</span>' . $tags_list . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 		}
 	}
@@ -164,7 +164,7 @@ endif;
 
 if ( ! function_exists( 'rosa2_lite_the_separator' ) ) {
     function rosa2_lite_the_separator( $style = 'default' ) {
-        echo '<div class="wp-block-separator is-style-' . esc_attr( $style ) . '">' . rosa2_lite_get_separator_markup() . '</div>';
+        echo '<div class="wp-block-separator is-style-' . esc_attr( $style ) . '">' . rosa2_lite_get_separator_markup() . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
     }
 }
 
@@ -182,7 +182,7 @@ if ( ! function_exists( 'rosa2_lite_get_separator_markup' ) ) {
             <div class="c-separator__line c-separator__line--right"></div>
             <div class="c-separator__arrow c-separator__arrow--right"></div>
         </div>
-		<?php return apply_filters( 'rosa2_lite_separator_markup', ob_get_clean() );
+		<?php return apply_filters( 'rosa2_lite_separator_markup', ob_get_flush() );
 	}
 }
 
@@ -190,7 +190,7 @@ if ( ! function_exists( 'rosa2_lite_get_separator_symbol' ) ) {
 	function rosa2_lite_get_separator_symbol() {
         ob_start();
         get_template_part( 'template-parts/separators/fleuron-1-svg' );
-        return ob_get_clean();
+        return ob_get_flush();
 	}
 }
 
@@ -289,7 +289,7 @@ if ( ! function_exists( 'rosa2_lite_footer_the_copyright' ) ) {
 	 * Display the footer copyright.
 	 */
 	function rosa2_lite_footer_the_copyright() {
-		$output         = '';
+		$output = '';
 		$output .= '<div class="site-info">' . "\n";
 		/* translators: %s: WordPress. */
 		$output .= '<a href="' . esc_url( __( 'https://wordpress.org/', '__theme_txtd' ) ) . '">' . sprintf( esc_html__( 'Proudly powered by %s', '__theme_txtd' ), 'WordPress' ) . '</a>' . "\n";
@@ -297,7 +297,7 @@ if ( ! function_exists( 'rosa2_lite_footer_the_copyright' ) ) {
 		/* translators: 1: The theme name 2: The theme author link.  */
 		$output .= '<span class="c-footer__credits">' . sprintf( esc_html__( 'Theme: %1$s by %2$s.', '__theme_txtd' ), 'Rosa 2 Lite', '<a href="https://pixelgrade.com/?utm_source=rosa2-lite-clients&utm_medium=footer&utm_campaign=rosa2-lite" title="' . esc_html__( 'The Pixelgrade Website', '__theme_txtd' ) . '" rel="nofollow">Pixelgrade</a>' ) . '</span>' . "\n";
 		$output .= '</div>';
-		echo apply_filters( 'rosa2_lite_footer_the_copyright', $output );
+		echo apply_filters( 'rosa2_lite_footer_the_copyright', $output ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 }
 
@@ -312,7 +312,6 @@ if ( ! function_exists( 'rosa2_lite_shape_comment' ) ) {
 	 * @param int $depth
 	 */
 	function rosa2_lite_shape_comment( $comment, $args, $depth ) {
-		$GLOBALS['comment'] = $comment; // phpcs:ignore
 		switch ( $comment->comment_type ) {
 			case 'pingback':
 			case 'trackback': ?>
@@ -391,7 +390,7 @@ if ( ! function_exists( 'rosa2_lite_comments_toggle_checked_attribute' ) ) {
 	 * We only accept two outcomes: either output 'checked="checked"' or nothing.
 	 */
 	function rosa2_lite_comments_toggle_checked_attribute() {
-		echo rosa2_lite_get_comments_toggle_checked_attribute();
+		echo rosa2_lite_get_comments_toggle_checked_attribute(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 }
 
@@ -411,7 +410,7 @@ if ( ! function_exists( 'rosa2_lite_get_comments_toggle_checked_attribute' ) ) {
 
 if ( ! function_exists( 'rosa2_lite_the_read_more_button' ) ) {
 	function rosa2_lite_the_read_more_button() {
-		echo rosa2_lite_get_read_more_button();
+		echo rosa2_lite_get_read_more_button(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 }
 

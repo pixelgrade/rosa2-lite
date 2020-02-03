@@ -81,7 +81,7 @@ if ( post_password_required() ) {
             comment_form( $args );
             ?>
 
-        </div>
-    </div>
+        </div><!-- .comments-area__content -->
+    </div><!-- .comments-area__wrap -->
 
 </div><!-- #comments -->

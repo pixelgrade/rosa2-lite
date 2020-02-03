@@ -19,7 +19,6 @@ $page_id = get_option( 'page_for_posts' ); ?>
 		<main id="main" class="site-main">
 
 			<?php
-
 			$page_for_posts = get_option( 'page_for_posts' );
 
 			$categories = get_categories();
@@ -29,41 +28,41 @@ $page_id = get_option( 'page_for_posts' ); ?>
 				} );
 			}
 
-			$has_title = ! empty( $page_for_posts );
+			$has_title      = ! empty( $page_for_posts );
 			$has_categories = ! empty( $categories ) && ! is_wp_error( $categories );
 
-            if ( have_posts() ) { ?>
+			if ( have_posts() ) {
+				if ( $has_title || $has_categories ) { ?>
+					<header class="entry-header">
+						<div class="entry-content has-text-align-center">
 
-                <?php if ( $has_title || $has_categories ) { ?>
-                    <header class="entry-header">
-                        <div class="entry-content has-text-align-center">
-                            <?php
+							<?php
+							if ( $has_title ) {
+								echo '<h1 class="page-title">' . get_the_title( $page_id ) . '</h1>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+							}
 
-                            if ( $has_title ) {
-                                echo '<h1 class="page-title">' . get_the_title( $page_id ) . '</h1>';
-                            }
+							if ( $has_categories ) {
+								echo '<ul class="entry-meta">';
+								foreach ( $categories as $category ) {
+									$category_url = get_category_link( $category->term_id );
+									echo '<li><a href="' . esc_url( $category_url ) . '">' . esc_html( $category->name ) . '</a></li>';
+								}
+								echo '</ul>';
+							} ?>
+						</div>
 
-                            if ( $has_categories ) {
-                                echo '<ul class="entry-meta">';
-                                foreach ( $categories as $category ) {
-                                    $category_url = get_category_link( $category->term_id );
-                                    echo '<li><a href="' . esc_url( $category_url ) . '">' . esc_html( $category->name ) . '</a></li>';
-                                }
-                                echo '</ul>';
-                            }
-                            ?>
-                        </div>
-                    </header><!-- .page-header -->
-                <?php } ?>
+					</header><!-- .page-header -->
+				<?php } ?>
 
-                <div class="entry-content">
-                    <?php
-                        get_template_part( 'template-parts/loop' );
-                        rosa2_lite_the_posts_pagination();
-                    } else {
-                        get_template_part( 'template-parts/content', 'none' );
-                    } ?>
-                </div>
+				<div class="entry-content">
+					<?php
+					get_template_part( 'template-parts/loop' );
+					rosa2_lite_the_posts_pagination(); ?>
+				</div>
+
+			<?php } else {
+				get_template_part( 'template-parts/content', 'none' );
+			} ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

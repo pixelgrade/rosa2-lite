@@ -18,9 +18,9 @@ define( 'ROSA2_LITE_THEME_LIGHT_PRIMARY',    '#FFFFFF' );    // white
 define( 'ROSA2_LITE_THEME_LIGHT_SECONDARY',  '#CCCCCC' );    // gray
 define( 'ROSA2_LITE_THEME_LIGHT_TERTIARY',   '#EEEFF2' );    // light gray
 
-require_once __DIR__ . '/colors.php';
-require_once __DIR__ . '/fonts.php';
-require_once __DIR__ . '/connected-fields.php';
+require_once __DIR__ . '/colors.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+require_once __DIR__ . '/fonts.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+require_once __DIR__ . '/connected-fields.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 // Add new options to the Customify config
 add_filter( 'customify_filter_fields', 'rosa2_lite_add_customify_options', 11, 1 );

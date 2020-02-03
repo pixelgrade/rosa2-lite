@@ -168,7 +168,7 @@ function rosa2_lite_print_scripts() {
 		} );
     </script>
 
-	<?php echo ob_get_clean();
+	<?php echo ob_get_flush(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 }
 add_action( 'wp_print_scripts', 'rosa2_lite_print_scripts', 10 );
 

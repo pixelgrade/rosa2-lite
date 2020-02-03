@@ -13,20 +13,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header(); ?>
 
-    <div id="primary" class="content-area">
-        <main id="main" class="site-main">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
 
-	        <div class="entry-content">
-				<?php if ( have_posts() ) {
+			<?php if ( have_posts() ) { ?>
+				<div class="entry-content">
 					get_template_part( 'template-parts/loop' );
-					rosa2_lite_the_posts_pagination();
-				} else {
-					get_template_part( 'template-parts/content', 'none' );
-				} ?>
-	        </div>
+					rosa2_lite_the_posts_pagination(); ?>
+				</div>
+			<?php } else {
+				get_template_part( 'template-parts/content', 'none' );
+			} ?>
 
-        </main><!-- #main -->
-    </div><!-- #primary -->
+		</main><!-- #main -->
+	</div><!-- #primary -->
 
 <?php
 get_footer();
