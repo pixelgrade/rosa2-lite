@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-02-03T08:55:25+00:00\n"
+"POT-Creation-Date: 2020-02-03T13:26:29+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.3.0\n"
 "X-Domain: __theme_txtd\n"
@@ -23,10 +23,12 @@ msgid "https://github.com/pixelgrade/rosa2-lite"
 msgstr ""
 
 #. Description of the theme
-msgid "Rosa 2 Lite is a free restaurant WordPress theme designed for Gutenberg, the new block editor from WordPress. The fantastic parallax effect will allow any type of small business, from restaurants, coffee shops, bakeries, beauty salons, hotels, and more, to capture the attention of all online visitors. With just a few clicks, you can add a media card block with text and a gallery of images side by side, a slideshow gallery block to showcase your location's hot spots, and even a background video on each parallax section of the page. The built-in Food Menu lets you quickly add menu items, highlight the important ones, and display special discounted prices for each item. The predefined color palettes from the Style Manager system offers a fast way to customize your site's overall appearance and design. In case you get stuck, you can use the Theme Help section provided via the Pixelgrade Assistant plugin to search through the documentation or open a support ticket."
+msgid "Rosa2 Lite is a free restaurant WordPress theme designed for Gutenberg, the new block editor from WordPress. The fantastic parallax effect will allow any type of small business, from restaurants, coffee shops, bakeries, beauty salons, hotels, and more, to capture the attention of all online visitors. With just a few clicks, you can add a media card block with text and a gallery of images side by side, a slideshow gallery block to showcase your location's hot spots, and even a background video on each parallax section of the page. The built-in Food Menu lets you quickly add menu items, highlight the important ones, and display special discounted prices for each item. The predefined color palettes from the Style Manager system offers a fast way to customize your site's overall appearance and design. In case you get stuck, you can use the Theme Help section provided via the Pixelgrade Assistant plugin to search through the documentation or open a support ticket."
 msgstr ""
 
 #. Author of the theme
+#. translators: 1: The theme name 2: The theme author link.
+#: inc/template-tags.php:298
 msgid "Pixelgrade"
 msgstr ""
 
@@ -730,9 +732,19 @@ msgstr ""
 msgid "Proudly powered by %s"
 msgstr ""
 
+#. translators: %s: WordPress.
+#: inc/template-tags.php:295
+msgid "WordPress"
+msgstr ""
+
 #. translators: 1: The theme name 2: The theme author link.
 #: inc/template-tags.php:298
 msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#. translators: 1: The theme name 2: The theme author link.
+#: inc/template-tags.php:298
+msgid "Rosa 2 Lite"
 msgstr ""
 
 #. translators: 1: The theme name 2: The theme author link.
