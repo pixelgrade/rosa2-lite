@@ -177,7 +177,7 @@ if ( ! function_exists( 'rosa2_lite_get_separator_markup' ) ) {
             <div class="c-separator__arrow c-separator__arrow--left"></div>
             <div class="c-separator__line c-separator__line--left"></div>
             <div class="c-separator__symbol">
-                <span><?php echo rosa2_lite_get_separator_symbol(); ?></span>
+                <span><?php echo rosa2_lite_get_separator_symbol(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></span>
             </div>
             <div class="c-separator__line c-separator__line--right"></div>
             <div class="c-separator__arrow c-separator__arrow--right"></div>

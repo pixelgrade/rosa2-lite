@@ -13,14 +13,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Load NovaBlocks integration for this theme
  */
-require_once trailingslashit( get_template_directory() ) . 'inc/integrations/novablocks.php';
+require_once trailingslashit( get_template_directory() ) . 'inc/integrations/novablocks.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 /**
  * Load Customify integration for this theme.
  */
-require_once trailingslashit( get_template_directory() ) . 'inc/integrations/customify/customify.php';
+require_once trailingslashit( get_template_directory() ) . 'inc/integrations/customify/customify.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 /**
  * Load Jetpack integration for this theme.
  */
-require_once trailingslashit( get_template_directory() ) . 'inc/integrations/jetpack.php';
+require_once trailingslashit( get_template_directory() ) . 'inc/integrations/jetpack.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
