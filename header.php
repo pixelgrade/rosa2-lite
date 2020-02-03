@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '__theme_txtd' ); ?></a>
 
 	<?php
-	do_action( 'rosa_before_header', 'main' );
+	do_action( 'rosa2_lite_before_header', 'main' );
 
 	get_template_part( 'template-parts/site-header' ); ?>
 

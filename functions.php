@@ -141,7 +141,7 @@ function rosa2_lite_scripts() {
 
 	wp_enqueue_style( 'rosa2-blocks-styles', get_template_directory_uri() . '/dist/js/editor.blocks.css', array( 'rosa2-style' ), $theme->get( 'Version' ) );
 
-	wp_enqueue_script( 'rosa2-app', get_template_directory_uri() . '/dist/js/scripts' . $suffix . '.js', array(
+	wp_enqueue_script( 'rosa2-scripts', get_template_directory_uri() . '/dist/js/scripts' . $suffix . '.js', array(
 		'jquery',
 		'hoverIntent',
 		'imagesloaded'

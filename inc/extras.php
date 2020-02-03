@@ -45,7 +45,7 @@ function rosa2_lite_last_block_hero() {
 
 	return false;
 }
-add_action('rosa_before_header', 'rosa2_lite_last_block_hero');
+add_action('rosa2_before_header', 'rosa2_lite_last_block_hero');
 
 function rosa2_lite_has_moderate_media_card_after_hero() {
 	global $post;
@@ -127,31 +127,6 @@ if ( ! function_exists( 'rosa2_lite_custom_excerpt_length' ) ) {
 	}
 }
 add_filter( 'excerpt_length', 'rosa2_lite_custom_excerpt_length', 50 );
-
-if ( ! function_exists( 'pixelgrade_get_original_theme_name' ) ) {
-	/**
-	 * Get the current theme original name from the WUpdates code.
-	 *
-	 * @return string
-	 */
-	function pixelgrade_get_original_theme_name() {
-		// Get the id of the current theme
-		$wupdates_ids = apply_filters( 'wupdates_gather_ids', array() );
-		$slug         = basename( get_template_directory() );
-		if ( ! empty( $wupdates_ids[ $slug ]['name'] ) ) {
-			return $wupdates_ids[ $slug ]['name'];
-		}
-
-		// If we couldn't get the WUpdates name, we will fallback to the theme header name entry.
-		$theme_header_name = wp_get_theme( get_template() )->get( 'Name' );
-		if ( ! empty( $theme_header_name ) ) {
-			return ucwords( str_replace( array( '-', '_' ), ' ', $theme_header_name ) );
-		}
-
-		// The ultimate fallback is the template directory, uppercased.
-		return ucwords( str_replace( array( '-', '_' ), ' ', $slug ) );
-	}
-}
 
 if ( ! function_exists( 'rosa2_lite_google_fonts_url' ) ) {
 	/**

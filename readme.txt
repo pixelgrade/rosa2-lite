@@ -10,7 +10,7 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: rosa2-lite
 Domain Path: /languages/
-Tags: food-and-drink, two-columns, right-sidebar, custom-menu, featured-images, translation-ready, threaded-comments, rtl-language-support, custom-logo, editor-style, block-styles, wide-blocks
+Tags: food-and-drink, one-column, two-columns, right-sidebar, custom-menu, featured-images, translation-ready, full-width-template, sticky-post, threaded-comments, rtl-language-support, custom-colors, custom-logo, editor-style, block-styles, wide-blocks
 Requires PHP: 5.4.0
 Requires at least: 5.2.0
 Tested up to: 5.3.2
@@ -36,7 +36,6 @@ Unless otherwise specified, all the theme files, scripts and images are licensed
 The Rosa2 Lite Theme bundles the following third-party resources:
 
 * normalize.css https://necolas.github.io/normalize.css/, (c) 2012-2016 Nicolas Gallagher and Jonathan Neal, licensed under the [MIT License](https://opensource.org/licenses/mit-license.html)
-* rellax.js https://pixelgrade.github.io/rellax/, Copyright (c) 2016-2019 Pixelgrade, License: the [MIT License](https://opensource.org/licenses/mit-license.html)
 
 * Images: screenshot image from PxHere - [Source](https://pxhere.com/en/photo/1420053) licensed under CC0 Public Domain.
 

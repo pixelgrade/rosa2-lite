@@ -182,7 +182,7 @@ if ( ! function_exists( 'rosa2_lite_get_separator_markup' ) ) {
             <div class="c-separator__line c-separator__line--right"></div>
             <div class="c-separator__arrow c-separator__arrow--right"></div>
         </div>
-		<?php return apply_filters( 'rosa_separator_markup', ob_get_clean() );
+		<?php return apply_filters( 'rosa2_lite_separator_markup', ob_get_clean() );
 	}
 }
 
@@ -210,7 +210,7 @@ if ( ! function_exists( ' rosa2_lite_has_custom_logo_transparent' ) ) {
 			$switched_blog = true;
 		}
 
-		$custom_logo_id = get_theme_mod( 'rosa_transparent_logo' );
+		$custom_logo_id = absint( get_theme_mod( 'rosa_transparent_logo', false ) );
 
 		if ( $switched_blog ) {
 			restore_current_blog();
@@ -237,7 +237,7 @@ if ( ! function_exists( ' rosa2_lite_get_custom_logo_transparent' ) ) {
 			$switched_blog = true;
 		}
 
-		$custom_logo_id = get_theme_mod( 'rosa_transparent_logo' );
+		$custom_logo_id = absint( get_theme_mod( 'rosa_transparent_logo', false ) );
 
 		// We have a logo. Logo is go.
 		if ( $custom_logo_id ) {
@@ -404,7 +404,7 @@ if ( ! function_exists( 'rosa2_lite_get_comments_toggle_checked_attribute' ) ) {
 	function rosa2_lite_get_comments_toggle_checked_attribute() {
 		$attribute = 'checked';
 
-		return apply_filters( 'pixelgrade_get_comments_toggle_checked_attribute', $attribute );
+		return apply_filters( 'rosa2_lite_get_comments_toggle_checked_attribute', $attribute );
 	}
 }
 
