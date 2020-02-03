@@ -1,6 +1,6 @@
 <?php
 /**
- * Rosa 2 Theme Customizer logic.
+ * Rosa2 Lite Theme Customizer logic.
  *
  * @package Rosa2 Lite
  */
@@ -76,7 +76,7 @@ function rosa2_lite_customize_register( $wp_customize ) {
 		/* translators: %s: The view pro link. */
 			__( '<div class="upsell-container">
 					<h2>Need More? Go PRO</h2>
-					<p>Take it to the next level and stand out. See the hotspots of Rosa 2 PRO:</p>
+					<p>Take it to the next level and stand out. See the hotspots of Rosa2 PRO:</p>
 					<ul class="upsell-features">
                             <li>
                             	<h4>Personalize to Match Your Branding</h4>
@@ -183,7 +183,7 @@ function rosa2_lite_customizer_partial_transparent_logo() {
 }
 
 /**
- * Generate a link to the Rosa Lite info page.
+ * Generate a link to the Rosa2 Lite info page.
  */
 function rosa2_lite_get_pro_link() {
 	return 'https://pixelgrade.com/themes/restaurants/rosa2-pro?utm_source=rosa2-lite-clients&utm_medium=customizer&utm_campaign=rosa2-lite';

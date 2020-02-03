@@ -17,7 +17,7 @@ Tested up to: 5.3.2
 
 == Description ==
 
-Rosa2 Lite is the free version of Rosa 2, the #1 best selling restaurant WordPress theme, built to help small businesses shape an appealing online experience.
+Rosa 2 Lite is the free version of Rosa 2, the #1 best selling restaurant WordPress theme, built to help small businesses shape an appealing online experience.
 It's packed with a parallax effect to grab attention, an online food menu so people can discover your offering, an easy to customize interface without using code, and a responsive design to address people on the go.
 This theme's versatility allows it to be used in a wide range of industries, making it the perfect theme if you own a business.
 No matter if it's a restaurant, beauty salon, house rental, hotel, coffee shop, or any other type of small business, this theme will fit your needs perfectly.
@@ -42,7 +42,7 @@ You will be prompted upon theme activation to install and activate these plugins
 
 Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License v2.0 or later.
 
-The Rosa2 Lite Theme bundles the following third-party resources:
+The Rosa 2 Lite Theme bundles the following third-party resources:
 
 * normalize.css https://github.com/necolas/normalize.css, (c) Nicolas Gallagher and Jonathan Neal, licensed under the [MIT License](https://opensource.org/licenses/mit-license.html)
 

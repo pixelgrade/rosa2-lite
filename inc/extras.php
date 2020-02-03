@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Rosa 2
+ * @package Rosa2 Lite
  */
 
 if ( ! function_exists( 'wp_body_open' ) ) {
@@ -130,9 +130,9 @@ add_filter( 'excerpt_length', 'rosa2_lite_custom_excerpt_length', 50 );
 
 if ( ! function_exists( 'rosa2_lite_google_fonts_url' ) ) {
 	/**
-	 * Register Google fonts for Rosa 2 Lite.
+	 * Register Google fonts for Rosa2 Lite.
 	 *
-	 * @since Rosa 2 Lite 1.0
+	 * @since Rosa2 Lite 1.0
 	 *
 	 * @return string Google fonts URL for the theme.
 	 */

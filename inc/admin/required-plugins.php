@@ -34,7 +34,7 @@ function rosa2_lite_register_required_plugins() {
 		'strings'          => array(
 			'page_title'                      => esc_html__( 'Install Recommended Plugins', '__theme_txtd' ),
 			'menu_title'                      => esc_html__( 'Install Plugins', '__theme_txtd' ),
-			/* translators: %1$s = plugin name */
+			/* translators: %s: plugin name. */
 			'installing'                      => esc_html__( 'Installing Plugin: %s', '__theme_txtd' ),
 			'oops'                            => esc_html__( 'Something went wrong with the plugin API.', '__theme_txtd' ),
 			/* translators: %1$s = plugin name */
@@ -50,7 +50,7 @@ function rosa2_lite_register_required_plugins() {
 			/* translators: %1$s = plugin name */
 			'notice_cannot_activate'          => _n_noop( 'Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated.', 'Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated.', '__theme_txtd' ),
 			/* translators: %1$s = plugin name */
-			'notice_ask_to_update'            => _n_noop( 'The following plugin needs to be updated to its latest version to ensure maximum compatibility with Rosa Lite: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with Rosa2 Lite: %1$s.', '__theme_txtd' ),
+			'notice_ask_to_update'            => _n_noop( 'The following plugin needs to be updated to its latest version to ensure maximum compatibility with Rosa2 Lite: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with Rosa2 Lite: %1$s.', '__theme_txtd' ),
 			/* translators: %1$s = plugin name */
 			'notice_cannot_update'            => _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.', '__theme_txtd' ),
 			'install_link'                    => _n_noop( 'Begin installing plugin', 'Begin installing plugins', '__theme_txtd' ),

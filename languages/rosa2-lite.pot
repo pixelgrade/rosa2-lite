@@ -1,0 +1,853 @@
+# Copyright (C) 2020 Pixelgrade
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Rosa2 Lite 1.1.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/rosa2-lite\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-02-03T08:55:25+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.3.0\n"
+"X-Domain: __theme_txtd\n"
+
+#. Theme Name of the theme
+msgid "Rosa2 Lite"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "https://github.com/pixelgrade/rosa2-lite"
+msgstr ""
+
+#. Description of the theme
+msgid "Rosa 2 Lite is a free restaurant WordPress theme designed for Gutenberg, the new block editor from WordPress. The fantastic parallax effect will allow any type of small business, from restaurants, coffee shops, bakeries, beauty salons, hotels, and more, to capture the attention of all online visitors. With just a few clicks, you can add a media card block with text and a gallery of images side by side, a slideshow gallery block to showcase your location's hot spots, and even a background video on each parallax section of the page. The built-in Food Menu lets you quickly add menu items, highlight the important ones, and display special discounted prices for each item. The predefined color palettes from the Style Manager system offers a fast way to customize your site's overall appearance and design. In case you get stuck, you can use the Theme Help section provided via the Pixelgrade Assistant plugin to search through the documentation or open a support ticket."
+msgstr ""
+
+#. Author of the theme
+msgid "Pixelgrade"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://pixelgrade.com"
+msgstr ""
+
+#: comments.php:33
+#: comments.php:56
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:35
+#: comments.php:58
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:36
+#: comments.php:59
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:69
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:75
+msgctxt "noun"
+msgid "Comment"
+msgstr ""
+
+#: comments.php:77
+msgid "Your comment..."
+msgstr ""
+
+#: functions.php:59
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:60
+msgid "Secondary Menu"
+msgstr ""
+
+#: header.php:24
+msgid "Skip to content"
+msgstr ""
+
+#: inc/admin/required-plugins.php:35
+msgid "Install Recommended Plugins"
+msgstr ""
+
+#: inc/admin/required-plugins.php:36
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:328
+msgid "Install Plugins"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: inc/admin/required-plugins.php:38
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:330
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: inc/admin/required-plugins.php:39
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:333
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#. translators: %1$s = plugin name
+#: inc/admin/required-plugins.php:41
+msgid "Rosa2 Lite requires the following plugin: %1$s."
+msgid_plural "Rosa2 Lite requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %1$s = plugin name
+#: inc/admin/required-plugins.php:43
+msgid "Rosa2 Lite recommends the following plugin: %1$s."
+msgid_plural "Rosa2 Lite recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %1$s = plugin name
+#: inc/admin/required-plugins.php:45
+msgid "Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed."
+msgid_plural "Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %1$s = plugin name
+#: inc/admin/required-plugins.php:47
+msgid "The following theme required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %1$s = plugin name
+#: inc/admin/required-plugins.php:49
+msgid "The following theme recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %1$s = plugin name
+#: inc/admin/required-plugins.php:51
+msgid "Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated."
+msgid_plural "Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %1$s = plugin name
+#: inc/admin/required-plugins.php:53
+msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with Rosa2 Lite: %1$s."
+msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with Rosa2 Lite: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %1$s = plugin name
+#: inc/admin/required-plugins.php:55
+msgid "Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated."
+msgid_plural "Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/admin/required-plugins.php:56
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:370
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/admin/required-plugins.php:57
+msgid "Activate installed plugin"
+msgid_plural "Activate installed plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/admin/required-plugins.php:58
+msgid "Return to Recommended Plugins Installer"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:327
+msgid "Install Required Plugins"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:332
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#. translators: 1: plugin name(s).
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:334
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:340
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:346
+msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
+msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:352
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:358
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:364
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:375
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:380
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:385
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:386
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:826
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2558
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:3605
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:387
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:3184
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:388
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2977
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:389
+msgid "No action taken. Plugin was already active."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:391
+msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
+msgstr ""
+
+#. translators: 1: dashboard link.
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:393
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:394
+msgid "Dismiss this notice"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:395
+msgid "There are one or more required or recommended plugins to install, update or activate."
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:396
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:521
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:522
+msgid "Update Required"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:933
+msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:933
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:936
+msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:936
+msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:1120
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2973
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#. translators: %s: version number
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2007
+msgid "TGMPA v%s"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2298
+msgid "Required"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2301
+msgid "Recommended"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2317
+msgid "WordPress Repository"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2320
+msgid "External Source"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2323
+msgid "Pre-Packaged"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2340
+msgid "Not Installed"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2344
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2346
+msgid "Active"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2352
+msgid "Required Update not Available"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2355
+msgid "Requires Update"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2358
+msgid "Update recommended"
+msgstr ""
+
+#. translators: 1: install status, 2: update status
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2367
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#. translators: 1: number of plugins.
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2413
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2417
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2421
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2425
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2507
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2515
+msgid "Installed version:"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2523
+msgid "Minimum required version:"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2535
+msgid "Available version:"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2558
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2572
+msgid "Plugin"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2573
+msgid "Source"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2574
+msgid "Type"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2578
+msgid "Version"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2579
+msgid "Status"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2628
+msgid "Install %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2633
+msgid "Update %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2639
+msgid "Activate %2$s"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2709
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2742
+msgid "Install"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2748
+msgid "Update"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2751
+msgid "Activate"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2782
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2784
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2825
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2827
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2933
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:2959
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:3183
+msgid "Plugin activation failed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:3523
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#. translators: 1: plugin name, 2: error message.
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:3526
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:3528
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:3532
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:3534
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:3534
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:3542
+msgid "Show Details"
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:3534
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:3542
+msgid "Hide Details"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:3535
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:3537
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:3540
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:3542
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:3543
+msgid "All installations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: inc/admin/required-plugins/class-tgm-plugin-activation.php:3545
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/customizer.php:46
+msgid "Logo while on Transparent Header"
+msgstr ""
+
+#: inc/customizer.php:48
+#: inc/customizer.php:53
+msgid "Select logo"
+msgstr ""
+
+#: inc/customizer.php:49
+msgid "Change logo"
+msgstr ""
+
+#: inc/customizer.php:50
+msgid "Default"
+msgstr ""
+
+#: inc/customizer.php:51
+msgid "Remove"
+msgstr ""
+
+#: inc/customizer.php:52
+msgid "No logo selected"
+msgstr ""
+
+#: inc/customizer.php:54
+msgid "Choose logo"
+msgstr ""
+
+#: inc/customizer.php:73
+msgid "View PRO Version"
+msgstr ""
+
+#. translators: %s: The view pro link.
+#: inc/customizer.php:77
+msgid ""
+"<div class=\"upsell-container\">\n"
+"\t\t\t\t\t<h2>Need More? Go PRO</h2>\n"
+"\t\t\t\t\t<p>Take it to the next level and stand out. See the hotspots of Rosa2 PRO:</p>\n"
+"\t\t\t\t\t<ul class=\"upsell-features\">\n"
+"                            <li>\n"
+"                            \t<h4>Personalize to Match Your Branding</h4>\n"
+"                            \t<div class=\"description\">Showcase your brand in an easy and smart way by using Style Manager, an intuitive interface that allows you to change color and font palettes and with a few clicks until they fully represent your business.</div>\n"
+"                            </li>\n"
+"                            \n"
+"                            <li>\n"
+"                            \t<h4>New Doppler Scrolling Effect</h4>\n"
+"                            \t<div class=\"description\">With Rosa 2 PRO you can impress the site visitors with full-bleed images or videos. The new Doppler effect works perfectly with portrait images and lets you highlight the parts you find most relevant for your visitors.</div>\n"
+"                            </li>\n"
+"                            \n"
+"                            <li>\n"
+"                            \t<h4>Sell Online, Manage Bookings, and More</h4>\n"
+"                            \t<div class=\"description\">Rosa 2 PRO is fully integrated with the famous WooCommerce plugin so you can enable food delivery in an instant. Plus, people will be able to book a table online with a few clicks. You'll also get a Location Map for easy discovery, custom Header and Footer, an Announcement Bar for site-wide notifications, and many other features.</div>\n"
+"                            </li>\n"
+"\n"
+"                              <li>\n"
+"                            \t<h4>Premium Customer Support</h4>\n"
+"                            \t<div class=\"description\">You will benefit by priority support from a caring and devoted team, eager to help and spread happiness. We work hard to provide a flawless experience for those who vote for us with trust and choose to be our special clients.</div>\n"
+"                            </li>\n"
+"\n"
+"                    </ul> %s </div>"
+msgstr ""
+
+#. translators: %1$s: The view pro URL, %2$s: The view pro link text.
+#: inc/customizer.php:103
+msgid "Get Rosa 2 PRO"
+msgstr ""
+
+#. Translators: If there are characters in your language that are not supported by Montserrat, translate this to 'off'. Do not translate into your own language.
+#: inc/extras.php:149
+msgctxt "Montserrat font: on or off"
+msgid "on"
+msgstr ""
+
+#. Translators: If there are characters in your language that are not supported by Source Sans Pro, translate this to 'off'. Do not translate into your own language.
+#: inc/extras.php:157
+msgctxt "Source Sans Pro font: on or off"
+msgid "on"
+msgstr ""
+
+#. Translators: If there are characters in your language that are not supported by Yesteryear, translate this to 'off'. Do not translate into your own language.
+#: inc/extras.php:165
+msgctxt "Yesteryear font: on or off"
+msgid "on"
+msgstr ""
+
+#. translators: To add an additional character subset specific to your language, translate this to 'greek', 'cyrillic', 'devanagari' or 'vietnamese'. Do not translate into your own language.
+#: inc/extras.php:170
+msgctxt "Add new subset (greek, cyrillic, devanagari, vietnamese)"
+msgid "no-subset"
+msgstr ""
+
+#: inc/integrations/customify/colors.php:137
+msgid "Theme Default"
+msgstr ""
+
+#: inc/integrations/novablocks.php:35
+msgid "This is a catchy"
+msgstr ""
+
+#: inc/integrations/novablocks.php:36
+msgid "Headline"
+msgstr ""
+
+#: inc/integrations/novablocks.php:46
+msgid "A brilliant subtitle to explain its catchiness"
+msgstr ""
+
+#: inc/integrations/novablocks.php:65
+msgid "Discover"
+msgstr ""
+
+#: inc/integrations/novablocks.php:66
+msgid "Our Story"
+msgstr ""
+
+#: inc/integrations/novablocks.php:83
+msgid "We have always defined ourselves by the ability to overcome the impossible. And we count these moments. These moments when we dare to aim higher, to break barriers, to make the unknown known."
+msgstr ""
+
+#: inc/integrations/novablocks.php:90
+msgid "Learn More"
+msgstr ""
+
+#: inc/template-tags.php:24
+msgctxt "post date"
+msgid "Posted on"
+msgstr ""
+
+#: inc/template-tags.php:41
+msgctxt "post author"
+msgid "by"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:60
+msgid ", "
+msgstr ""
+
+#. translators: before list of categories.
+#: inc/template-tags.php:63
+msgctxt "post categories"
+msgid "Posted in"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:74
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#. translators: before list of tags.
+#: inc/template-tags.php:77
+msgctxt "post tags"
+msgid "Tagged"
+msgstr ""
+
+#. translators: %s: post title
+#: inc/template-tags.php:91
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:116
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#. translators: %s: WordPress.
+#: inc/template-tags.php:295
+msgid "https://wordpress.org/"
+msgstr ""
+
+#. translators: %s: WordPress.
+#: inc/template-tags.php:295
+msgid "Proudly powered by %s"
+msgstr ""
+
+#. translators: 1: The theme name 2: The theme author link.
+#: inc/template-tags.php:298
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#. translators: 1: The theme name 2: The theme author link.
+#: inc/template-tags.php:298
+msgid "The Pixelgrade Website"
+msgstr ""
+
+#: inc/template-tags.php:321
+msgid "Pingback:"
+msgstr ""
+
+#: inc/template-tags.php:321
+msgid "(Edit)"
+msgstr ""
+
+#. translators: %s: comment author link
+#: inc/template-tags.php:339
+msgid "%s <span class=\"says\">says:</span>"
+msgstr ""
+
+#. translators: 1: comment date, 2: comment time
+#: inc/template-tags.php:348
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: inc/template-tags.php:352
+msgid "Edit"
+msgstr ""
+
+#: inc/template-tags.php:356
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#. translators: %s: The post title.
+#: inc/template-tags.php:424
+msgid "Read more <span class=\"screen-reader-text\">about \"%s\"</span>"
+msgstr ""
+
+#: inc/template-tags.php:456
+msgctxt "previous set of posts"
+msgid "Previous"
+msgstr ""
+
+#: inc/template-tags.php:457
+msgctxt "next set of posts"
+msgid "Next"
+msgstr ""
+
+#: inc/template-tags.php:458
+msgid "Posts navigation"
+msgstr ""
+
+#: inc/template-tags.php:501
+msgid "Post navigation"
+msgstr ""
+
+#: inc/template-tags.php:508
+msgid "Previous article"
+msgstr ""
+
+#: inc/template-tags.php:516
+msgid "Next article"
+msgstr ""
+
+#: inc/template-tags.php:540
+msgid "Please select a menu in this location"
+msgstr ""
+
+#. translators: %s: The search query
+#: search.php:26
+msgid "Search results for: %s"
+msgstr ""
+
+#: template-parts/comments-toggle.php:25
+msgid "No Comments Yet"
+msgstr ""
+
+#: template-parts/comments-toggle.php:27
+msgctxt "comments title"
+msgid "1 Comment"
+msgstr ""
+
+#. translators: 1: number of comments
+#: template-parts/comments-toggle.php:32
+msgctxt "comments title"
+msgid "%1$s Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: template-parts/content-none.php:18
+msgid "Nothing Found"
+msgstr ""
+
+#. translators: 1: link to WP admin new post page.
+#: template-parts/content-none.php:28
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:40
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:46
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: template-parts/menu-toggle.php:27
+msgid "Menu"
+msgstr ""
+
+#: template-parts/site-footer.php:21
+msgid "Footer Menu"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Full Width Template"
+msgstr ""
