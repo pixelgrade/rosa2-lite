@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-import { insideHalf, reloadRellax, debounce } from "../utils";
+import { insideHalf, debounce } from "../utils";
 import GlobalService from './globalService';
 import Hero from './hero';
 import CommentsArea from './commentsArea';

@@ -19,17 +19,6 @@ export function insideHalf( box1, box2 ) {
 	return insideX && insideY;
 }
 
-export function reloadRellax( element ) {
-	const rellax = jQuery( element ).data( 'rellax' );
-
-	if ( rellax ) {
-		rellax._reset();
-		rellax._cachePosition();
-		rellax._prepareElement();
-		rellax._updatePosition();
-	}
-}
-
 export const debounce = (func, wait) => {
 	let timeout = null;
 
