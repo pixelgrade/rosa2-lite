@@ -29,6 +29,11 @@ With the Style Manager system you can customize your site's overall color palett
 2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
 
+== License ==
+
+Rosa2 Lite WordPress Theme, Copyright 2020 Pixelgrade.
+Rosa2 Lite is distributed under the terms of the GNU GPL.
+
 == Recommended Plugins ==
 
 To **take full advantage of Rosa2 Lite,** we recommend you install and activate the following two WordPress plugins:
