@@ -1822,6 +1822,8 @@ ul.menu,
     .sub-menu > li {
       padding-right: var(--theme-wrapper-sides-spacing);
       padding-left: var(--theme-wrapper-sides-spacing); }
+  .nav--is-open {
+    overflow: hidden; }
   .site-header,
   .c-menu-toggle__slice {
     transition: transform .3s ease-out; }

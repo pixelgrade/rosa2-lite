@@ -16,6 +16,7 @@ class Header {
 		this.$header = $( this.element );
 		this.$toggle = $( '.c-menu-toggle' );
 		this.$toggleWrap = $( '.c-menu-toggle__wrap' );
+		this.$toggleCheckbox = $( '.c-menu-toggle__checkbox' );
 
 		this.scrolled = false;
 		this.inversed = false;
@@ -46,6 +47,7 @@ class Header {
 		this.updatePageOffset();
 		this.updateHeaderOffset();
 		this.updateMobileHeaderOffset();
+		this.bindClick();
 	}
 
 	onHeightUpdate( tween ) {
@@ -109,6 +111,10 @@ class Header {
 		if ( this.wasSticky ) {
 			$body.toggleClass( 'has-site-header-fixed', this.visibleHeaderHeight < windowHeight * 0.2 );
 		}
+	}
+
+	bindClick() {
+		this.$toggleCheckbox.on( 'click', this.toggleNavStateClass );
 	}
 
 	updateHeaderOffset() {
@@ -175,6 +181,13 @@ class Header {
 
 		this.$mobileHeader.insertAfter( this.$toggle );
 		this.createdMobileHeader = true;
+	}
+
+	toggleNavStateClass() {
+		const isMenuOpen = $(this).prop( 'checked' );
+		const $body = $( 'body' );
+
+		$body.toggleClass( 'nav--is-open', isMenuOpen );
 	}
 
 	render( inversed ) {

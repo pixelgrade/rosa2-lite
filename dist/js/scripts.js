@@ -659,6 +659,7 @@ function () {
     this.$header = external_jQuery_default()(this.element);
     this.$toggle = external_jQuery_default()('.c-menu-toggle');
     this.$toggleWrap = external_jQuery_default()('.c-menu-toggle__wrap');
+    this.$toggleCheckbox = external_jQuery_default()('.c-menu-toggle__checkbox');
     this.scrolled = false;
     this.inversed = false;
     this.wasSticky = external_jQuery_default()('body').is('.has-site-header-fixed');
@@ -685,6 +686,7 @@ function () {
       this.updatePageOffset();
       this.updateHeaderOffset();
       this.updateMobileHeaderOffset();
+      this.bindClick();
     }
   }, {
     key: "onHeightUpdate",
@@ -757,6 +759,11 @@ function () {
       }
     }
   }, {
+    key: "bindClick",
+    value: function bindClick() {
+      this.$toggleCheckbox.on('click', this.toggleNavStateClass);
+    }
+  }, {
     key: "updateHeaderOffset",
     value: function updateHeaderOffset() {
       if (!this.element) return;
@@ -821,6 +828,13 @@ function () {
       external_jQuery_default()('.menu-item--cart').first().clone().appendTo(this.$mobileHeader);
       this.$mobileHeader.insertAfter(this.$toggle);
       this.createdMobileHeader = true;
+    }
+  }, {
+    key: "toggleNavStateClass",
+    value: function toggleNavStateClass() {
+      var isMenuOpen = external_jQuery_default()(this).prop('checked');
+      var $body = external_jQuery_default()('body');
+      $body.toggleClass('nav--is-open', isMenuOpen);
     }
   }, {
     key: "render",
