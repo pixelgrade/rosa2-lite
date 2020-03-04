@@ -1,0 +1,124 @@
+.pixassist-notice *, .pixassist-notice :before, .pixassist-notice :after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.pixassist-notice[class] {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.5; }
+  .pixassist-notice[class] p {
+    font: inherit;
+    padding: 0; }
+  .pixassist-notice[class] h2 {
+    font-size: 18px;
+    line-height: 1.32;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 6px; }
+  @media screen and (max-width: 782px) {
+    .wp-core-ui .pixassist-notice[class] {
+      padding-right: 0; } }
+
+.pixassist-notice__screenshot {
+  width: 20%;
+  height: auto;
+  max-width: 160px;
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid #DFE8EF; }
+  @media only screen and (max-width: 1024px) {
+    .pixassist-notice__screenshot {
+      display: none; } }
+
+.pixassist-notice__body {
+  max-width: 780px;
+  display: inline-block;
+  padding-left: 16px;
+  padding-right: 40px; }
+  @media only screen and (max-width: 1024px) {
+    .pixassist-notice__body {
+      max-width: 100%; } }
+
+.pixassist-notice-button {
+  position: relative;
+  overflow: hidden; }
+  .pixassist-notice-button.button:before {
+    margin: 0px 5px -1px -6px;
+    color: white; }
+  .pixassist-notice-button.button.updated-message:before {
+    content: "\f12a"; }
+  .pixassist-notice-button:active {
+    -webkit-transform: perspective(1px) translateY(2px) translateZ(0);
+            transform: perspective(1px) translateY(2px) translateZ(0);
+    -webkit-transition-duration: .05s;
+            transition-duration: .05s;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+  .pixassist-notice-button.state--error {
+    background-color: #E3004A;
+    border-color: #a00;
+    text-shadow: none; }
+    .pixassist-notice-button.state--error:hover {
+      background-color: #c10240; }
+  .pixassist-notice-button:disabled {
+    cursor: not-allowed; }
+  .pixassist-notice-button + .button {
+    margin-left: 5px; }
+
+.wp-core-ui .pixassist-notice-button, .wp-core-ui .pixassist-notice-button + .button {
+  line-height: 1.5;
+  text-align: center;
+  height: auto;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 5px;
+  white-space: normal; }
+  @media screen and (max-width: 782px) {
+    .wp-core-ui .pixassist-notice-button, .wp-core-ui .pixassist-notice-button + .button {
+      width: 100%;
+      margin: 0;
+      margin-top: 10px; } }
+
+.wp-core-ui .button-primary.state--plugin-installing {
+  cursor: wait !important;
+  color: #fff !important;
+  text-shadow: 0 -1px 1px #006799, 1px 0 1px #006799, 0 1px 1px #006799, -1px 0 1px #006799 !important; }
+
+.notice {
+  display: none; }
+
+.state--plugin-invalidated[class] {
+  -webkit-animation: shake 0.8s 0.1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+          animation: shake 0.8s 0.1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; }
+
+@-webkit-keyframes shake {
+  10%, 90% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+            transform: translate3d(-1px, 0, 0); }
+  20%, 80% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+            transform: translate3d(-4px, 0, 0); }
+  40%, 60% {
+    -webkit-transform: translate3d(4px, 0, 0);
+            transform: translate3d(4px, 0, 0); } }
+
+@keyframes shake {
+  10%, 90% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+            transform: translate3d(-1px, 0, 0); }
+  20%, 80% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+            transform: translate3d(-4px, 0, 0); }
+  40%, 60% {
+    -webkit-transform: translate3d(4px, 0, 0);
+            transform: translate3d(4px, 0, 0); } }

@@ -12,10 +12,16 @@ function rosa2_lite_register_required_plugins() {
 
 	$plugins = array(
 		array(
+			'name'               => 'Pixelgrade Assistant',
+			'slug'               => 'pixelgrade-assistant',
+			'is_callable'        => 'PixelgradeAssistant',
+			'required'           => false,
+		),
+		array(
 			'name'     => 'Nova Blocks',
 			'slug'     => 'nova-blocks',
 			'required' => false,
-			'version'  => '1.1.4',
+			'version'  => '1.2.2',
 		),
 		array(
 			'name'     => 'Customify',
