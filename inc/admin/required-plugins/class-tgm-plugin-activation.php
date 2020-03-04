@@ -8,7 +8,7 @@
  * or theme author for support.
  *
  * @package   TGM-Plugin-Activation
- * @version   2.6.1 for parent theme Rosa2 Lite for publication on WordPress.org
+ * @version   2.6.5 for parent theme Rosa2 Lite for publication on WordPress.org
  * @link      http://tgmpluginactivation.com/
  * @author    Thomas Griffin, Gary Jones, Juliette Reinders Folmer
  * @copyright Copyright (c) 2011, Thomas Griffin
@@ -55,7 +55,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 *
 		 * @const string Version number.
 		 */
-		const TGMPA_VERSION = '2.6.1';
+		const TGMPA_VERSION = '2.6.5';
 
 		/**
 		 * Regular expression to test if a URL is a WP plugin repo URL.
