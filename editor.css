@@ -506,7 +506,8 @@
 .editor-styles-wrapper .c-headline {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  width: 100%; }
   .editor-styles-wrapper .c-headline.has-text-align-left {
     align-items: flex-start; }
   .editor-styles-wrapper .c-headline.has-text-align-right {
