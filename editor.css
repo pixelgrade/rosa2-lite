@@ -275,7 +275,8 @@
 
 :root {
   --theme-content-width-normal: calc(38 * var(--theme-content-final-font-size));
-  --theme-content-width-wide: calc(65 * var(--theme-content-final-font-size)); }
+  --theme-content-width-wide: calc(65 * var(--theme-content-final-font-size));
+  --theme-wrapper-sides-spacing: var(--theme-spacing-fluid-medium); }
 
 :root {
   --theme-spacing: 1rem;
