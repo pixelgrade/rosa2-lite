@@ -1,5 +1,8 @@
 @mixin quote {
     @include apply-font(heading-3);
+}
+
+@mixin quote-decorated {
 
     &:before {
         content: "";
@@ -13,13 +16,25 @@
 
 @mixin quote__cite {
     margin-top: var(--theme-spacing);
-    @include apply-font(heading-5);
+    @include apply-font(body);
     font-style: normal;
 }
 
 .wp-block-quote,
 .wp-block-pullquote {
     @include quote;
+
+    &.has-smaller-font-size {
+        @include apply-font(heading-4);
+    }
+
+    &.has-larger-font-size {
+        @include apply-font(heading-2);
+    }
+}
+
+.wp-block-pullquote {
+    @include quote-decorated;
 }
 
 .wp-block-quote cite,

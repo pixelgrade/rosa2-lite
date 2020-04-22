@@ -1,0 +1,35 @@
+.novablocks-block[class] {
+    padding: var(--novablocks-block-padding) 0;
+    color: var(--novablocks-block-text-color);
+    background-color: var(--novablocks-block-background-color);
+}
+
+.novablocks-block__content {
+    position: relative;
+
+    color: var(--novablocks-block-content-text-color);
+    transform: translateZ(0);
+
+    &[class] {
+        padding: var(--novablocks-block-content-padding);
+    }
+
+    @include above(tablet) {
+        box-shadow: var(--novablocks-block-content-box-shadow);
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+
+            display: block;
+            background-color: var(--novablocks-block-content-background-color);
+            opacity: var(--novablocks-block-content-background-opacity);
+            pointer-events: none;
+        }
+    }
+}

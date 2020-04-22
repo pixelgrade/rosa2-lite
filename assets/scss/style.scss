@@ -51,11 +51,6 @@ Table of Contents
 @import "elements/pre";
 @import "elements/tables";
 
-/* 0.3 Fallbacks */
-// these styles come handy when the required plugins aren't installed or activated
-// and were put here to avoid overriding other properties
-@import "fallbacks/nova-blocks";
-
 /* 1. Utility classes */
 // mostly classes generated programatically that can be used on various blocks
 // to change various aspects in their appearance
@@ -97,6 +92,7 @@ Table of Contents
 /* 3. Blocks */
 @import "blocks/helpers";
 @import "blocks/frontend";
+@import "blocks/nova-blocks/hero/custom";
 
 /* 4. Pages */
 @import "pages/archive";
