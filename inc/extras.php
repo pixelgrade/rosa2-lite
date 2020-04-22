@@ -189,3 +189,10 @@ if ( ! function_exists( 'rosa2_lite_google_fonts_url' ) ) {
 		return $fonts_url;
 	} #function
 }
+
+function rosa2_lite_custom_gutenberg_settings() {
+	add_theme_support( 'editor-gradient-presets', array() );
+	add_theme_support( 'disable-custom-gradients' );
+}
+
+add_action( 'after_setup_theme', 'rosa2_lite_custom_gutenberg_settings', 10 );

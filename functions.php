@@ -109,6 +109,7 @@ function rosa2_lite_deregister_gutenberg_styles() {
 }
 add_action( 'enqueue_block_assets', 'rosa2_lite_deregister_gutenberg_styles', 10 );
 
+
 function rosa2_lite_enqueue_theme_block_editor_assets() {
 	$theme  = wp_get_theme( get_template() );
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
@@ -129,12 +130,24 @@ function rosa2_lite_enqueue_theme_block_editor_assets() {
 }
 add_action( 'enqueue_block_editor_assets', 'rosa2_lite_enqueue_theme_block_editor_assets', 10 );
 
+function rosa2_lite_enqueue_theme_block_assets() {
+	$theme  = wp_get_theme( get_template() );
+	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+
+	wp_enqueue_style( 'rosa2-lite-block-styles', get_template_directory_uri() . '/blocks.css', array(), $theme->get( 'Version' ) );
+}
+add_action( 'enqueue_block_assets', 'rosa2_lite_enqueue_theme_block_assets', 10 );
+
 function rosa2_lite_scripts() {
 	$theme  = wp_get_theme( get_template() );
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
 	/* Default Google Fonts */
 	wp_enqueue_style( 'rosa2-lite-google-fonts', rosa2_lite_google_fonts_url() );
+
+	if ( ! in_array( 'nova-blocks/nova-blocks.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+		wp_enqueue_style( 'rosa2-novablocks-fallback-style', get_template_directory_uri() . '/novablocks-fallback.css', array(), $theme->get( 'Version' ) );
+	}
 
 	wp_enqueue_style( 'rosa2-style', get_template_directory_uri() . '/style.css', array(), $theme->get( 'Version' ) );
 	wp_style_add_data( 'rosa2-style', 'rtl', 'replace' );

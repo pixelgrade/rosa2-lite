@@ -36,12 +36,11 @@
     position: static;
 }
 
-.novablocks-hero__indicator {
+.novablocks-hero__indicator:not(.novablocks-hero__indicator--middle) {
     width: 160px;
     height: 50px;
+    top: 100%;
     color: var(--theme-light-primary);
-
-    transform: translate(-50%);
 
     z-index: 1;
 

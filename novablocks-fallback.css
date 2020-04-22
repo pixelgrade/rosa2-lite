@@ -1,0 +1,80 @@
+.novablocks-media__image {
+  position: relative; }
+  .novablocks-media__image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: none;
+    width: auto;
+    height: auto; }
+    @supports (transform: translate(-50%, -50%)) {
+      .novablocks-media__image img {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); } }
+    @supports (object-fit: cover) {
+      .novablocks-media__image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+        transform: none; } }
+
+.novablocks-media__inner-container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  word-break: break-word; }
+
+.novablocks-media__layout {
+  margin-top: calc( -1 * var(--novablocks-media-spacing));
+  margin-left: calc( -1 * var(--novablocks-media-spacing)); }
+  .novablocks-media__layout > * {
+    padding-left: var(--novablocks-media-spacing);
+    margin-top: var(--novablocks-media-spacing); }
+  @media only screen and (min-width: 768px) {
+    .novablocks-media__layout {
+      display: flex;
+      flex-wrap: wrap; }
+      .novablocks-media__layout > * {
+        flex: 1 0 50%; } }
+
+.novablocks-block[class] {
+  padding: var(--novablocks-block-padding) 0;
+  color: var(--novablocks-block-text-color);
+  background-color: var(--novablocks-block-background-color); }
+
+.novablocks-block__content {
+  position: relative;
+  color: var(--novablocks-block-content-text-color);
+  transform: translateZ(0); }
+  .novablocks-block__content[class] {
+    padding: var(--novablocks-block-content-padding); }
+  @media only screen and (min-width: 768px) {
+    .novablocks-block__content {
+      box-shadow: var(--novablocks-block-content-box-shadow); }
+      .novablocks-block__content:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        background-color: var(--novablocks-block-content-background-color);
+        opacity: var(--novablocks-block-content-background-opacity);
+        pointer-events: none; } }
+
+.block-is-moderate,
+.block-is-highlighted {
+  --novablocks-block-padding: var(--novablocks-spacing); }
+
+@media only screen and (min-width: 768px) {
+  .content-is-moderate {
+    --novablocks-block-content-padding: var(--novablocks-spacing);
+    --novablocks-block-content-background-color: var(--current-light-primary); } }
