@@ -4,6 +4,8 @@
     flex-direction: column;
     align-items: center;
 
+    width: 100%;
+
     &.has-text-align-left {
         align-items: flex-start;
     }

@@ -21,7 +21,7 @@ function rosa2_lite_register_required_plugins() {
 			'name'     => 'Nova Blocks',
 			'slug'     => 'nova-blocks',
 			'required' => false,
-			'version'  => '1.2.2',
+			'version'  => '1.3.0',
 		),
 		array(
 			'name'     => 'Customify',

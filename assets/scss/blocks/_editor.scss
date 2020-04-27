@@ -15,20 +15,6 @@
 @import "core/social-links/editor";
 @import "core/table/editor";
 
-// Nova - Media
-@import "nova-blocks/media/custom";
-
-// Nova - Food Menu
-@import "nova-blocks/food-menu/style";
-@import "nova-blocks/food-menu/editor";
-
-// Nova - OpenTable Reservation Form
-@import "nova-blocks/opentable-reservation/style";
-
-// Nova - Slideshow
-@import "nova-blocks/slideshow/editor";
-
-// Nova - Hero
-@import "nova-blocks/hero/editor";
+@import "nova-blocks/editor";
 
 @import "custom";

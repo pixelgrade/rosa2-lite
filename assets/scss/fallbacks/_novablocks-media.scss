@@ -1,0 +1,35 @@
+.novablocks-media__image {
+    position: relative;
+
+    img {
+        @include image-cover;
+    }
+}
+
+.novablocks-media__inner-container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+
+    word-break: break-word;
+}
+
+.novablocks-media__layout {
+    margin-top: calc( -1 * var(--novablocks-media-spacing) );
+    margin-left: calc( -1 * var(--novablocks-media-spacing) );
+
+    > * {
+        padding-left: var(--novablocks-media-spacing);
+        margin-top: var(--novablocks-media-spacing);
+    }
+
+    @include above(tablet) {
+        display: flex;
+        flex-wrap: wrap;
+
+        > * {
+            flex: 1 0 50%;
+        }
+    }
+}

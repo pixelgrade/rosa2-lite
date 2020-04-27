@@ -1,0 +1,12 @@
+.block-is-moderate,
+.block-is-highlighted {
+    --novablocks-block-padding: var(--novablocks-spacing);
+}
+
+@include above(tablet) {
+
+    .content-is-moderate  {
+        --novablocks-block-content-padding: var(--novablocks-spacing);
+        --novablocks-block-content-background-color: var(--current-light-primary);
+    }
+}
