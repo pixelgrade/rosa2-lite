@@ -8,7 +8,7 @@
  * or theme author for support.
  *
  * @package   TGM-Plugin-Activation
- * @version   2.6.4 for Boilerplate
+ * @version   2.6.5 for Theme
  * @link      http://tgmpluginactivation.com/
  * @author    Thomas Griffin, Gary Jones, Juliette Reinders Folmer
  * @copyright Copyright (c) 2011, Thomas Griffin
@@ -55,7 +55,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 *
 		 * @const string Version number.
 		 */
-		const TGMPA_VERSION = '2.6.4'; // Version bump by Pixelgrade!!!
+		const TGMPA_VERSION = '2.6.5'; // Version bump by Pixelgrade!!!
 
 		/**
 		 * Regular expression to test if a URL is a WP plugin repo URL.
@@ -1090,6 +1090,13 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				}
 			}
 			unset( $slug, $plugin );
+
+			// Pixelgrade addition!!!
+			// Allow others to filter notices.
+			$message = apply_filters( 'tgmpa_admin_notices', $message, $total_required_action_count, $install_link_count, $activate_link_count, $update_link_count, $this );
+			// Pixelgrade addition!!!
+			// Allow others to filter notices total required action count.
+			$total_required_action_count = apply_filters( 'tgmpa_admin_notices_total_required_action_count', $total_required_action_count, $this );
 
 			// If we have notices to display, we move forward.
 			if ( ! empty( $message ) || $total_required_action_count > 0 ) {
