@@ -4,8 +4,8 @@ Author: Pixelgrade
 Author URI: https://pixelgrade.com/
 Contributors: pixelgrade, babbardel, vlad.olaru, razvanonofrei, gorby31
 Description: This is the free version of Rosa 2, the #1 best selling restaurant WordPress theme, built to help small businesses shape an appealing online experience. It's packed with a parallax effect to grab attention, an online food menu so people can discover your offering, an easy to customize interface without using code, and a responsive design to address people on the go. This theme's versatility allows it to be used in a wide range of industries, making it the perfect theme if you own a business. No matter if it's a restaurant, beauty salon, house rental, hotel, coffee shop, or any other type of small business, this theme will fit your needs perfectly. With the Style Manager system you can customize your site's overall color palettes choosing from a set of predefined, carefully crafted palettes. If in need of help, jump right in the Theme Help section provided via the Pixelgrade Assistant plugin and search the documentation or open a support ticket.
-Version: 1.1.6
-Stable tag: 1.1.6
+Version: 1.1.7
+Stable tag: 1.1.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: rosa2-lite
@@ -13,7 +13,7 @@ Domain Path: /languages/
 Tags: food-and-drink, one-column, two-columns, right-sidebar, custom-menu, featured-images, translation-ready, full-width-template, sticky-post, threaded-comments, rtl-language-support, custom-colors, custom-logo, editor-style, block-styles, wide-blocks
 Requires PHP: 5.4.0
 Requires at least: 5.2.0
-Tested up to: 5.4
+Tested up to: 5.4.2
 
 == Description ==
 
@@ -54,6 +54,11 @@ Rosa2 Lite WordPress Theme, Copyright 2020 Pixelgrade.
 Rosa2 Lite is distributed under the terms of the GNU General Public License v2 or later.
 
 == Changelog ==
+
+= 1.1.7 =
+* Fixed blog layout after latest update of Nova Blocks.
+* Fixed Media Card options.
+* Add support for thumbnails on products.
 
 = 1.1.6 =
 * Fix Media Card layout on mobiles.
