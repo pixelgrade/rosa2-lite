@@ -26,9 +26,15 @@
 
 .novablocks-media__image {
 
+    position: relative;
+
+    a {
+        @include cover;
+    }
+
+    img,
     svg {
         @include image-cover;
-        object-fit: contain;
     }
 }
 

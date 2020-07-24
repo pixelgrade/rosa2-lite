@@ -1,0 +1,3 @@
+@mixin element-spacing {
+    --element-spacing: calc( var(--block-top-spacing, 1) * var(--theme-spacing-fluid-small) * var(--novablocks-element-spacing-multiplier, 1) );
+}
