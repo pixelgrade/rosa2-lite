@@ -40,7 +40,7 @@ if ( ! function_exists( 'rosa2_lite_setup' ) ) {
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		remove_theme_support( 'post-thumbnails' );
-		add_theme_support( 'post-thumbnails', array( 'post' ) );
+		add_theme_support( 'post-thumbnails', array( 'post', 'product' ) );
 
 		/**
 		 * Switch default core markup for search form, comment form, and comments
