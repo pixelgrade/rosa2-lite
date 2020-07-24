@@ -4526,11 +4526,6 @@ html:root {
   --current-letter-spacing: var(--theme-body-letter-spacing);
   --current-text-transform: var(--theme-body-text-transform);
   --current-text-decoration: var(--theme-body-text-decoration); }
-  .novablocks-media__content[class] {
-    flex-basis: calc(50% - var(--novablocks-media-spacing)); }
-
-.novablocks-media__aside[class] {
-  flex-basis: calc(50% + var(--novablocks-media-spacing) - 0.5px); }
 
 .novablocks-media:not(.novablocks-media--no-thumbnail) .novablocks-media__aside {
   min-height: 15em; }

@@ -6,18 +6,9 @@
 .novablocks-media__content {
     max-width: 100%;
     @include apply-font(body);
-
-    &[class] {
-        flex-basis: calc(50% - var(--novablocks-media-spacing));
-    }
 }
 
 .novablocks-media__aside {
-
-    &[class] {
-        // 0.5px to help Edge resolve the calc
-        flex-basis: calc(50% + var(--novablocks-media-spacing) - 0.5px);
-    }
 
     .novablocks-media:not(.novablocks-media--no-thumbnail) & {
         min-height: 15em;
