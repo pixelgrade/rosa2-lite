@@ -1,0 +1,31 @@
+
+.editor-block-list__block,
+.block-editor-block-list__block {
+  clear: both;
+
+  &.wp-block-image {
+    img {
+      display: block;
+    }
+
+    figcaption {
+      @include apply-font(body);
+    }
+  }
+
+  &.is-style-rounded {
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  &[data-align="full"] .wp-block-image figcaption {
+    padding-left: var(--theme-wrapper-sides-spacing);
+    padding-right: var(--theme-wrapper-sides-spacing);
+  }
+
+  &[data-align="center"] .wp-block-image img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

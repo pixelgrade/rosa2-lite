@@ -1087,6 +1087,39 @@
       padding-bottom: var(--wp-block-group-padding); }
       .editor-styles-wrapper .wp-block-group[class*="is-style"]:not(.is-style-default) + .editor-styles-wrapper .wp-block-group[class*="is-style"]:not(.is-style-default) {
         --element-spacing: 0; }
+  .editor-styles-wrapper .editor-block-list__block,
+  .editor-styles-wrapper .block-editor-block-list__block {
+    clear: both; }
+    .editor-styles-wrapper .editor-block-list__block.wp-block-image img,
+    .editor-styles-wrapper .block-editor-block-list__block.wp-block-image img {
+      display: block; }
+    .editor-styles-wrapper .editor-block-list__block.wp-block-image figcaption,
+    .editor-styles-wrapper .block-editor-block-list__block.wp-block-image figcaption {
+      font-family: var(--current-font-family);
+      font-size: var(--current-font-size);
+      line-height: var(--current-line-height);
+      font-weight: var(--current-font-weight);
+      letter-spacing: var(--current-letter-spacing);
+      text-transform: var(--current-text-transform);
+      text-decoration: var(--current-text-decoration);
+      --current-font-family: var(--theme-body-font-family);
+      --current-font-size: var(--theme-body-final-font-size);
+      --current-line-height: var(--theme-body-line-height);
+      --current-font-weight: var(--theme-body-font-weight);
+      --current-letter-spacing: var(--theme-body-letter-spacing);
+      --current-text-transform: var(--theme-body-text-transform);
+      --current-text-decoration: var(--theme-body-text-decoration); }
+    .editor-styles-wrapper .editor-block-list__block.is-style-rounded img,
+    .editor-styles-wrapper .block-editor-block-list__block.is-style-rounded img {
+      border-radius: 50%; }
+    .editor-styles-wrapper .editor-block-list__block[data-align="full"] .wp-block-image figcaption,
+    .editor-styles-wrapper .block-editor-block-list__block[data-align="full"] .wp-block-image figcaption {
+      padding-left: var(--theme-wrapper-sides-spacing);
+      padding-right: var(--theme-wrapper-sides-spacing); }
+    .editor-styles-wrapper .editor-block-list__block[data-align="center"] .wp-block-image img,
+    .editor-styles-wrapper .block-editor-block-list__block[data-align="center"] .wp-block-image img {
+      margin-left: auto;
+      margin-right: auto; }
   .editor-styles-wrapper .wp-block-latest-comments {
     list-style: none; }
     .editor-styles-wrapper .wp-block-latest-comments > :not(:first-child) {

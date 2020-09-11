@@ -1,17 +1,53 @@
 $enable-image-block-styles:             true !default;
 
 @if $enable-image-block-styles == true {
+
     /* Image Block */
     .wp-block-image {
-        @include space-children-y( var(--theme-sacing-micro) );
 
         img {
             display: block;
+        }
 
-            // force images to fill their container
-            // because Safari doesn't download new images from the srcset when the browser is resized
-            width: 100%;
-            height: auto;
+        figcaption {
+            @include apply-font(body);
+        }
+
+        // force images to fill their container
+        // because Safari doesn't download new images from the srcset when the browser is resized
+        &.alignwide,
+        &.alignfull,
+        > .alignwide,
+        > .alignfull {
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &.aligncenter,
+        > .aligncenter {
+
+            img {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        &.alignfull,
+        > .alignfull {
+
+            figcaption {
+                padding-left: var(--theme-wrapper-sides-spacing);
+                padding-right: var(--theme-wrapper-sides-spacing);
+            }
+        }
+
+        &.is-style-rounded {
+            img {
+                border-radius: 50%;
+            }
         }
     }
 }
