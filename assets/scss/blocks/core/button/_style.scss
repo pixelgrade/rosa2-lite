@@ -27,50 +27,68 @@ $enable-button-block-styles:            true !default;
     }
 
     .wp-block-button__link {
-        display: inline-block;
         @include button-base;
         @include button-box;
         @include apply-font(button);
-
-        &:not(.has-text-color) {
-            @include button-color;
-        }
+        @include button-color;
     }
 
-    .wp-block-buttons[class] {
+    .wp-block-buttons[class][class][class] {
+        margin-top: var(--element-spacing);
+
         display: flex;
         align-items: center;
         flex-wrap: wrap;
 
-        margin-left: calc(var(--theme-spacing) * -1);
+        &:first-child {
+            --block-top-spacing: 1;
+            @include element-spacing;
+        }
+
+
+        .wp-block,
+        .wp-block-button {
+            margin-top: 0 !important;
+
+            &:not(:last-child),
+            &:not(:first-child):not(:last-child) {
+                margin-right: var(--element-spacing);
+            }
+        }
 
         .block-editor-block-list__layout {
             display: flex;
             align-items: center;
             flex-wrap: wrap;
 
-            * {
+            > * {
                 margin-left: 0;
                 margin-right: 0;
             }
         }
 
-        .wp-block,
-        .wp-block-button {
-            display: flex;
-            margin-left: var(--theme-spacing);
-        }
-
         &.aligncenter {
             justify-content: center;
-        }
 
-        &.alignleft {
-            justify-content: flex-start;
+            .wp-block,
+            .wp-block-button {
+                margin-left: calc( var(--element-spacing) / 2 );
+                margin-right: calc( var(--element-spacing) / 2 );
+            }
         }
 
         &.alignright {
             justify-content: flex-end;
+
+            .wp-block,
+            .wp-block-button {
+                margin-left: var(--element-spacing);
+                margin-right: 0;
+            }
+        }
+
+        .wp-block-button__link[class] {
+            display: block;
         }
     }
 }

@@ -1,0 +1,7 @@
+// A mix-in for turning OpenType features on and off
+// Demos of CSS OpenType features in CSS
+// https://sparanoid.com/lab/opentype-features
+
+@mixin font-feature() {
+    --current-font-feature: "liga", "dlig", "onum";
+}

@@ -196,7 +196,9 @@
     transform: translate(0, -50%) scale(-1,1);
   }
 
-  &:hover {
+  &:not([disabled]):hover {
+
+    color: var(--theme-button-text-color);
 
     &:before {
       transform: scale3d(0, 1, 1);

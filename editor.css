@@ -496,12 +496,14 @@
         transform: translate(0, -50%) scale(-1, 1);
         transition: var(--theme-button-transition);
         transition-property: opacity, transform; } }
-  .editor-styles-wrapper .is-style-text .wp-block-button__link:hover:before {
-    transform: scale3d(0, 1, 1);
-    transform-origin: right; }
-  .editor-styles-wrapper .is-style-text .wp-block-button__link:hover:after {
-    opacity: 1;
-    transform: translate(0.4em, -50%) scale(-1, 1); }
+  .editor-styles-wrapper .is-style-text .wp-block-button__link:not([disabled]):hover {
+    color: var(--theme-button-text-color); }
+    .editor-styles-wrapper .is-style-text .wp-block-button__link:not([disabled]):hover:before {
+      transform: scale3d(0, 1, 1);
+      transform-origin: right; }
+    .editor-styles-wrapper .is-style-text .wp-block-button__link:not([disabled]):hover:after {
+      opacity: 1;
+      transform: translate(0.4em, -50%) scale(-1, 1); }
 
 .editor-styles-wrapper .c-headline {
   display: flex;
@@ -721,7 +723,6 @@
     text-align: right; }
   .editor-styles-wrapper .wp-block-button__link {
     display: inline-block;
-    display: inline-block;
     text-decoration: none;
     cursor: pointer;
     --theme-button-text-color: var(--current-light-primary);
@@ -760,36 +761,49 @@
     --current-font-weight: var(--theme-button-font-weight);
     --current-letter-spacing: var(--theme-button-letter-spacing);
     --current-text-transform: var(--theme-button-text-transform);
-    --current-text-decoration: var(--theme-button-text-decoration); }
+    --current-text-decoration: var(--theme-button-text-decoration);
+    color: var(--current-button-text-color); }
     .editor-styles-wrapper .wp-block-button__link:hover {
       --current-button-background-color: var(--theme-button-hover-background-color);
       --current-button-border-color: var(--theme-button-hover-border-color);
       --current-button-text-color: var(--theme-button-hover-text-color);
       --current-button-transition: var(--theme-button-hover-transition); }
-    .editor-styles-wrapper .wp-block-button__link:not(.has-text-color) {
-      color: var(--current-button-text-color); }
-  .editor-styles-wrapper .wp-block-buttons[class] {
+  .editor-styles-wrapper .wp-block-buttons[class][class][class] {
+    margin-top: var(--element-spacing);
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    margin-left: calc(var(--theme-spacing) * -1); }
-    .editor-styles-wrapper .wp-block-buttons[class] .block-editor-block-list__layout {
+    flex-wrap: wrap; }
+    .editor-styles-wrapper .wp-block-buttons[class][class][class]:first-child {
+      --block-top-spacing: 1;
+      --element-spacing: calc( var(--block-top-spacing, 1) * var(--theme-spacing-fluid-small) * var(--novablocks-element-spacing-multiplier, 1) ); }
+    .editor-styles-wrapper .wp-block-buttons[class][class][class] .wp-block,
+    .editor-styles-wrapper .wp-block-buttons[class][class][class] .wp-block-button {
+      margin-top: 0 !important; }
+      .editor-styles-wrapper .wp-block-buttons[class][class][class] .wp-block:not(:last-child), .editor-styles-wrapper .wp-block-buttons[class][class][class] .wp-block:not(:first-child):not(:last-child),
+      .editor-styles-wrapper .wp-block-buttons[class][class][class] .wp-block-button:not(:last-child),
+      .editor-styles-wrapper .wp-block-buttons[class][class][class] .wp-block-button:not(:first-child):not(:last-child) {
+        margin-right: var(--element-spacing); }
+    .editor-styles-wrapper .wp-block-buttons[class][class][class] .block-editor-block-list__layout {
       display: flex;
       align-items: center;
       flex-wrap: wrap; }
-      .editor-styles-wrapper .wp-block-buttons[class] .block-editor-block-list__layout * {
+      .editor-styles-wrapper .wp-block-buttons[class][class][class] .block-editor-block-list__layout > * {
         margin-left: 0;
         margin-right: 0; }
-    .editor-styles-wrapper .wp-block-buttons[class] .wp-block,
-    .editor-styles-wrapper .wp-block-buttons[class] .wp-block-button {
-      display: flex;
-      margin-left: var(--theme-spacing); }
-    .editor-styles-wrapper .wp-block-buttons[class].aligncenter {
+    .editor-styles-wrapper .wp-block-buttons[class][class][class].aligncenter {
       justify-content: center; }
-    .editor-styles-wrapper .wp-block-buttons[class].alignleft {
-      justify-content: flex-start; }
-    .editor-styles-wrapper .wp-block-buttons[class].alignright {
+      .editor-styles-wrapper .wp-block-buttons[class][class][class].aligncenter .wp-block,
+      .editor-styles-wrapper .wp-block-buttons[class][class][class].aligncenter .wp-block-button {
+        margin-left: calc( var(--element-spacing) / 2);
+        margin-right: calc( var(--element-spacing) / 2); }
+    .editor-styles-wrapper .wp-block-buttons[class][class][class].alignright {
       justify-content: flex-end; }
+      .editor-styles-wrapper .wp-block-buttons[class][class][class].alignright .wp-block,
+      .editor-styles-wrapper .wp-block-buttons[class][class][class].alignright .wp-block-button {
+        margin-left: var(--element-spacing);
+        margin-right: 0; }
+    .editor-styles-wrapper .wp-block-buttons[class][class][class] .wp-block-button__link[class] {
+      display: block; }
   .editor-styles-wrapper ul.wp-block-categories__list[class] {
     list-style: none;
     padding-left: 0; }
@@ -1643,7 +1657,6 @@
     --current-text-decoration: var(--theme-body-text-decoration);
     font-style: normal; }
   .editor-styles-wrapper[class] {
-    /* Headings */
     /* Iframes */
     /* Lists */
     /* Nested unordered lists */
@@ -1667,7 +1680,7 @@
     background-color: var(--current-light-primary);
     color: var(--current-dark-secondary); }
     .editor-styles-wrapper[class] h1, .editor-styles-wrapper[class] h2, .editor-styles-wrapper[class] h3, .editor-styles-wrapper[class] h4, .editor-styles-wrapper[class] h5, .editor-styles-wrapper[class] h6 {
-      margin: 0; }
+      margin-bottom: 0; }
     .editor-styles-wrapper[class] h1.has-larger-font-size {
       font-family: var(--current-font-family);
       font-size: var(--current-font-size);

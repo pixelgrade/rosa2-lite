@@ -641,7 +641,6 @@
 
 .wp-block-button__link {
   display: inline-block;
-  display: inline-block;
   text-decoration: none;
   cursor: pointer;
   --theme-button-text-color: var(--current-light-primary);
@@ -680,37 +679,50 @@
   --current-font-weight: var(--theme-button-font-weight);
   --current-letter-spacing: var(--theme-button-letter-spacing);
   --current-text-transform: var(--theme-button-text-transform);
-  --current-text-decoration: var(--theme-button-text-decoration); }
+  --current-text-decoration: var(--theme-button-text-decoration);
+  color: var(--current-button-text-color); }
   .wp-block-button__link:hover {
     --current-button-background-color: var(--theme-button-hover-background-color);
     --current-button-border-color: var(--theme-button-hover-border-color);
     --current-button-text-color: var(--theme-button-hover-text-color);
     --current-button-transition: var(--theme-button-hover-transition); }
-  .wp-block-button__link:not(.has-text-color) {
-    color: var(--current-button-text-color); }
 
-.wp-block-buttons[class] {
+.wp-block-buttons[class][class][class] {
+  margin-top: var(--element-spacing);
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  margin-left: calc(var(--theme-spacing) * -1); }
-  .wp-block-buttons[class] .block-editor-block-list__layout {
+  flex-wrap: wrap; }
+  .wp-block-buttons[class][class][class]:first-child {
+    --block-top-spacing: 1;
+    --element-spacing: calc( var(--block-top-spacing, 1) * var(--theme-spacing-fluid-small) * var(--novablocks-element-spacing-multiplier, 1) ); }
+  .wp-block-buttons[class][class][class] .wp-block,
+  .wp-block-buttons[class][class][class] .wp-block-button {
+    margin-top: 0 !important; }
+    .wp-block-buttons[class][class][class] .wp-block:not(:last-child), .wp-block-buttons[class][class][class] .wp-block:not(:first-child):not(:last-child),
+    .wp-block-buttons[class][class][class] .wp-block-button:not(:last-child),
+    .wp-block-buttons[class][class][class] .wp-block-button:not(:first-child):not(:last-child) {
+      margin-right: var(--element-spacing); }
+  .wp-block-buttons[class][class][class] .block-editor-block-list__layout {
     display: flex;
     align-items: center;
     flex-wrap: wrap; }
-    .wp-block-buttons[class] .block-editor-block-list__layout * {
+    .wp-block-buttons[class][class][class] .block-editor-block-list__layout > * {
       margin-left: 0;
       margin-right: 0; }
-  .wp-block-buttons[class] .wp-block,
-  .wp-block-buttons[class] .wp-block-button {
-    display: flex;
-    margin-left: var(--theme-spacing); }
-  .wp-block-buttons[class].aligncenter {
+  .wp-block-buttons[class][class][class].aligncenter {
     justify-content: center; }
-  .wp-block-buttons[class].alignleft {
-    justify-content: flex-start; }
-  .wp-block-buttons[class].alignright {
+    .wp-block-buttons[class][class][class].aligncenter .wp-block,
+    .wp-block-buttons[class][class][class].aligncenter .wp-block-button {
+      margin-left: calc( var(--element-spacing) / 2);
+      margin-right: calc( var(--element-spacing) / 2); }
+  .wp-block-buttons[class][class][class].alignright {
     justify-content: flex-end; }
+    .wp-block-buttons[class][class][class].alignright .wp-block,
+    .wp-block-buttons[class][class][class].alignright .wp-block-button {
+      margin-left: var(--element-spacing);
+      margin-right: 0; }
+  .wp-block-buttons[class][class][class] .wp-block-button__link[class] {
+    display: block; }
 
 /* Categories Block */
 .wp-block-categories {

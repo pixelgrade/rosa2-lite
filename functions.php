@@ -114,6 +114,10 @@ function rosa2_lite_enqueue_theme_block_editor_assets() {
 	$theme  = wp_get_theme( get_template() );
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
+	global $wp_version;
+	$is_old_wp_version = version_compare( $wp_version, '5.5', '<' );
+	$is_gutenberg_plugin_active = defined( 'GUTENBERG_VERSION' );
+
 	/* Default Google Fonts */
 	wp_enqueue_style( 'rosa2-lite-google-fonts', rosa2_lite_google_fonts_url() );
 
@@ -126,6 +130,10 @@ function rosa2_lite_enqueue_theme_block_editor_assets() {
 		$theme->get( 'Version' ),
 		true
 	);
+
+	if ( $is_old_wp_version && ! $is_gutenberg_plugin_active ) {
+		wp_enqueue_style( 'rosa2-gutenberg-legacy-editor' );
+	}
 }
 add_action( 'enqueue_block_editor_assets', 'rosa2_lite_enqueue_theme_block_editor_assets', 10 );
 
@@ -141,12 +149,20 @@ function rosa2_lite_scripts() {
 	$theme  = wp_get_theme( get_template() );
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
+	global $wp_version;
+	$is_old_wp_version = version_compare( $wp_version, '5.5', '<' );
+	$is_gutenberg_plugin_active = defined( 'GUTENBERG_VERSION' );
+
 	/* Default Google Fonts */
 	wp_enqueue_style( 'rosa2-lite-google-fonts', rosa2_lite_google_fonts_url() );
 
 	if ( ! in_array( 'nova-blocks/nova-blocks.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
 		wp_enqueue_style( 'rosa2-novablocks-fallback-style', get_template_directory_uri() . '/novablocks-fallback.css', array(), $theme->get( 'Version' ) );
 	}
+
+	wp_register_style( 'rosa2-lite-gutenberg-legacy-frontend', get_template_directory_uri() . '/dist/css/gutenberg-legacy-frontend.css', array(), $theme->get( 'Version' ) );
+
+	wp_register_style( 'rosa2-lite-gutenberg-legacy-editor', get_template_directory_uri() . '/dist/css/gutenberg-legacy-editor.css', array(), $theme->get( 'Version' ) );
 
 	wp_enqueue_style( 'rosa2-style', get_template_directory_uri() . '/style.css', array(), $theme->get( 'Version' ) );
 	wp_style_add_data( 'rosa2-style', 'rtl', 'replace' );
@@ -159,6 +175,10 @@ function rosa2_lite_scripts() {
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
+	}
+
+	if ( $is_old_wp_version && ! $is_gutenberg_plugin_active ) {
+		wp_enqueue_style( 'rosa2-gutenberg-legacy-frontend' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'rosa2_lite_scripts', 10 );

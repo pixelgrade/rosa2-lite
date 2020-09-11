@@ -1,7 +1,7 @@
-/* Headings */
 h1, h2, h3, h4, h5, h6 {
-  margin: 0;
+  margin-bottom: 0;
 }
+
 
 h1.has-larger-font-size {
   @include apply-font(display);

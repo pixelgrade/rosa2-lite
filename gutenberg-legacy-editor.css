@@ -1,0 +1,7 @@
+.wp-block-buttons[class][class] {
+  margin-top: 0; }
+  .wp-block-buttons[class][class] .block-editor-block-list__layout > * {
+    margin-left: 0;
+    margin-right: 0; }
+  .wp-block-buttons[class][class] .wp-block-button {
+    margin: var(--element-spacing) var(--element-spacing) 0 0; }
