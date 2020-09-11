@@ -645,10 +645,6 @@
 .block-editor-block-list__layout .wp-block[data-align=wide] {
   max-width: var(--theme-content-width-wide); }
 
-.editor-block-list__layout > [data-align="wide"],
-.block-editor-block-list__layout > [data-align="wide"] {
-  max-width: var(--theme-content-width-wide); }
-
 .editor-block-list__layout > [data-align="full"],
 .block-editor-block-list__layout > [data-align="full"] {
   max-width: none; }

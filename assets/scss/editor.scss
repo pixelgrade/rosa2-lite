@@ -22,10 +22,6 @@
         max-width: var(--theme-content-width-wide);
     }
 
-    > [data-align="wide"] {
-        max-width: var(--theme-content-width-wide);
-    }
-
     > [data-align="full"] {
         max-width: none;
     }
