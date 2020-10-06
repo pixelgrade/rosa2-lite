@@ -1577,6 +1577,10 @@
     margin-top: 0;
     -webkit-transform: none;
     transform: none; }
+  .editor-styles-wrapper .wp-block[data-type="novablocks/navigation"] ul.menu a {
+    display: flex; }
+  .editor-styles-wrapper .menu {
+    padding-top: 0; }
   .editor-styles-wrapper .wp-block-quote,
   .editor-styles-wrapper .wp-block-pullquote {
     font-family: var(--current-font-family);

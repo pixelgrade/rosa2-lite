@@ -194,7 +194,7 @@ ul.menu,
           &:before {
             content: '';
             position: absolute;
-            bottom: .5em; // Margin bottom applied on header links
+            bottom: .2em; // Margin bottom applied on header links
             height: 3px;
             background: currentColor;
             transition: transform .4s $ease;

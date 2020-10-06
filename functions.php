@@ -156,7 +156,7 @@ function rosa2_lite_scripts() {
 	/* Default Google Fonts */
 	wp_enqueue_style( 'rosa2-lite-google-fonts', rosa2_lite_google_fonts_url() );
 
-	if ( ! in_array( 'nova-blocks/nova-blocks.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+	if ( rosa2_lite_should_enqueue_novablocks_fallbacks() ) {
 		wp_enqueue_style( 'rosa2-novablocks-fallback-style', get_template_directory_uri() . '/novablocks-fallback.css', array(), $theme->get( 'Version' ) );
 	}
 
