@@ -2060,12 +2060,6 @@ ul.menu,
   [class*="__inner-container"] > .alignfull {
     max-width: none; }
 
-.entry-content > :not(:first-child),
-.wp-block-column > :not(:first-child),
-[class*="__inner-container"] > :not(:first-child) {
-  --element-spacing: var(--theme-spacing-small);
-  margin-top: var(--element-spacing); }
-
 .entry-content {
   word-wrap: break-word; }
 

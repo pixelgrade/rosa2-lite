@@ -7,12 +7,6 @@
     @include wrapper;
 }
 
-.entry-content,
-.wp-block-column,
-[class*="__inner-container"] {
-    @include space-children-y( var(--theme-spacing-small) );
-}
-
 .entry-content {
     word-wrap: break-word;
 }
