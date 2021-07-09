@@ -4,7 +4,7 @@ Author: Pixelgrade
 Author URI: https://pixelgrade.com/
 Contributors: pixelgrade, babbardel, vlad.olaru, razvanonofrei, gorby31
 Description: This is the free version of Rosa 2, the #1 best selling restaurant WordPress theme, built to help small businesses shape an appealing online experience. It's packed with a parallax effect to grab attention, an online food menu so people can discover your offering, an easy to customize interface without using code, and a responsive design to address people on the go. This theme's versatility allows it to be used in a wide range of industries, making it the perfect theme if you own a business. No matter if it's a restaurant, beauty salon, house rental, hotel, coffee shop, or any other type of small business, this theme will fit your needs perfectly. With the Style Manager system you can customize your site's overall color palettes choosing from a set of predefined, carefully crafted palettes. If in need of help, jump right in the Theme Help section provided via the Pixelgrade Assistant plugin and search the documentation or open a support ticket.
-Version: 1.3.0
+Version: 1.3.1
 Stable tag: 1.3.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -13,7 +13,7 @@ Domain Path: /languages/
 Tags: food-and-drink, one-column, two-columns, right-sidebar, custom-menu, featured-images, translation-ready, full-width-template, sticky-post, threaded-comments, rtl-language-support, custom-colors, custom-logo, editor-style, block-styles, wide-blocks
 Requires PHP: 5.4.0
 Requires at least: 5.2.0
-Tested up to: 5.5.1
+Tested up to: 5.7.2
 
 == Description ==
 
@@ -54,6 +54,10 @@ Rosa2 Lite WordPress Theme, Copyright 2020 Pixelgrade.
 Rosa2 Lite is distributed under the terms of the GNU General Public License v2 or later.
 
 == Changelog ==
+
+= 1.3.1 =
+* Improve compatibility with Nova Blocks 1.12.0
+* Tested theme with the latest version of WordPress (5.7.2)
 
 = 1.3.0 =
 * Improved compatibility with Nova Blocks 1.6.0
