@@ -56,3 +56,15 @@
 [class*="novablocks-u-content"] {
     z-index: 10;
 }
+
+.novablocks-hero {
+    color: var(--novablocks-hero-text-color);
+}
+
+.novablocks-u-background-dark {
+    background-color: var(--current-dark-primary);
+}
+
+.novablocks-u-background-light {
+    background-color: var(--current-light-primary);
+}

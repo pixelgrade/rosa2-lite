@@ -2805,11 +2805,11 @@ span.page-numbers {
   margin-top: var(--element-spacing);
   margin-bottom: calc( var(--block-bottom-spacing, 1) * var(--theme-spacing-fluid-small) * var(--novablocks-element-spacing-multiplier, 1)); }
 
-.novablocks-media + .novablocks-media[class],
-.novablocks-hero + .novablocks-media[class],
-.novablocks-slideshow + .novablocks-media[class],
-.novablocks-map.alignfull + .novablocks-media[class],
-.novablocks-collection + .novablocks-media[class], .novablocks-media +
+.novablocks-media:not(.novablocks-media--blog) + .novablocks-media:not(.novablocks-media--blog)[class],
+.novablocks-hero + .novablocks-media:not(.novablocks-media--blog)[class],
+.novablocks-slideshow + .novablocks-media:not(.novablocks-media--blog)[class],
+.novablocks-map.alignfull + .novablocks-media:not(.novablocks-media--blog)[class],
+.novablocks-collection + .novablocks-media:not(.novablocks-media--blog)[class], .novablocks-media:not(.novablocks-media--blog) +
 .novablocks-hero[class],
 .novablocks-hero +
 .novablocks-hero[class],
@@ -2818,7 +2818,7 @@ span.page-numbers {
 .novablocks-map.alignfull +
 .novablocks-hero[class],
 .novablocks-collection +
-.novablocks-hero[class], .novablocks-media +
+.novablocks-hero[class], .novablocks-media:not(.novablocks-media--blog) +
 .novablocks-slideshow[class],
 .novablocks-hero +
 .novablocks-slideshow[class],
@@ -2827,7 +2827,7 @@ span.page-numbers {
 .novablocks-map.alignfull +
 .novablocks-slideshow[class],
 .novablocks-collection +
-.novablocks-slideshow[class], .novablocks-media +
+.novablocks-slideshow[class], .novablocks-media:not(.novablocks-media--blog) +
 .novablocks-map.alignfull[class],
 .novablocks-hero +
 .novablocks-map.alignfull[class],
@@ -2836,7 +2836,7 @@ span.page-numbers {
 .novablocks-map.alignfull +
 .novablocks-map.alignfull[class],
 .novablocks-collection +
-.novablocks-map.alignfull[class], .novablocks-media +
+.novablocks-map.alignfull[class], .novablocks-media:not(.novablocks-media--blog) +
 .novablocks-collection[class],
 .novablocks-hero +
 .novablocks-collection[class],
@@ -4582,7 +4582,6 @@ html:root {
     top: 0;
     left: 0;
     min-width: 100%;
-    min-height: 100%;
     max-width: none;
     width: auto;
     height: auto; }
@@ -4608,7 +4607,8 @@ html:root {
 
 .novablocks-media--blog[class] {
   --novablocks-block-content-box-shadow: none;
-  --novablocks-block-background-color: var(--current-light-tertiary); }
+  --novablocks-block-background-color: var(--current-light-tertiary);
+  --card-content-padding: 100; }
   .novablocks-media--blog[class] .novablocks-media__image {
     height: 100%;
     min-height: 400px; }
@@ -4839,6 +4839,15 @@ html:root {
 
 [class*="novablocks-u-content"] {
   z-index: 10; }
+
+.novablocks-hero {
+  color: var(--novablocks-hero-text-color); }
+
+.novablocks-u-background-dark {
+  background-color: var(--current-dark-primary); }
+
+.novablocks-u-background-light {
+  background-color: var(--current-light-primary); }
 
 /* 4. Pages */
 body.archive, body.blog, body.search {
@@ -5567,3 +5576,6 @@ img:not(.is-loaded) {
   opacity: 0; }
   .gm-style img:not(.is-loaded) {
     opacity: 1; }
+
+.wp-block:first-child, .entry-content > *:first-child, .wp-block-column > *:first-child, [class*="__inner-container"] > *:first-child {
+  --block-top-spacing: 0; }

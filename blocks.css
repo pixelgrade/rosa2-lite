@@ -1722,7 +1722,6 @@ html:root {
     top: 0;
     left: 0;
     min-width: 100%;
-    min-height: 100%;
     max-width: none;
     width: auto;
     height: auto; }
@@ -1748,7 +1747,8 @@ html:root {
 
 .novablocks-media--blog[class] {
   --novablocks-block-content-box-shadow: none;
-  --novablocks-block-background-color: var(--current-light-tertiary); }
+  --novablocks-block-background-color: var(--current-light-tertiary);
+  --card-content-padding: 100; }
   .novablocks-media--blog[class] .novablocks-media__image {
     height: 100%;
     min-height: 400px; }

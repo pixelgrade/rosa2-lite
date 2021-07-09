@@ -23,3 +23,7 @@ img:not(.is-loaded) {
         opacity: 1;
     }
 }
+
+.wp-block:first-child, .entry-content > *:first-child, .wp-block-column > *:first-child, [class*="__inner-container"] > *:first-child {
+    --block-top-spacing: 0;
+}

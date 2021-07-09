@@ -7,7 +7,7 @@
     margin-bottom: calc( var(--block-bottom-spacing, 1) * var(--theme-spacing-fluid-small) * var(--novablocks-element-spacing-multiplier, 1) );
 }
 
-.novablocks-media,
+.novablocks-media:not(.novablocks-media--blog),
 .novablocks-hero,
 .novablocks-slideshow,
 .novablocks-map.alignfull,
