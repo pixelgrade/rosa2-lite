@@ -1530,6 +1530,40 @@
   .editor-styles-wrapper .nova-food-menu-item--highlighted {
     margin-left: 0;
     margin-right: 0; }
+  .editor-styles-wrapper .novablocks-hero__inner-container > .c-headline .c-headline__primary,
+  .editor-styles-wrapper .novablocks-hero__inner-container > .c-headline .c-headline__secondary {
+    opacity: 1; }
+  .editor-styles-wrapper .novablocks-hero__inner-container > .c-headline + .c-headline .c-headline__primary,
+  .editor-styles-wrapper .novablocks-hero__inner-container > .c-headline + .c-headline .c-headline__secondary {
+    opacity: 1; }
+  .editor-styles-wrapper .novablocks-hero__inner-container > :not(.c-headline) {
+    opacity: 1; }
+  .editor-styles-wrapper .novablocks-hero__inner-container .c-separator__symbol {
+    color: var(--current-color-primary); }
+  @media not screen and (min-width: 768px) {
+    .editor-styles-wrapper .novablocks-hero .novablocks-u-content-padding {
+      padding-top: var(--theme-spacing-xxl);
+      padding-bottom: var(--theme-spacing-xxl); } }
+  .editor-styles-wrapper .novablocks-hero .novablocks-u-content-align {
+    position: static; }
+  .editor-styles-wrapper .novablocks-hero__indicator:not(.novablocks-hero__indicator--middle) {
+    width: 160px;
+    height: 50px;
+    top: 100%;
+    color: var(--theme-light-primary);
+    z-index: 1; }
+    .editor-styles-wrapper .novablocks-hero__indicator:not(.novablocks-hero__indicator--middle):after {
+      color: var(--theme-dark-primary); }
+    .has-moderate-media-card-after-hero .editor-styles-wrapper .novablocks-hero__indicator:not(.novablocks-hero__indicator--middle) {
+      color: var(--theme-light-tertiary); }
+  .editor-styles-wrapper [class*="novablocks-u-content"] {
+    z-index: 10; }
+  .editor-styles-wrapper .novablocks-hero {
+    color: var(--novablocks-hero-text-color); }
+  .editor-styles-wrapper .novablocks-u-background-dark {
+    background-color: var(--current-dark-primary); }
+  .editor-styles-wrapper .novablocks-u-background-light {
+    background-color: var(--current-light-primary); }
   .editor-styles-wrapper .novablocks-u-background-dark .novablocks-hero__indicator:after {
     color: var(--theme-sm-light-1); }
   .editor-styles-wrapper .novablocks-slideshow__arrow {
