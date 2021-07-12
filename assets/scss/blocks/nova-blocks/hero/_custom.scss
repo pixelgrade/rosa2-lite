@@ -24,6 +24,9 @@
 }
 
 .novablocks-hero {
+    
+    --novablocks-hero-text-color: #FFF;
+    
     .novablocks-u-content-padding {
         @include below(tablet) {
             padding-top: var(--theme-spacing-xxl);

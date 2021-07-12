@@ -4543,6 +4543,177 @@ html:root {
 .nova-food-menu-item__label {
   color: var(--current-light-primary); }
 
+:root {
+  --novablocks-color-1: #203AB6;
+  --novablocks-color-2: #FFE42E;
+  --novablocks-color-3: #323067;
+  --novablocks-dark-1: #323067;
+  --novablocks-dark-2: #272743;
+  --novablocks-dark-3: #000043;
+  --novablocks-light-1: #FFFFFF;
+  --novablocks-light-2: #EDF0F1;
+  --novablocks-light-3: #EDF0F1;
+  --novablocks-color-primary: var(--novablocks-color-1);
+  --novablocks-color-secondary: var(--novablocks-color-2);
+  --novablocks-color-tertiary: var(--novablocks-color-3);
+  --novablocks-dark-primary: var(--novablocks-dark-1);
+  --novablocks-dark-secondary: var(--novablocks-dark-2);
+  --novablocks-dark-tertiary: var(--novablocks-dark-3);
+  --novablocks-light-primary: var(--novablocks-light-1);
+  --novablocks-light-secondary: var(--novablocks-light-2);
+  --novablocks-light-tertiary: var(--novablocks-light-3);
+  --novablocks-current-color-primary: var(--novablocks-color-primary);
+  --novablocks-current-color-secondary: var(--novablocks-color-secondary);
+  --novablocks-current-color-tertiary: var(--novablocks-color-tertiary);
+  --novablocks-current-dark-primary: var(--novablocks-dark-primary);
+  --novablocks-current-dark-secondary: var(--novablocks-dark-secondary);
+  --novablocks-current-dark-tertiary: var(--novablocks-dark-tertiary);
+  --novablocks-current-light-primary: var(--novablocks-light-primary);
+  --novablocks-current-light-secondary: var(--novablocks-light-secondary);
+  --novablocks-current-light-tertiary: var(--novablocks-light-tertiary);
+  --novablocks-spacing: 24px;
+  --novablocks-sides-spacings: var(--novablocks-spacing);
+  --novablocks-media-spacing: var(--novablocks-spacing);
+  --novablocks-media-gutter: var(--novablocks-spacing);
+  --novablocks-media-background-direction: 90deg;
+  --novablocks-transition-duration: 0.5s;
+  --novablocks-transition-easing: ease;
+  --novablocks-transition: all var(--novablocks-transition-duration) var(--novablocks-transition-easing);
+  --novablocks-element-spacing-level-1-multiplier: 1;
+  --novablocks-element-spacing-level-2-multiplier: 0.5;
+  --novablocks-element-spacing-level-3-multiplier: 0.25;
+  --novablocks-block-content-box-shadow:
+		0 32px 128px rgba(42, 54, 52, 0.1),
+		0 16px 64px rgba(42, 54, 52, 0.1),
+		0 8px 16px rgba(42, 54, 52, 0.1); }
+
+.novablocks-block {
+  --novablocks-block-text-color: var(--novablocks-current-dark-secondary);
+  --novablocks-block-accent-color: var(--novablocks-block-current-accent-color);
+  --novablocks-block-titles-color: var(--novablocks-current-dark-secondary);
+  --novablocks-block-background-color: var(--novablocks-current-light-primary);
+  --novablocks-block-padding: var(--novablocks-spacing);
+  --novablocks-block-content-padding: var(--novablocks-spacing);
+  --novablocks-block-content-text-color: var(--novablocks-current-dark-secondary);
+  --novablocks-block-content-titles-color: var(--novablocks-current-dark-secondary);
+  --novablocks-block-content-accent-color: var(--novablocks-block-current-accent-color);
+  --novablocks-block-content-background-color: transparent;
+  --novablocks-block-content-background-opacity: 1;
+  --novablocks-block-content-current-box-shadow: none;
+  --novablocks-block-current-accent-color: var(--novablocks-current-color-primary); }
+  .has-secondary-accent-color .novablocks-block {
+    --novablocks-block-current-accent-color: var(--novablocks-current-color-secondary); }
+  .has-tertiary-accent-color .novablocks-block {
+    --novablocks-block-current-accent-color: var(--novablocks-current-color-tertiary); }
+
+.novablocks-media {
+  position: relative;
+  z-index: var(--novablocks-block-zindex); }
+
+.novablocks-block {
+  --block-padding: 0;
+  --block-content-padding: 0; }
+  .novablocks-block[class] {
+    color: var(--novablocks-block-text-color);
+    background-color: var(--novablocks-block-background-color);
+    transition: var(--novablocks-transition);
+    transition-property: background-color, padding, margin; }
+    .novablocks-block[class] h1, .novablocks-block[class] h2, .novablocks-block[class] h3, .novablocks-block[class] h4, .novablocks-block[class] h5, .novablocks-block[class] h6 {
+      transition: var(--novablocks-transition);
+      transition-property: color; }
+    .novablocks-block[class] h1, .novablocks-block[class] h2, .novablocks-block[class] h3 {
+      color: var(--novablocks-block-titles-color); }
+    .novablocks-block[class] h4, .novablocks-block[class] h5, .novablocks-block[class] h6 {
+      color: var(--novablocks-block-accent-color); }
+
+.novablocks-block__content[class] {
+  position: relative;
+  padding: var(--block-content-padding);
+  color: var(--novablocks-block-content-text-color);
+  transform: translateZ(0);
+  transition: var(--novablocks-transition);
+  transition-property: padding, box-shadow; }
+  .novablocks-block__content[class] h1, .novablocks-block__content[class] h2, .novablocks-block__content[class] h3 {
+    color: var(--novablocks-block-content-titles-color); }
+  .novablocks-block__content[class] h4, .novablocks-block__content[class] h5, .novablocks-block__content[class] h6 {
+    color: var(--novablocks-block-content-accent-color); }
+
+.novablocks-block__content h1, .novablocks-block__content h2, .novablocks-block__content h3, .novablocks-block__content h4, .novablocks-block__content h5, .novablocks-block__content h6 {
+  width: 100%; }
+
+@media only screen and (min-width: 768px) {
+  .novablocks-block__content {
+    box-shadow: var(--novablocks-block-content-current-box-shadow); }
+    .novablocks-block__content:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      display: block;
+      background-color: var(--novablocks-block-content-background-color);
+      opacity: var(--novablocks-block-content-background-opacity);
+      pointer-events: none;
+      transition: var(--novablocks-transition);
+      transition-property: background-color, opacity; } }
+
+@media not screen and (min-width: 768px) {
+  .block-is-moderate.content-is-basic {
+    --novablocks-block-background-color: var(--novablocks-current-light-tertiary);
+    --block-padding: var(--novablocks-block-padding); }
+  .block-is-highlighted.content-is-basic,
+  .block-is-highlighted.content-is-moderate,
+  .block-is-basic.content-is-highlighted,
+  .block-is-moderate.content-is-highlighted {
+    --novablocks-block-background-color: var(--novablocks-current-dark-primary);
+    --novablocks-block-content-text-color: var(--novablocks-current-light-primary);
+    --novablocks-block-content-titles-color: var(--novablocks-current-light-primary);
+    --novablocks-block-content-accent-color: var(--novablocks-current-light-primary);
+    --novablocks-block-text-color: var(--novablocks-block-content-text-color);
+    --novablocks-block-titles-color: var(--novablocks-block-content-titles-color);
+    --novablocks-block-accent-color: var(--novablocks-block-content-accent-color);
+    --block-padding: var(--novablocks-block-padding); }
+    .is-style-alternate .block-is-highlighted.content-is-basic, .is-style-alternate
+    .block-is-highlighted.content-is-moderate, .is-style-alternate
+    .block-is-basic.content-is-highlighted, .is-style-alternate
+    .block-is-moderate.content-is-highlighted {
+      --novablocks-block-background-color: var(--novablocks-block-current-accent-color);
+      --novablocks-block-accent-color: var(--novablocks-current-light-primary); } }
+
+@media only screen and (min-width: 768px) {
+  .block-is-moderate {
+    --novablocks-block-background-color: var(--novablocks-current-light-tertiary);
+    --block-padding: var(--novablocks-block-padding); }
+  .block-is-highlighted {
+    --novablocks-block-background-color: var(--novablocks-current-dark-primary);
+    --novablocks-block-text-color: var(--novablocks-current-light-primary);
+    --novablocks-block-titles-color: var(--novablocks-current-light-primary);
+    --novablocks-block-accent-color: var(--novablocks-current-light-primary);
+    --block-padding: var(--novablocks-block-padding); }
+    .is-style-alternate .block-is-highlighted {
+      --novablocks-block-background-color: var(--novablocks-block-current-accent-color);
+      --novablocks-block-accent-color: var(--novablocks-current-light-primary); }
+      .is-style-alternate .block-is-highlighted:not(.content-is-highlighted) {
+        --novablocks-block-content-accent-color: var(--novablocks-current-light-primary); }
+  .content-is-moderate,
+  .content-is-highlighted {
+    --block-content-padding: calc( var(--novablocks-block-content-padding) * var(--novablocks-block-content-padding-multiplier, 1) ); }
+  .content-is-moderate.block-is-moderate {
+    --novablocks-block-content-background-color: var(--novablocks-current-light-primary); }
+  .content-is-highlighted.block-is-highlighted {
+    --novablocks-block-content-background-color: var(--novablocks-current-light-primary); }
+  .block-is-highlighted:not(.content-is-highlighted),
+  .content-is-highlighted:not(.block-is-highlighted) {
+    --novablocks-block-content-text-color: var(--novablocks-current-light-primary);
+    --novablocks-block-content-titles-color: var(--novablocks-block-content-text-color); }
+  .content-is-highlighted:not(.block-is-highlighted) {
+    --novablocks-block-content-background-color: var(--novablocks-current-dark-primary); }
+    .is-style-alternate .content-is-highlighted:not(.block-is-highlighted) {
+      --novablocks-block-content-background-color: var(--novablocks-block-current-accent-color);
+      --novablocks-block-content-accent-color: var(--novablocks-current-light-primary); } }
+
 .novablocks-media > .wp-block-group__inner-container {
   padding-top: 1px; }
 
@@ -4616,6 +4787,10 @@ html:root {
     order: 0; }
   .novablocks-media--blog[class].has-image-on-the-left .novablocks-media__layout {
     flex-direction: row-reverse; }
+
+.novablocks-media .novablocks-block[class] {
+  background: linear-gradient(var(--novablocks-media-background-direction), var(--novablocks-block-background-color) 0, var(--novablocks-block-background-color) calc(var(--emphasis-area) * 1%), transparent calc(var(--emphasis-area) * 1%));
+  background-size: 100% 100%; }
 
 .novablocks-slideshow__arrow {
   background-color: transparent;
@@ -4818,10 +4993,12 @@ html:root {
 .novablocks-hero__inner-container .c-separator__symbol {
   color: var(--current-color-primary); }
 
-@media not screen and (min-width: 768px) {
-  .novablocks-hero .novablocks-u-content-padding {
-    padding-top: var(--theme-spacing-xxl);
-    padding-bottom: var(--theme-spacing-xxl); } }
+.novablocks-hero {
+  --novablocks-hero-text-color: #FFF; }
+  @media not screen and (min-width: 768px) {
+    .novablocks-hero .novablocks-u-content-padding {
+      padding-top: var(--theme-spacing-xxl);
+      padding-bottom: var(--theme-spacing-xxl); } }
 
 .novablocks-hero .novablocks-u-content-align {
   position: static; }

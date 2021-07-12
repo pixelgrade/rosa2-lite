@@ -1540,10 +1540,12 @@
     opacity: 1; }
   .editor-styles-wrapper .novablocks-hero__inner-container .c-separator__symbol {
     color: var(--current-color-primary); }
-  @media not screen and (min-width: 768px) {
-    .editor-styles-wrapper .novablocks-hero .novablocks-u-content-padding {
-      padding-top: var(--theme-spacing-xxl);
-      padding-bottom: var(--theme-spacing-xxl); } }
+  .editor-styles-wrapper .novablocks-hero {
+    --novablocks-hero-text-color: #FFF; }
+    @media not screen and (min-width: 768px) {
+      .editor-styles-wrapper .novablocks-hero .novablocks-u-content-padding {
+        padding-top: var(--theme-spacing-xxl);
+        padding-bottom: var(--theme-spacing-xxl); } }
   .editor-styles-wrapper .novablocks-hero .novablocks-u-content-align {
     position: static; }
   .editor-styles-wrapper .novablocks-hero__indicator:not(.novablocks-hero__indicator--middle) {
