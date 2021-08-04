@@ -3581,6 +3581,12 @@ span.page-numbers {
     .wp-block-buttons[class][class][class].alignright .wp-block-button {
       margin-left: var(--element-spacing);
       margin-right: 0; }
+  .wp-block-buttons[class][class][class].is-content-justification-left {
+    justify-content: flex-start; }
+  .wp-block-buttons[class][class][class].is-content-justification-center {
+    justify-content: center; }
+  .wp-block-buttons[class][class][class].is-content-justification-right {
+    justify-content: flex-end; }
   .wp-block-buttons[class][class][class] .wp-block-button__link[class] {
     display: block; }
 
